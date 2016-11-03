@@ -1,0 +1,43 @@
+<resources>
+
+    <!--Itens globais-->
+    <string name="app_name">Checker</string>
+    <string name="developer1">Fernando Soares</string>
+    <string name="developer2">Lael Nervis</string>
+    <string name="version">v2.0</string>
+    <string name="year">2016</string>
+    <string name="location">CTA - IFRS</string>
+
+    <!-- Itens do toolbar da activity_main -->
+    <string name="main_toolbar_title">Checker</string>
+    <string name="main_toolbar_item_menu1">Sair</string>
+
+    <!-- Itens activity_main -->
+    <string name="main_button_1_title">Avaliação</string>
+    <string name="main_button_2_title">Relatórios</string>
+    <string name="main_button_3_title">Sobre</string>
+    <string name="main_dialog_title">Entre com o título da nova avaliação.</string>
+    <string name="main_dialog_edittext_hint">Título</string>
+
+    <!-- Itens do toolbar da activity_sobre -->
+    <string name="sobre_toolbar_title">Sobre</string>
+
+    <!-- Itens activity_sobre -->
+    <string name="sobre_texto"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                \n Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                \n Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+
+
+    <!-- Itens do toolbar da activity_avalicao -->
+    <string name="avaliacao_toolbar_title">Avaliação</string>
+
+
+    <!-- Itens do toolbar da activity_lista_avaliacao -->
+    <string name="relatorio_toolbar_title">Lista de Relatórios</string>
+
+    <!-- Itens footer -->
+    <string name="footer_text_1">Checker &#8211; v2.0 &#8211; 2016</string>
+    <string name="footer_text_2">CTA - IFRS | Fernando Soares | Lael Nervis</string>
+    <string name="footer_description_image">Logo do app</string>
+
+</resources>
