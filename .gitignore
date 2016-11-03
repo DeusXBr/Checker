@@ -38,6 +38,7 @@ captures/
 
 # Intellij
 *.iml
+.idea
 .idea/workspace.xml
 .idea/libraries
 
@@ -47,5 +48,5 @@ captures/
 # External native build folder generated in Android Studio 2.2 and later
 .externalNativeBuild
 
-### Android Patch ###
+### Android Patch ##
 gen-external-apklibs
