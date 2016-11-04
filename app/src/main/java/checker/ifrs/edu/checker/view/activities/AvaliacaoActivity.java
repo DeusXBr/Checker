@@ -14,7 +14,6 @@ import java.util.Iterator;
 
 import checker.ifrs.edu.checker.R;
 import checker.ifrs.edu.checker.model.bll.CategoriaBll;
-import checker.ifrs.edu.checker.model.dal.CategoriaDal;
 import checker.ifrs.edu.checker.vo.Categoria;
 import io.realm.Realm;
 
@@ -30,34 +29,11 @@ public class AvaliacaoActivity extends AppCompatActivity {
         // Metodo para inicializar o toolbar
         initToolBar();
 
-
-        CategoriaDal mCategoriaDal = new CategoriaDal(this);
-        CategoriaBll mCategoriaBll = new CategoriaBll(mCategoriaDal);
-
-        mCategoriaBll.addCategoria(new Categoria(1, "Calçadas"));
-        mCategoriaBll.addCategoria(new Categoria(2, "Rebaixamento de calçadas"));
-        mCategoriaBll.addCategoria(new Categoria(3, "Coletores"));
-        mCategoriaBll.addCategoria(new Categoria(4, "Circulação externa"));
-        mCategoriaBll.addCategoria(new Categoria(5, "Circulação interna"));
-        mCategoriaBll.addCategoria(new Categoria(6, "Portas"));
-        mCategoriaBll.addCategoria(new Categoria(7, "Refeitório e cantina"));
-        mCategoriaBll.addCategoria(new Categoria(8, "Mobiliário e layout"));
-        mCategoriaBll.addCategoria(new Categoria(9, "Biblioteca"));
-        mCategoriaBll.addCategoria(new Categoria(10, "Bebedouro"));
-        mCategoriaBll.addCategoria(new Categoria(11, "Circulação vertical"));
-        mCategoriaBll.addCategoria(new Categoria(12, "Plataforma elevatória"));
-        mCategoriaBll.addCategoria(new Categoria(13, "Escada"));
-        mCategoriaBll.addCategoria(new Categoria(14, "Rampas"));
-        mCategoriaBll.addCategoria(new Categoria(15, "Corrimão e guarda-corpo"));
-        mCategoriaBll.addCategoria(new Categoria(16, "Circulação vertical"));
-        mCategoriaBll.addCategoria(new Categoria(17, "Sanitários e vestiários"));
-        mCategoriaBll.addCategoria(new Categoria(18, "Cinamas, teatros, auditórios e similares"));
-        mCategoriaBll.addCategoria(new Categoria(19, "Estacionamento"));
-        mCategoriaBll.addCategoria(new Categoria(20, "Geral"));
-
+        CategoriaBll mCategoriaBll = new CategoriaBll();
 
         LinearLayout mlinearLayout = (LinearLayout) findViewById(R.id.content_avaliacao);
         ArrayList<Categoria> resultCategoria = mCategoriaBll.getAllCategorias();
+
         Iterator itr = resultCategoria.iterator();
 
         while(itr.hasNext()){
