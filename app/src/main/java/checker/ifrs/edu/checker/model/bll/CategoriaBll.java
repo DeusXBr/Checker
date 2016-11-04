@@ -86,4 +86,5 @@ public class CategoriaBll {
     public ArrayList<Categoria> getAllCategorias(){
         return this.mCategoriaDal.trazerCategorias();
     }
+
 }

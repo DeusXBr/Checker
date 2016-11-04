@@ -32,5 +32,4 @@ public class Categoria extends RealmObject{
         return this.nome;
     }
 
-
 }

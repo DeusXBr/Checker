@@ -19,7 +19,7 @@ public class MyApplication extends Application {
 
         RealmConfiguration realmConfiguration = new RealmConfiguration.Builder()
                 .name("my-database.realm")      // nome do arquivo do banco de dados realm
-                .deleteRealmIfMigrationNeeded() // deleta todos os dados quando trocar a versão do db
+                .deleteRealmIfMigrationNeeded() // deleta todos os dados quando trocado a versão do db
                 .initialData(new Realm.Transaction() {
                     @Override
                     public void execute(Realm realm) {
