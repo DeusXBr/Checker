@@ -16,10 +16,9 @@ public class CategoriaBll {
     /**
      * Metodo construtor
      *
-     * @param categoriaDal parametro utilizado para fazer as acoes no banco de dados
      */
-    public CategoriaBll(CategoriaDal categoriaDal){
-        this.mCategoriaDal = categoriaDal;
+    public CategoriaBll(){
+        mCategoriaDal = new CategoriaDal();
     }
 
     /**

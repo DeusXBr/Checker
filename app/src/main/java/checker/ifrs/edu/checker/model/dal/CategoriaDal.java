@@ -1,6 +1,5 @@
 package checker.ifrs.edu.checker.model.dal;
 
-import android.content.Context;
 
 import java.util.ArrayList;
 
@@ -19,8 +18,7 @@ public class CategoriaDal {
     private static final int SUCCESS_OPERATION = 0;
     private static final int FAIL_OPERATION = 1;
 
-    public CategoriaDal(Context context){
-        Realm.init(context);
+    public CategoriaDal(){
         this.mRealm = Realm.getDefaultInstance();
     }
 
@@ -35,6 +33,7 @@ public class CategoriaDal {
         }
 
         this.mRealm.commitTransaction();
+        this.closeRealm();
 
         return SUCCESS_OPERATION;
     }
@@ -77,7 +76,6 @@ public class CategoriaDal {
         if(mRealm != null && mRealm.isInTransaction()){
             mRealm.cancelTransaction();
         }
-
     }
 
     public void clearDatabase(){
@@ -87,6 +85,7 @@ public class CategoriaDal {
         mRealm.where(Categoria.class).findAll().deleteAllFromRealm();
         mRealm.commitTransaction();
 
+        this.closeRealm();
     }
 
     public void closeRealm(){
