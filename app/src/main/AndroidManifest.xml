@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="checker.ifrs.edu.checker">
 
     <application
@@ -17,11 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".view.activities.AvaliacaoActivity" />
         <activity android:name=".view.activities.ListaAvaliacaoActivity" />
-        <activity android:name=".view.activities.SobreActivity"/>
-
+        <activity android:name=".view.activities.SobreActivity" />
+        <activity android:name=".view.activities.PerguntasActivity"></activity>
     </application>
 
 </manifest>

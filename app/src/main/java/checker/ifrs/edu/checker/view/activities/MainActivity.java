@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Metodo para inicializar o toolbar
         initToolBar();
     }
 
@@ -85,6 +84,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**
+     * Metodo para inicializar o toolbar
+     *
+     * Obs: chamada esta no construtor da classe
+     *
+     */
     public void initToolBar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
