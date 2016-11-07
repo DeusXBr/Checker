@@ -8,6 +8,8 @@
     <string name="year">2016</string>
     <string name="location">CTA - IFRS</string>
 
+
+
     <!-- Itens do toolbar da activity_main -->
     <string name="main_toolbar_title">Checker</string>
     <string name="main_toolbar_item_menu1">Sair</string>
@@ -19,6 +21,8 @@
     <string name="main_dialog_title">Entre com o título da nova avaliação.</string>
     <string name="main_dialog_edittext_hint">Título</string>
 
+
+
     <!-- Itens do toolbar da activity_sobre -->
     <string name="sobre_toolbar_title">Sobre</string>
 
@@ -28,12 +32,24 @@
                                 \n Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
 
 
+
     <!-- Itens do toolbar da activity_avalicao -->
     <string name="avaliacao_toolbar_title">Avaliação</string>
+
+    <!-- Itens activity_avalicao -->
+    <string name="avaliacao_button_text">Resultado</string>
+
+
+
+    <!-- Itens do toolbar da activity_perguntas -->
+    <string name="perguntas_toolbar_title">Perguntas</string>
+
 
 
     <!-- Itens do toolbar da activity_lista_avaliacao -->
     <string name="relatorio_toolbar_title">Lista de Relatórios</string>
+
+
 
     <!-- Itens footer -->
     <string name="footer_text_1">Checker &#8211; v2.0 &#8211; 2016</string>
