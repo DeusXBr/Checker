@@ -1,11 +1,8 @@
 package checker.ifrs.edu.checker.app;
 
 import android.app.Application;
-import android.widget.Toast;
-
-import checker.ifrs.edu.checker.model.bll.CategoriaBll;
-import checker.ifrs.edu.checker.model.dal.CategoriaDal;
 import checker.ifrs.edu.checker.vo.Categoria;
+import checker.ifrs.edu.checker.vo.Questao;
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 
@@ -23,8 +20,14 @@ public class MyApplication extends Application {
                 .initialData(new Realm.Transaction() {
                     @Override
                     public void execute(Realm realm) {
-                        realm.copyToRealm(new Categoria(1, "Calçadas"));
-                        realm.copyToRealm(new Categoria(2, "Rebaixamento de calçadas"));
+
+                        // dados de categoria
+                        Categoria categoria1 = realm.createObject(Categoria.class, 1);
+                        categoria1.setNome("Calçadas");
+
+                        Categoria categoria2 = realm.createObject(Categoria.class, 2);
+                        categoria2.setNome("Rebaixamento de calçadas");
+
                         realm.copyToRealm(new Categoria(3, "Coletores"));
                         realm.copyToRealm(new Categoria(4, "Circulação externa"));
                         realm.copyToRealm(new Categoria(5, "Circulação interna"));
@@ -43,6 +46,23 @@ public class MyApplication extends Application {
                         realm.copyToRealm(new Categoria(18, "Cinamas, teatros, auditórios e similares"));
                         realm.copyToRealm(new Categoria(19, "Estacionamento"));
                         realm.copyToRealm(new Categoria(20, "Geral"));
+
+
+                        // dados questoes
+                        Questao questao1 = realm.createObject(Questao.class, 1);
+                        questao1.setPergunta("Você gosta de filmes?");
+                        questao1.setFeedbackCorreto("Bom garoto!");
+                        questao1.setFeedbackErrado("Reveja seus gostos!");
+                        questao1.setFeedbackParcial("tanto faz");
+                        questao1.setCategoria(categoria1);
+
+                        Questao questao2 = realm.createObject(Questao.class, 2);
+                        questao2.setPergunta("Você gosta de sorvete?");
+                        questao2.setFeedbackCorreto("Isso ai!");
+                        questao2.setFeedbackErrado("Como assim? =/");
+                        questao2.setFeedbackParcial("tanto faz 2");
+                        questao2.setCategoria(categoria2);
+
                     }
                 })
                 .build();

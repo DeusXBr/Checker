@@ -5,8 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import java.util.List;
 
 import checker.ifrs.edu.checker.R;
+import checker.ifrs.edu.checker.model.bll.QuestaoBll;
+import checker.ifrs.edu.checker.vo.Questao;
 
 public class PerguntasActivity extends AppCompatActivity {
 
@@ -16,6 +21,15 @@ public class PerguntasActivity extends AppCompatActivity {
         setContentView(R.layout.activity_perguntas);
 
         initToolBar();
+
+        //TODO pegar bundle com o nome da categoria selecionada
+
+        QuestaoBll mQuestaoBll = new QuestaoBll();
+
+        List<Questao> questaoList = mQuestaoBll.getAllQuestoesByCategoria("Rebaixamento de calçadas");
+
+        TextView textView = (TextView) findViewById(R.id.perguntaTexto);
+        textView.setText(questaoList.get(0).getPergunta());
     }
 
     /**

@@ -18,6 +18,10 @@ public class CategoriaDal {
     private static final int SUCCESS_OPERATION = 0;
     private static final int FAIL_OPERATION = 1;
 
+    /**
+     * Metodo construtor
+     *
+     */
     public CategoriaDal(){
         this.mRealm = Realm.getDefaultInstance();
     }
