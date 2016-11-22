@@ -25,6 +25,8 @@ import checker.ifrs.edu.checker.vo.Categoria;
 
 public class AvaliacaoActivity extends AppCompatActivity {
 
+    public static final String KEY_EXTRA = "checker.ifrs.edu.checker.NOME_CATEGORIA";
+
     private ListView listCategorias;
     private CategoriaListAdapter categoriaListAdapter;
 
@@ -37,11 +39,11 @@ public class AvaliacaoActivity extends AppCompatActivity {
 
         CategoriaBll mCategoriaBll = new CategoriaBll();
 
-        listCategorias = (ListView) findViewById(R.id.listViewAvaliacao); // pega layout com o listView
+        this.listCategorias = (ListView) findViewById(R.id.listViewAvaliacao); // pega layout com o listView
         ArrayList<Categoria> resultCategoria = mCategoriaBll.getAllCategorias(); // pega as categorias do realm
 
-        categoriaListAdapter = new CategoriaListAdapter(this, resultCategoria);
-        listCategorias.setAdapter(categoriaListAdapter); // adiciona o adapter criado acima no listView
+        this.categoriaListAdapter = new CategoriaListAdapter(this, resultCategoria);
+        this.listCategorias.setAdapter(categoriaListAdapter); // adiciona o adapter criado acima no listView
     }
 
     /**
@@ -56,8 +58,8 @@ public class AvaliacaoActivity extends AppCompatActivity {
     /**
      * Metodo retornar para activity anterior
      *
-     * @param item
-     * @return
+     * @param item menuItem do menu
+     * @return boolean
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item){

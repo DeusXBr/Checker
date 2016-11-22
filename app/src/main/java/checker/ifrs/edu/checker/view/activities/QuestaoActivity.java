@@ -5,15 +5,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.ListView;
 
 import java.util.List;
 
 import checker.ifrs.edu.checker.R;
 import checker.ifrs.edu.checker.model.bll.QuestaoBll;
+import checker.ifrs.edu.checker.view.adapter.QuestaoListAdapter;
 import checker.ifrs.edu.checker.vo.Questao;
 
-public class PerguntasActivity extends AppCompatActivity {
+public class QuestaoActivity extends AppCompatActivity {
+
+    private ListView listQuestao;
+    private QuestaoListAdapter questaoListAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,21 +27,38 @@ public class PerguntasActivity extends AppCompatActivity {
 
         initToolBar();
 
-        //TODO pegar bundle com o nome da categoria selecionada
-
         QuestaoBll mQuestaoBll = new QuestaoBll();
+        String nomeCategoria;
 
-        List<Questao> questaoList = mQuestaoBll.getAllQuestoesByCategoria("Rebaixamento de calçadas");
+        if (getIntent().hasExtra(AvaliacaoActivity.KEY_EXTRA)) { //verifica se tem dados passados pela intent
+            nomeCategoria = getIntent().getStringExtra(AvaliacaoActivity.KEY_EXTRA); //pega o dado passado
 
-        TextView textView = (TextView) findViewById(R.id.perguntaTexto);
-        textView.setText(questaoList.get(0).getPergunta());
+            this.listQuestao = (ListView) findViewById(R.id.listViewPerguntas); // pega layout com o listView
+            List<Questao> resultPerguntas = mQuestaoBll.getAllQuestoesByCategoria(nomeCategoria); // pega as perguntas da categoria especificada acima
+
+            this.questaoListAdapter = new QuestaoListAdapter(this, resultPerguntas);
+            this.listQuestao.setAdapter(questaoListAdapter); // adiciona o adapter criado acima no listView
+
+        } else {
+            throw new IllegalArgumentException("Activity extra não encontrada: " + AvaliacaoActivity.KEY_EXTRA);
+        }
+
     }
+
+    /**
+     *  CallBack para finalizar a etapa
+     *
+     *  Obs: onClick esta no activity_perguntas.xml -> content_questao.xml    */
+    public void conluirEtapa(View view){
+        //TODO criar nova intent para finalizar etapa.
+    }
+
 
     /**
      * Metodo retornar para activity anterior
      *
-     * @param item
-     * @return
+     * @param item menuItem do menu
+     * @return boolean
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
@@ -56,7 +78,7 @@ public class PerguntasActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         // recupera o titulo do app no xml strings
-        String title = getResources().getString(R.string.perguntas_toolbar_title);
+        String title = getResources().getString(R.string.questao_toolbar_title);
 
         // coloca o title, recuperado da linha acima, como titulo do toolbar
         toolbar.setTitle(title);

@@ -41,8 +41,17 @@
 
 
 
-    <!-- Itens do toolbar da activity_perguntas -->
-    <string name="perguntas_toolbar_title">Perguntas</string>
+    <!-- Itens do toolbar da activity_questao -->
+    <string name="questao_toolbar_title">Avaliação</string>
+
+    <!-- Itens activity_questao -->
+    <string name="questao_button_text">Concluir Etapa</string>
+    <string name="questao_textview_1">Numeração</string>
+    <string name="questao_textview_2">Pergunta</string>
+    <string name="questao_radiobutton_1">Sim</string>
+    <string name="questao_radiobutton_2">Não</string>
+    <string name="questao_radiobutton_3">Parcialmente</string>
+    <string name="questao_radiobutton_4">Não se aplica</string>
 
 
 
