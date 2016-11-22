@@ -1,0 +1,2775 @@
+[
+	{
+	    "id": 1,
+	    "pergunta": "Tem largura mínima de 120cm (circulação de uma pessoa em pé e outra em uma cadeira de rodas)?",
+	    "feedbackCorreto": "",
+	    "feedbackErrado": "",
+	    "feedbackParcial": "",
+	    "categoria":{
+	    		"id": 1,
+	    		"nome": "Calçadas"
+			}
+  	},
+  	{
+	    "id": 2,
+	    "pergunta": "No caso de faixa gramada junto ao meio fio, a faixa pavimentada tem largura mínima de 150cm?",
+	    "feedbackCorreto": "",
+	    "feedbackErrado": "",
+	    "feedbackParcial": "",
+	    "categoria":{
+	    		"id": 1,
+	    		"nome": "Calçadas"
+			}
+  	},
+  	{
+	    "id": 3,
+	    "pergunta": "O Revestimento no piso é antiderrapante?",
+	    "feedbackCorreto": "",
+	    "feedbackErrado": "",
+	    "feedbackParcial": "",
+	    "categoria":{
+	    		"id": 1,
+	    		"nome": "Calçadas"
+			}
+  	},
+  	{
+	    "id": 4,
+	    "pergunta": "O Revestimento do piso é contínuo, sem ressaltos ou depressões?",
+	    "feedbackCorreto": "",
+	    "feedbackErrado": "",
+	    "feedbackParcial": "",
+	    "categoria":{
+	    		"id": 1,
+	    		"nome": "Calçadas"
+			}
+  	},
+  	{
+	    "id": 5,
+	    "pergunta": "O Revestimento no piso tem superfície regular, firme e estável, sem provocar trepidações?",
+	    "feedbackCorreto": "",
+	    "feedbackErrado": "",
+	    "feedbackParcial": "",
+	    "categoria":{
+	    		"id": 1,
+	    		"nome": "Calçadas"
+			}
+  	},
+  	{
+	    "id": 6,
+	    "pergunta": "A Inclinação transversal do piso é de no máximo 3%?",
+	    "feedbackCorreto": "",
+	    "feedbackErrado": "",
+	    "feedbackParcial": "",
+	    "categoria":{
+	    		"id": 1,
+	    		"nome": "Calçadas"
+			}
+  	},
+  	{
+	    "id": 7,
+	    "pergunta": "A calçada possui inclinação longitudinal de até 5%?",
+	    "feedbackCorreto": "",
+	    "feedbackErrado": "",
+	    "feedbackParcial": "",
+	    "categoria":{
+	    		"id": 1,
+	    		"nome": "Calçadas"
+			}
+  	},
+  	{
+	    "id": 8,
+	    "pergunta": "Se a calçada possui inclinação longitudinal maior que 5%, esta inclinação é menor que 12,5%?",
+	    "feedbackCorreto": "",
+	    "feedbackErrado": "",
+	    "feedbackParcial": "",
+	    "categoria":{
+	    		"id": 1,
+	    		"nome": "Calçadas"
+			}
+  	},
+  	{
+	    "id": 9,
+	    "pergunta": "A calçada tem inclinação contínua?",
+	    "feedbackCorreto": "",
+	    "feedbackErrado": "",
+	    "feedbackParcial": "",
+	    "categoria":{
+	    		"id": 1,
+	    		"nome": "Calçadas"
+			}
+  	},
+  	{
+	    "id": 10,
+	    "pergunta": "Se existirem degraus em qualquer das inclinações, assinale a opção não.",
+	    "feedbackCorreto": "",
+	    "feedbackErrado": "",
+	    "feedbackParcial": "",
+	    "categoria":{
+	    		"id": 1,
+	    		"nome": "Calçadas"
+			}
+  	},
+  	{
+	    "id": 11,
+	    "pergunta": "Os degraus têm espelhos com altura máxima de 18cm e piso mínimo de 28cm?",
+	    "feedbackCorreto": "",
+	    "feedbackErrado": "",
+	    "feedbackParcial": "",
+	    "categoria":{
+	    		"id": 1,
+	    		"nome": "Calçadas"
+			}
+  	},
+  	{
+	    "id": 12,
+	    "pergunta": "Se existirem obstáculos como caixas de coleta, lixeiras, telefones públicos e outros, estes obstáculos estão fora do espaço de passagem de pedestres?",
+	    "feedbackCorreto": "",
+	    "feedbackErrado": "",
+	    "feedbackParcial": "",
+	    "categoria":{
+	    		"id": 1,
+	    		"nome": "Calçadas"
+			}
+  	},
+  	{
+	    "id": 13,
+	    "pergunta": "Obstáculos aéreos, como marquises, placas, toldos, e vegetação, estão localizados a uma altura superior a 210cm?",
+	    "feedbackCorreto": "",
+	    "feedbackErrado": "",
+	    "feedbackParcial": "",
+	    "categoria":{
+	    		"id": 1,
+	    		"nome": "Calçadas"
+			}
+  	},
+  	{
+	    "id": 14,
+	    "pergunta": "A acomodação do acesso de veículos é feita exclusivamente dentro do imóvel, de forma a não criar degraus ou desníveis abruptos na calçada?",
+	    "feedbackCorreto": "",
+	    "feedbackErrado": "",
+	    "feedbackParcial": "",
+	    "categoria":{
+	    		"id": 1,
+	    		"nome": "Calçadas"
+			}
+  	},
+  	{
+	    "id": 15,
+	    "pergunta": "No alinhamento entre a calçada e o lote particular, o portão de garagem ou portão de acesso à área privativa, abre para o interior do lote?",
+	    "feedbackCorreto": "",
+	    "feedbackErrado": "",
+	    "feedbackParcial": "",
+	    "categoria":{
+	    		"id": 1,
+	    		"nome": "Calçadas"
+			}
+  	},
+  	{
+	    "id": 16,
+	    "pergunta": "Junto ao portão da garagem ou ao portão de acesso à área privativa há sinalizador que emite luz e som para alertar os pedestres quando os carros entram e saem?",
+	    "feedbackCorreto": "",
+	    "feedbackErrado": "",
+	    "feedbackParcial": "",
+	    "categoria":{
+	    		"id": 1,
+	    		"nome": "Calçadas"
+			}
+  	},
+  	{
+	    "id": 17,
+	    "pergunta": "O semáforo, se existir, em frente à escola possui sinalizador sonoro?",
+	    "feedbackCorreto": "",
+	    "feedbackErrado": "",
+	    "feedbackParcial": "",
+	    "categoria":{
+	    		"id": 1,
+	    		"nome": "Calçadas"
+			}
+  	},
+  	{
+	    "id": 18,
+	    "pergunta": "O semáforo, se existir, em frente à escola possui uma luz com cronômetro de abertura de sinal?",
+	    "feedbackCorreto": "",
+	    "feedbackErrado": "",
+	    "feedbackParcial": "",
+	    "categoria":{
+	    		"id": 1,
+	    		"nome": "Calçadas"
+			}
+  	},
+    {
+        "id": 19,
+        "pergunta": "Nas calçadas em locais com faixa destinada á travessia de via pública por pedestres, há rebaixamento do meio-fio e rampa sobre a calçada?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 2,
+          "nome": "Rebaixamento de Calçada"
+        }
+    },
+    {
+        "id": 20,
+        "pergunta": "Há faixa de circulação plana livre e contínua na calçada em frente à rampa?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 2,
+          "nome": "Rebaixamento de Calçada"
+        }
+    },
+    {
+        "id": 21,
+        "pergunta": "A faixa de circulação na calçada em frente à rampa tem, no mínimo, 80cm de largura?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 2,
+          "nome": "Rebaixamento de Calçada"
+        }
+    },
+    {
+        "id": 22,
+        "pergunta": "A rampa possui largura mínima de 120cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 2,
+          "nome": "Rebaixamento de Calçada"
+        }
+    },
+    {
+        "id": 23,
+        "pergunta": "As bordas laterais da rampa são afuniladas e rampadas, não existindo degraus entre os pisos da rampa e da calçada, ou há obstáculos laterais como jardins ou guarda-corpos?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 2,
+          "nome": "Rebaixamento de Calçada"
+        }
+    },
+    {
+        "id": 24,
+        "pergunta": "As bordas laterais da rampa têm 50cm de largura na sua maior dimensão?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 2,
+          "nome": "Rebaixamento de Calçada"
+        }
+    },
+    {
+        "id": 25,
+        "pergunta": "Há continuidade entre o piso da rampa e da via pública, sem interrupção por degraus?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 2,
+          "nome": "Rebaixamento de Calçada"
+        }
+    },
+    {
+        "id": 26,
+        "pergunta": "O piso da rampa é revestido com material antiderrapante?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 2,
+          "nome": "Rebaixamento de Calçada"
+        }
+    },
+    {
+        "id": 27,
+        "pergunta": "Há faixa de sinalização tátil de alerta com textura e cor diferenciada no piso da rampa com largura entre 25cm e 50cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 2,
+          "nome": "Rebaixamento de Calçada"
+        }
+    },
+    {
+        "id": 28,
+        "pergunta": "Nas grades e ralos, o espaço máximo entre barras é de 1,50cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 3,
+          "nome": "Coletores"
+        }
+    },
+    {
+        "id": 29,
+        "pergunta": "As grelhas são embutidas no piso, sem alterar o nivelamento deste?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 3,
+          "nome": "Coletores"
+        }
+    },
+    {
+        "id": 30,
+        "pergunta": "Em caso de grelhas salientes, a altura máxima do ressalto é 1,5cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 3,
+          "nome": "Coletores"
+        }
+    },
+    {
+        "id": 31,
+        "pergunta": "As grelhas estão dispostas transversalmente à direção do movimento?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 3,
+          "nome": "Coletores"
+        }
+    },
+    {
+        "id": 32,
+        "pergunta": "Nas grades e ralos, o espaço máximo entre barras é de 1,50cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 4,
+          "nome": "Circulação externa"
+        }
+    },
+    {
+        "id": 33,
+        "pergunta": "Os pisos são antiderrapantes sob quaisquer condições?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 4,
+          "nome": "Circulação externa"
+        }
+    },
+    {
+        "id": 34,
+        "pergunta": "Os espaços de circulação externa têm uma faixa livre com largura mínima de 120cm para circulação de uma pessoa em pé e outra em uma cadeira de rodas?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 4,
+          "nome": "Circulação externa"
+        }
+    },
+    {
+        "id": 35,
+        "pergunta": "A inclinação transversal máxima do piso da circulação é de 3%?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 4,
+          "nome": "Circulação externa"
+        }
+    },
+    {
+        "id": 36,
+        "pergunta": "O piso é plano, com desnível máximo de 0,5cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 4,
+          "nome": "Circulação externa"
+        }
+    },
+    {
+        "id": 37,
+        "pergunta": "Onde há desníveis entre 0,5cm e 1,5cm, há rampa com inclinação máxima de 50%?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 4,
+          "nome": "Circulação externa"
+        }
+    },
+    {
+        "id": 38,
+        "pergunta": "Onde há degraus, maiores que 1,5cm, e escadas, há rampa ou equipamento eletromecânico vencendo o mesmo desnível?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 4,
+          "nome": "Circulação externa"
+        }
+    },
+    {
+        "id": 39,
+        "pergunta": "As zonas de circulação estão livres de obstáculos como caixas de coletas, lixeira, floreiras, telefones públicos, extintores de incêndio e outros?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 4,
+          "nome": "Circulação externa"
+        }
+    },
+    {
+        "id": 40,
+        "pergunta": "Placas de sinalização e outros elementos suspensos que tenham sua projeção sobre a faixa de circulação estão a uma altura mínima de 210cm em relação ao piso?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 4,
+          "nome": "Circulação externa"
+        }
+    },
+    {
+        "id": 41,
+        "pergunta": "Há piso tátil sob o mobiliário suspenso?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 4,
+          "nome": "Circulação externa"
+        }
+    },
+    {
+        "id": 42,
+        "pergunta": "Se a extensão do corredor é de 4,00m, a sua largura mínima é de 0,90m?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 5,
+          "nome": "Circulação interna"
+        }
+    },
+    {
+        "id": 43,
+        "pergunta": "Se a extensão do corredor é de 4,00m até 10,00m, a sua largura mínima é de 1,20m?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 5,
+          "nome": "Circulação interna"
+        }
+    },
+    {
+        "id": 44,
+        "pergunta": "Os espaços de circulação externa têm uma faixa livre com largura mínima de 120cm para circulação de uma pessoa em pé e outra em uma cadeira de rodas?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 5,
+          "nome": "Circulação interna"
+        }
+    },
+    {
+        "id": 45,
+        "pergunta": "A inclinação transversal máxima do piso da circulação é de 3%?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 5,
+          "nome": "Circulação interna"
+        }
+    },
+    {
+        "id": 46,
+        "pergunta": "O piso dos corredores e passagens é revestido com material não escorregadio?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 5,
+          "nome": "Circulação interna"
+        }
+    },
+
+    {
+        "id": 47,
+        "pergunta": "As portas têm vão livre mínimo de 80cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 6,
+          "nome": "Portas"
+        }
+    },
+    {
+        "id": 48,
+        "pergunta": "As portas de duas ou mais folhas possuem pelo menos uma das folhas com vão livre de 80cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 6,
+          "nome": "Portas"
+        }
+    },
+    {
+        "id": 49,
+        "pergunta": "As portas estão dispostas de madeira a permitir sua completa abertura?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 6,
+          "nome": "Portas"
+        }
+    },
+    {
+        "id": 50,
+        "pergunta": "As maçanetas são do tipo alavanca?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 6,
+          "nome": "Portas"
+        }
+    },
+    {
+        "id": 51,
+        "pergunta": "As maçanetas possuem altura entre 90cm e 110cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 6,
+          "nome": "Portas"
+        }
+    },
+    {
+        "id": 52,
+        "pergunta": "As portas podem ser abertas com um único movimento?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 6,
+          "nome": "Portas"
+        }
+    },
+    {
+        "id": 53,
+        "pergunta": "Há uma largura mínima de 150cm em frente à porta (lado da abertura)?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 6,
+          "nome": "Portas"
+        }
+    },
+    {
+        "id": 54,
+        "pergunta": "Há alguma largura mínima de 120cm em frente à porta (lado contrário à abertura)?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 6,
+          "nome": "Portas"
+        }
+    },
+    {
+        "id": 55,
+        "pergunta": "Há espaço lateral à porta (lado da abertura) de no mínimo 60cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 6,
+          "nome": "Portas"
+        }
+    },
+    {
+        "id": 56,
+        "pergunta": "No caso de locais de hospedagem ou de saúde, há puxador horizontal com comprimento igual a metade da largura da porta?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 6,
+          "nome": "Portas"
+        }
+    },
+    {
+        "id": 57,
+        "pergunta": "O desnível máximo nas soleiras das portas é de 0,5cm de altura?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 6,
+          "nome": "Portas"
+        }
+    },
+    {
+        "id": 58,
+        "pergunta": "No caso de portas de vidro, essas possuem uma marcação contrastante?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 6,
+          "nome": "Portas"
+        }
+    },
+    {
+        "id": 59,
+        "pergunta": "O refeitório está localizado em rota acessível?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 7,
+          "nome": "Refeitório e cantina"
+        }
+    },
+    {
+        "id": 60,
+        "pergunta": "As áreas de circulação principais do refeitório têm largura mínima de 1,20m?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 7,
+          "nome": "Refeitório e cantina"
+        }
+    },
+    {
+        "id": 61,
+        "pergunta": "A circulação entre lugares das mesas do refeitório tem largura mínima de 90cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 7,
+          "nome": "Refeitório e cantina"
+        }
+    },
+    {
+        "id": 62,
+        "pergunta": "As mesas para refeições possuem altura da superfície entre 75cm e 85cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 7,
+          "nome": "Refeitório e cantina"
+        }
+    },
+    {
+        "id": 63,
+        "pergunta": "5% das mesas, ou no mínimo 1, possuem altura entre 75 e 85cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 7,
+          "nome": "Refeitório e cantina"
+        }
+    },
+    {
+        "id": 64,
+        "pergunta": "5% das mesas, ou no mínimo 1, possui recuo nos pés de no mínimo 50cm (aceitável 30cm) ou nos cantos, de modo que não interfiram no uso por pessoas em cadeira de rodas?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 7,
+          "nome": "Refeitório e cantina"
+        }
+    },
+    {
+        "id": 65,
+        "pergunta": "As mesas permitem aproximação frontal da cadeira de rodas, com uma altura mínima livre de 73cm embaixo da superfície de refeição?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 7,
+          "nome": "Refeitório e cantina"
+        }
+    },
+    {
+        "id": 66,
+        "pergunta": "Mesas ou superfícies para refeições possuem profundidade livre para aproximação frontal de no mínimo 50cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 7,
+          "nome": "Refeitório e cantina"
+        }
+    },
+    {
+        "id": 67,
+        "pergunta": "Há um módulo de referência de 80cm x 120cm para aproximação frontal da mesa?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 7,
+          "nome": "Refeitório e cantina"
+        }
+    },
+    {
+        "id": 68,
+        "pergunta": "As mesas são apropriadas ao uso de pessoas em cadeira de rodas?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 7,
+          "nome": "Refeitório e cantina"
+        }
+    },
+    {
+        "id": 69,
+        "pergunta": "Os balcões de atendimento possuem altura da superfície de no máximo 90cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 7,
+          "nome": "Refeitório e cantina"
+        }
+    },
+    {
+        "id": 70,
+        "pergunta": "Os balcões de atendimento possuem largura mínima 90cm (aceitável 80cm)?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 7,
+          "nome": "Refeitório e cantina"
+        }
+    },
+    {
+        "id": 71,
+        "pergunta": "Os balcões de atendimento permitem aproximação frontal da cadeira de rodas, com uma altura livre mínima de 73cm embaixo da superfície de trabalho?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 7,
+          "nome": "Refeitório e cantina"
+        }
+    },
+    {
+        "id": 72,
+        "pergunta": "Os balcões de atendimento possuem profundidade livre de aproximação de no mínimo 30cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 7,
+          "nome": "Refeitório e cantina"
+        }
+    },
+    {
+        "id": 73,
+        "pergunta": "Há módulos de referência de 80cm x 120cm para aproximação frontal ao balcão?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 7,
+          "nome": "Refeitório e cantina"
+        }
+    },
+    {
+        "id": 74,
+        "pergunta": "Os guichês para entrega de bandejas e pagamento (caixa) possuem altura máxima de 75 a 85cm em relação ao piso?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 7,
+          "nome": "Refeitório e cantina"
+        }
+    },
+    {
+        "id": 75,
+        "pergunta": "O laboratório está localizado em rota acessível?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 8,
+          "nome": "Mobiliário e layout"
+        }
+    },
+    {
+        "id": 76,
+        "pergunta": "As áreas de circulação principais do laboratório têm largura mínima de 1,20m?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 8,
+          "nome": "Mobiliário e layout"
+        }
+    },
+    {
+        "id": 77,
+        "pergunta": "A circulação entre lugares das mesas do laboratório tem largura mínima de 90cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 8,
+          "nome": "Mobiliário e layout"
+        }
+    },
+    {
+        "id": 78,
+        "pergunta": "As mesas dos laboratórios possuem altura de superfície de trabalho entre 75cm e 85cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 8,
+          "nome": "Mobiliário e layout"
+        }
+    },
+    {
+        "id": 79,
+        "pergunta": "As mesas dos laboratórios permitem aproximação frontal da cadeira de rodas, com altura livre mínima de 73cm embaixo da superfície de trabalho?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 8,
+          "nome": "Mobiliário e layout"
+        }
+    },
+    {
+        "id": 80,
+        "pergunta": "Mesas ou superfícies dos laboratórios para trabalho possuem profundidade livre para aproximação frontal de no mínimo 50cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 8,
+          "nome": "Mobiliário e layout"
+        }
+    },
+    {
+        "id": 81,
+        "pergunta": "Há um módulo de referência de 80x120cm para aproximação frontal das mesas dos laboratórios?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 8,
+          "nome": "Mobiliário e layout"
+        }
+    },
+    {
+        "id": 82,
+        "pergunta": "As mesas dos laboratórios são apropriadas para uso de pessoas em cadeira de rodas?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 8,
+          "nome": "Mobiliário e layout"
+        }
+    },
+    {
+        "id": 83,
+        "pergunta": "As salas de aula estão localizadas em rota acessível?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 8,
+          "nome": "Mobiliário e layout"
+        }
+    },
+    {
+        "id": 84,
+        "pergunta": "As áreas de circulação principal das salas de aula têm largura mínima de 1,20m?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 8,
+          "nome": "Mobiliário e layout"
+        }
+    },
+    {
+        "id": 85,
+        "pergunta": "A circulação entre os lugares das mesas das salas de aula têm largura mínima de 90cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 8,
+          "nome": "Mobiliário e layout"
+        }
+    },
+    {
+        "id": 86,
+        "pergunta": "As mesas das salas de aula possuem altura da superfície de trabalho entre 75 e 85cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 8,
+          "nome": "Mobiliário e layout"
+        }
+    },
+    {
+        "id": 87,
+        "pergunta": "As mesas das salas de aula permitem aproximação frontal da cadeira de rodas, com uma altura livre mínima de 73cm embaixo da superfície de trabalho?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 8,
+          "nome": "Mobiliário e layout"
+        }
+    },
+    {
+        "id": 88,
+        "pergunta": "Mesas ou superfícies das salas de aula para trabalho possuem profundidade livre para aproximação frontal de no mínimo 50cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 8,
+          "nome": "Mobiliário e layout"
+        }
+    },
+    {
+        "id": 89,
+        "pergunta": "Há um módulo de referência de 80cm x 120cm para aproximação frontal das mesas das salas de aula?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 8,
+          "nome": "Mobiliário e layout"
+        }
+    },
+    {
+        "id": 90,
+        "pergunta": "As mesas das salas de aula são apropriadas para o uso de pessoas em cadeira de rodas?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 8,
+          "nome": "Mobiliário e layout"
+        }
+    },
+    {
+        "id": 91,
+        "pergunta": "A biblioteca está localizada em rota acessível?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 9,
+          "nome": "Biblioteca"
+        }
+    },
+    {
+        "id": 92,
+        "pergunta": "As áreas de circulação principais da biblioteca têm largura mínima de 1,20m?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 9,
+          "nome": "Biblioteca"
+        }
+    },
+    {
+        "id": 93,
+        "pergunta": "A circulação entre o mobiliário da biblioteca tem largura mínima de 90cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 9,
+          "nome": "Biblioteca"
+        }
+    },
+    {
+        "id": 94,
+        "pergunta": "As mesas de estudo da biblioteca possuem altura de superfície de trabalho entre 75cm e 85cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 9,
+          "nome": "Biblioteca"
+        }
+    },
+    {
+        "id": 95,
+        "pergunta": "As mesas de estudo da biblioteca permitem aproximação frontal da cadeira de rodas, com altura livre mínima de 73cm embaixo da superfície de trabalho?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 9,
+          "nome": "Biblioteca"
+        }
+    },
+    {
+        "id": 96,
+        "pergunta": "Mesas ou superfícies para estudo possuem profundidade livre para aproximação frontal de no mínimo 50cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 9,
+          "nome": "Biblioteca"
+        }
+    },
+    {
+        "id": 97,
+        "pergunta": "Há um módulo de referência de 80x120cm para aproximação frontal da mesa?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 9,
+          "nome": "Biblioteca"
+        }
+    },
+    {
+        "id": 98,
+        "pergunta": "As mesas dos laboratórios são apropriadas para uso de pessoas em cadeira de rodas?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 9,
+          "nome": "Biblioteca"
+        }
+    },
+    {
+        "id": 99,
+        "pergunta": "5% das mesas, ou no mínimo 1, possui altura mínima entre 75 e 80cm, com vão livre de no mínimo 73cm do piso?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 9,
+          "nome": "Biblioteca"
+        }
+    },
+    {
+        "id": 100,
+        "pergunta": "Os balcões de atendimento possuem altura de superfície de trabalho de no mínimo 90cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 9,
+          "nome": "Biblioteca"
+        }
+    },
+    {
+        "id": 101,
+        "pergunta": "Os balcões de atendimento permitem aproximação frontal da cadeira de rodas, com uma altura livre mínima de 73cm embaixo da superfície de trabalho?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 9,
+          "nome": "Biblioteca"
+        }
+    },
+    {
+        "id": 102,
+        "pergunta": "Os balcões de atendimento possuem profundidade livre de aproximação de no mínimo 30cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 9,
+          "nome": "Biblioteca"
+        }
+    },
+    {
+        "id": 103,
+        "pergunta": "Há módulos de referência de 80x120cm para aproximação frontal ao balcão?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 9,
+          "nome": "Biblioteca"
+        }
+    },
+    {
+        "id": 104,
+        "pergunta": "O guichê possui altura máxima de 105cm em relação ao piso?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 9,
+          "nome": "Biblioteca"
+        }
+    },
+    {
+        "id": 105,
+        "pergunta": "As estantes e expositores dos itens do acervo estão dispostos a 90 graus em relação às janelas?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 9,
+          "nome": "Biblioteca"
+        }
+    },
+    {
+        "id": 106,
+        "pergunta": "Existe área de aproximação junto às prateleiras de livros com largura de 80cm e comprimento de 1,20m (MR)?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 9,
+          "nome": "Biblioteca"
+        }
+    },
+    {
+        "id": 107,
+        "pergunta": "Entre as estantes e entre os expositores dos itens do acervo há espaço mínimo necessário para passagem de um adulto e uma cadeira de rodas, conforme Módulo de Referência (MR) da NBR 9050 da ABNT?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 9,
+          "nome": "Biblioteca"
+        }
+    },
+    {
+        "id": 108,
+        "pergunta": "Os computadores dos terminais de consulta possuem acessibilidade?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 9,
+          "nome": "Biblioteca"
+        }
+    },
+    {
+        "id": 109,
+        "pergunta": "A biblioteca possui em seu acervo obras digitalizadas, em Braille ou em formato sonoro?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 9,
+          "nome": "Biblioteca"
+        }
+    },
+    {
+        "id": 110,
+        "pergunta": "As normas da biblioteca são disponibilizadas em diferentes formatos (Braille, ampliado, digital, outros)?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 9,
+          "nome": "Biblioteca"
+        }
+    },
+    {
+        "id": 111,
+        "pergunta": "Se há bebedouro, pelo menos 1(um) deles possui altura máxima de 90cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 10,
+          "nome": "Bebedouro"
+        }
+    },
+    {
+        "id": 112,
+        "pergunta": "Há uma altura livre inferior de no mínimo 73cm do piso?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 10,
+          "nome": "Bebedouro"
+        }
+    },
+    {
+        "id": 113,
+        "pergunta": "Há um módulo de referência (80cm x 120cm) para aproximação frontal ao bebedouro?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 10,
+          "nome": "Bebedouro"
+        }
+    },
+    {
+        "id": 114,
+        "pergunta": "Os bebedouros do tipo garrafão e filtros estão posicionados na altura entre 80cm e 120cm do piso?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 10,
+          "nome": "Bebedouro"
+        }
+    },
+    {
+        "id": 115,
+        "pergunta": "A porta do elevador tem vão mínimo de 80cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 11,
+          "nome": "Circulação vertical"
+        }
+    },
+    {
+        "id": 116,
+        "pergunta": "O tempo de permanência da porta aberta está entre 5s e 15s?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 11,
+          "nome": "Circulação vertical"
+        }
+    },
+    {
+        "id": 117,
+        "pergunta": "O elevador tem dimensão mínima de cabine de 110cm por 140cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 11,
+          "nome": "Circulação vertical"
+        }
+    },
+    {
+        "id": 118,
+        "pergunta": "O revestimento do piso da cabine tem superfície dura e antiderrapante, permitindo uma fácil manobra da cadeira de rodas?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 11,
+          "nome": "Circulação vertical"
+        }
+    },
+    {
+        "id": 119,
+        "pergunta": "O piso da cabine tem cor contrastante com a do piso do pavimento?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 11,
+          "nome": "Circulação vertical"
+        }
+    },
+    {
+        "id": 120,
+        "pergunta": "Os botões de chamada externos têm dimensão mínima de 19mm, excluindo-se a aba?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 11,
+          "nome": "Circulação vertical"
+        }
+    },
+    {
+        "id": 121,
+        "pergunta": "Os botões de chamada externos e do painel de comando são providos de indicação visual para indicar cada chamada registrada que se extingue quando atendida?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 11,
+          "nome": "Circulação vertical"
+        }
+    },
+    {
+        "id": 122,
+        "pergunta": "Os comandos de emergência estão agrupados na parte inferior do painel de comando da cabine?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 11,
+          "nome": "Circulação vertical"
+        }
+    },
+    {
+        "id": 123,
+        "pergunta": "A altura do último botão no painel de comando está a uma altura máxima de 137cm, medida a partir do piso da cabine, com tolerância para mais ou para menos de 2,5cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 11,
+          "nome": "Circulação vertical"
+        }
+    },
+    {
+        "id": 124,
+        "pergunta": "A altura do primeiro botão no painel de comando está a uma altura mínima de 89cm, medida a partir do piso da cabine, com tolerância de 2,5cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 11,
+          "nome": "Circulação vertical"
+        }
+    },
+    {
+        "id": 125,
+        "pergunta": "Existe Marcação Braile de identificação do pavimento, colocada imediatamente abaixo da designação do pavimento?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 11,
+          "nome": "Circulação vertical"
+        }
+    },
+    {
+        "id": 126,
+        "pergunta": "Existe identificação do pavimento em ambos os lados dos batentes das portas em todos os pavimentos?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 11,
+          "nome": "Circulação vertical"
+        }
+    },
+    {
+        "id": 127,
+        "pergunta": "A dimensão mínima das letras e números das marcações dos comandos é de 1,6cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 11,
+          "nome": "Circulação vertical"
+        }
+    },
+    {
+        "id": 128,
+        "pergunta": "Os números das indicações do pavimento onde se encontra o elevador tem altura mínima?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 11,
+          "nome": "Circulação vertical"
+        }
+    },
+    {
+        "id": 129,
+        "pergunta": "Há um corrimão fixado nos painéis laterais e de fundos de cabine?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 11,
+          "nome": "Circulação vertical"
+        }
+    },
+    {
+        "id": 130,
+        "pergunta": "Se há corrimão, a parte superior deste está a uma altura entre 89 e 90cm do piso acabado e com espaço livre entre o painel da cabine e corrimão de 4cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 11,
+          "nome": "Circulação vertical"
+        }
+    },
+    {
+        "id": 131,
+        "pergunta": "A cabine tem iluminação elétrica com no mínimo duas lâmpadas?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 11,
+          "nome": "Circulação vertical"
+        }
+    },
+    {
+        "id": 132,
+        "pergunta": "Os capachos embutidos no piso são nivelados com saliência menor que 0,5cm de altura?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 11,
+          "nome": "Circulação vertical"
+        }
+    },
+    {
+        "id": 133,
+        "pergunta": "Se há elevadores existentes, eles poderão sofrer alterações tecnicamente previstas na NBR 13.994/00?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 11,
+          "nome": "Circulação vertical"
+        }
+    },
+    {
+        "id": 134,
+        "pergunta": "Elevador que atenda as exigências da NBR 13.994/00 está identificado com o Símbolo Internacional de Acesso?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 11,
+          "nome": "Circulação vertical"
+        }
+    },
+    {
+        "id": 135,
+        "pergunta": "Existe plataforma elevatória?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 12,
+          "nome": "Plataforma elevatória"
+        }
+    },
+    {
+        "id": 136,
+        "pergunta": "Se a plataforma é vertical e de percurso aberto o desnível a ser vencido em edificações de uso público ou coletivo é de até 2,00m?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 12,
+          "nome": "Plataforma elevatória"
+        }
+    },
+    {
+        "id": 137,
+        "pergunta": "Se a plataforma é vertical e de percurso fechado, o desnível a ser vencido em edificações de uso público ou coletivo é de até 9m?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 12,
+          "nome": "Plataforma elevatória"
+        }
+    },
+    {
+        "id": 138,
+        "pergunta": "A plataforma possui dispositivo de comunicação para solicitação de auxílio nos equipamentos e nos pavimentos atendidos para utilização assistida?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 12,
+          "nome": "Plataforma elevatória"
+        }
+    },
+    {
+        "id": 139,
+        "pergunta": "A plataforma possui dispositivo de comunicação para solicitação de auxílio nos equipamentos e nos equipamentos e nos pavimentos atendidos para a utilização assistida?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 12,
+          "nome": "Plataforma elevatória"
+        }
+    },
+    {
+        "id": 140,
+        "pergunta": "Se a plataforma é de percurso inclinado, há parada programada nos patamares ou pelo menos a cada 3,20m de desnível?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 12,
+          "nome": "Plataforma elevatória"
+        }
+    },
+    {
+        "id": 141,
+        "pergunta": "O assento é escamoteável para uso de pessoa com mobilidade reduzida?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 12,
+          "nome": "Plataforma elevatória"
+        }
+    },
+    {
+        "id": 142,
+        "pergunta": "Há sinalização tátil e visual informando a obrigatoriedade de acompanhamento por pessoal habilitado durante sua utilização na área de espera?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 12,
+          "nome": "Plataforma elevatória"
+        }
+    },
+    {
+        "id": 143,
+        "pergunta": "Existe sinalização visual demarcando a área para espera de embarque e limite da projeção de embarque e limite da projeção de percurso do equipamento em funcionamento?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 12,
+          "nome": "Plataforma elevatória"
+        }
+    },
+    {
+        "id": 144,
+        "pergunta": "Há rampa ou elevador vencendo o mesmo desnível da escada?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 13,
+          "nome": "Escada"
+        }
+    },
+    {
+        "id": 145,
+        "pergunta": "A escada tem largura mínima de 120cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 13,
+          "nome": "Escada"
+        }
+    },
+    {
+        "id": 146,
+        "pergunta": "A dimensão do piso (profundidade), do degrau é maior que 28cm e menor que 32cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 13,
+          "nome": "Escada"
+        }
+    },
+    {
+        "id": 147,
+        "pergunta": "A dimensão do espelho do degrau é maior que 16cm e menor que 18cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 13,
+          "nome": "Escada"
+        }
+    },
+    {
+        "id": 148,
+        "pergunta": "As dimensões dos espelhos e pisos são constantes em toda a escada, excetuando-se as escadas fixas com lanços curvos ou mistos?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 13,
+          "nome": "Escada"
+        }
+    },
+    {
+        "id": 149,
+        "pergunta": "O primeiro e o último degrau de um lanço de escada estão distantes da área de circulação em pelo menos 30cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 13,
+          "nome": "Escada"
+        }
+    },
+    {
+        "id": 150,
+        "pergunta": "A inclinação transversal máxima da escada é de 1%?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 13,
+          "nome": "Escada"
+        }
+    },
+    {
+        "id": 151,
+        "pergunta": "O piso dos degraus da escada é revestido com material antiderrapante e estável?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 13,
+          "nome": "Escada"
+        }
+    },
+    {
+        "id": 152,
+        "pergunta": "O piso dos degraus da escada é reforçado com faixas antiderrapantes com cor contrastante ao piso (para pessoas com baixa visão)?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 13,
+          "nome": "Escada"
+        }
+    },
+    {
+        "id": 153,
+        "pergunta": "Há no início e no final de cada segmento de escada, um patamar de no mínimo 120cm de comprimento, na direção do movimento?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 13,
+          "nome": "Escada"
+        }
+    },
+    {
+        "id": 154,
+        "pergunta": "Há patamares em qualquer mudança de direção de escada?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 13,
+          "nome": "Escada"
+        }
+    },
+    {
+        "id": 155,
+        "pergunta": "Há corrimão em ambos os lados da escada?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 13,
+          "nome": "Escada"
+        }
+    },
+    {
+        "id": 156,
+        "pergunta": "Há guarda-corpo ou paredes em ambos os lados?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 13,
+          "nome": "Escada"
+        }
+    },
+    {
+        "id": 157,
+        "pergunta": "Se tratar de escada ou degraus fixos em rotas acessíveis, está associada à rampa ou ao equipamento de transporte vertical?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 13,
+          "nome": "Escada"
+        }
+    },
+    {
+        "id": 158,
+        "pergunta": "A escada atende a NBR 9077/01 - Saídas de Emergência em Edifícios?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 13,
+          "nome": "Escada"
+        }
+    },
+    {
+        "id": 159,
+        "pergunta": "A largura mínima da rampa é de 120cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 14,
+          "nome": "Rampas"
+        }
+    },
+    {
+        "id": 160,
+        "pergunta": "O piso da rampa e dos patamares é revestido com material antiderrapante?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 14,
+          "nome": "Rampas"
+        }
+    },
+    {
+        "id": 161,
+        "pergunta": "A inclinação da rampa esta em conformidade com a tabela de dimensionamento de rampas no anexo?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 14,
+          "nome": "Rampas"
+        }
+    },
+    {
+        "id": 162,
+        "pergunta": "A inclinação transversal máxima é de 2% em rampa interna ou 3% em rampa externa?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 14,
+          "nome": "Rampas"
+        }
+    },
+    {
+        "id": 163,
+        "pergunta": "As laterais da rampa são protegidas por paredes, guarda-corpos ou ressaltos no piso de no mínimo 5 cm (guia de balizamento) em ambos os lados?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 14,
+          "nome": "Rampas"
+        }
+    },
+    {
+        "id": 164,
+        "pergunta": "Há, no início e ao final de cada segmento de rampa, um patamar de no mínimo 120cm de comprimento, na direção do movimento?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 14,
+          "nome": "Rampas"
+        }
+    },
+    {
+        "id": 165,
+        "pergunta": "Há corrimão em ambos os lados da rampa?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 14,
+          "nome": "Rampas"
+        }
+    },
+    {
+        "id": 166,
+        "pergunta": "Há guarda-corpo ou paredes em ambos os lados?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 14,
+          "nome": "Rampas"
+        }
+    },
+    {
+        "id": 167,
+        "pergunta": "Há corrimão de ambos os lados da escada ou rampa?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 15,
+          "nome": "Corrimão e guarda-corpo"
+        }
+    },
+    {
+        "id": 168,
+        "pergunta": "Os corrimãos são feitos de material resistente?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 15,
+          "nome": "Corrimão e guarda-corpo"
+        }
+    },
+    {
+        "id": 169,
+        "pergunta": "Os corrimãos são construídos em materiais rígidos firmemente fixados às paredes ou barras de suporte e oferecem condições de segurança na utilização?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 15,
+          "nome": "Corrimão e guarda-corpo"
+        }
+    },
+    {
+        "id": 170,
+        "pergunta": "Os corrimãos são de seção circular entre 3,0cm e 4,5cm de diâmetro?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 15,
+          "nome": "Corrimão e guarda-corpo"
+        }
+    },
+    {
+        "id": 171,
+        "pergunta": "Há um espaço livre de no mínimo 4cm entre a parede e o corrimão?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 15,
+          "nome": "Corrimão e guarda-corpo"
+        }
+    },
+    {
+        "id": 172,
+        "pergunta": "Se a projeção dos corrimãos incidir dentro da largura da rampa, esta é a máxima de 10cm de cada lado?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 15,
+          "nome": "Corrimão e guarda-corpo"
+        }
+    },
+    {
+        "id": 173,
+        "pergunta": "Os corrimãos tem prolongamento horizontal de no mínimo 30cm nos dois níveis servidos pela escada ou rampa?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 15,
+          "nome": "Corrimão e guarda-corpo"
+        }
+    },
+    {
+        "id": 174,
+        "pergunta": "As extremidades do corrimão tem acabamento recuado?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 15,
+          "nome": "Corrimão e guarda-corpo"
+        }
+    },
+    {
+        "id": 175,
+        "pergunta": "As extremidades do corrimão tem desenho contínuo, são fixadas ou justapostas nas paredes?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 15,
+          "nome": "Corrimão e guarda-corpo"
+        }
+    },
+    {
+        "id": 176,
+        "pergunta": "Os corrimãos tem continuidade, sem interrupção nos patamares intermediários?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 15,
+          "nome": "Corrimão e guarda-corpo"
+        }
+    },
+    {
+        "id": 177,
+        "pergunta": "A altura do corrimão da escada é de 92cm do piso medidos na sua geratriz superior?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 15,
+          "nome": "Corrimão e guarda-corpo"
+        }
+    },
+    {
+        "id": 178,
+        "pergunta": "O corrimão da rampa está instalado a duas alturas: 92 e 70cm do piso, medido da geratriz superior?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 15,
+          "nome": "Corrimão e guarda-corpo"
+        }
+    },
+    {
+        "id": 179,
+        "pergunta": "Se a escada ou rampa possui largura superior a 240cm, há corrimão intermediário?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 15,
+          "nome": "Corrimão e guarda-corpo"
+        }
+    },
+    {
+        "id": 180,
+        "pergunta": "Os corrimãos intermediários somente são interrompidos, quando o comprimento do patamar é superior a 1,40m?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 15,
+          "nome": "Corrimão e guarda-corpo"
+        }
+    },
+    {
+        "id": 181,
+        "pergunta": "Se a escada ou rampa não tiverem paredes laterais, há guarda-corpo de 105cm de altura associado ao corrimão?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 15,
+          "nome": "Corrimão e guarda-corpo"
+        }
+    },
+    {
+        "id": 182,
+        "pergunta": "O corrimão da escada ou rampa atende a NBR9077?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 15,
+          "nome": "Corrimão e guarda-corpo"
+        }
+    },
+    {
+        "id": 183,
+        "pergunta": "O sanitário ou vestiário está localizado em lugar acessível?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 184,
+        "pergunta": "O sanitário ou vestiário está localizado próximo à circulação principal?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 185,
+        "pergunta": "Os sanitários ou vestiários acessíveis estão próximos ou integrados às demais instalações sanitárias?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 186,
+        "pergunta": "Os boxes para bacia sanitária têm dimensões mínimas 150cm x 170cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 187,
+        "pergunta": "Há área livre de 80cm de largura por 120cm de comprimento para transferência lateral, perpendicular e diagonal ao vaso sanitário?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 188,
+        "pergunta": "O sanitário ou vestiário está localizado em lugar acessível?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 189,
+        "pergunta": "Se o box para bacia sanitária possui dimensões de 150cm x 150cm, há porta com largura mínima de 100 cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 190,
+        "pergunta": "A bacia sanitária está a uma altura entre 43cm e 45cm do piso, medido a partir da borda superior sem assento?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 191,
+        "pergunta": "Se há plataforma para compor a altura da bacia sanitária, a projeção horizontal da plataforma ultrapassa no máximo 5cm o contorno da base da bacia?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 192,
+        "pergunta": "No caso de bacia com caixa acoplada há barra na parede do fundo de forma a evitar que a caixa seja usada como apoio?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 193,
+        "pergunta": "Caso haja barra, a distância mínima entre a face inferior e a tampa da caixa acoplada é de 15cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 194,
+        "pergunta": "As barras de apoio da bacia sanitária têm comprimento mínimo de 80cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 195,
+        "pergunta": "As barras possuem seção circular com diâmetro entre 3,0cm e 4,5cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 196,
+        "pergunta": "A barra lateral à bacia está posicionada de modo a avançar 50cm da extremidade frontal da bacia sanitária?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 197,
+        "pergunta": "A distância entre o eixo do vaso e a face da barra lateral é de 40cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 198,
+        "pergunta": "A porta do sanitário ou do boxe para a bacia sanitária tem vão livre mínimo de 80cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 199,
+        "pergunta": "A porta do sanitário ou do boxe para bacia sanitária tem barra horizontal para facilitar seu fechamento?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 200,
+        "pergunta": "A porta do sanitário ou do boxe para bacia sanitária está disposta de maneira a permitir sua completa abertura?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 201,
+        "pergunta": "A maçaneta ou trinco da porta do sanitário ou do boxe para bacia sanitária é do tipo alavanca?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 202,
+        "pergunta": "Os lavatórios são sem coluna?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 203,
+        "pergunta": "O lavatório está fixado a uma altura entre 78cm e 80cm em relação ao piso?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 204,
+        "pergunta": "Há uma altura livre de 73cm sob o lavatório?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 205,
+        "pergunta": "Há uma área livre de aproximação do lavatório com dimensões de 120cm x 80cm frontal ao lavatório?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 206,
+        "pergunta": "Há barras de apoio instaladas junto ao lavatório, na altura do mesmo?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 207,
+        "pergunta": "As torneiras do lavatório são de alavanca, monocomando ou acionadas por células fotoelétricas?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 208,
+        "pergunta": "O piso dos sanitários é antiderrapante?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 209,
+        "pergunta": "Os assessórios do sanitário estão localizados a uma altura entre 50cm e 120cm em relação ao piso?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 210,
+        "pergunta": "A forma de abertura da porta e a distribuição de aparelhos nos banheiros e lavabos permitem a utilização por um usuário em cadeira de rodas?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 211,
+        "pergunta": "Há um Símbolo Internacional de Acesso afixado na porta do sanitário?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 16,
+          "nome": "Sanitários e vestiários"
+        }
+    },
+    {
+        "id": 212,
+        "pergunta": "Há uma área mínima equivalente a um círculo de 150cm de diâmetro para uma rotação de 360o de uma cadeira de rodas sem deslocamento?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 17,
+          "nome": "Cinemas, teatros, auditórios e similares"
+        }
+    },
+    {
+        "id": 213,
+        "pergunta": "Para a transposição de obstáculos isolados (portas ou outros obstáculos fixos com extensão de no máximo 40cm), existe uma largura livre mínima de 80cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 17,
+          "nome": "Cinemas, teatros, auditórios e similares"
+        }
+    },
+    {
+        "id": 214,
+        "pergunta": "A largura para circulação de uma cadeira de rodas é de no mínimo 90cm?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 17,
+          "nome": "Cinemas, teatros, auditórios e similares"
+        }
+    },
+    {
+        "id": 215,
+        "pergunta": "Há uma largura mínima de 120cm para a circulação de uma pessoa em pé e outra numa cadeira de rodas?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 17,
+          "nome": "Cinemas, teatros, auditórios e similares"
+        }
+    },
+    {
+        "id": 216,
+        "pergunta": "Os locais destinados às pessoas em cadeiras de rodas atendem à tabela abaixo?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 17,
+          "nome": "Cinemas, teatros, auditórios e similares"
+        }
+    },
+    {
+        "id": 217,
+        "pergunta": "Os espaços para cadeiras de rodas têm 80cm de largura e 120cm de comprimento?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 17,
+          "nome": "Cinemas, teatros, auditórios e similares"
+        }
+    },
+    {
+        "id": 218,
+        "pergunta": "Os espaços para cadeiras de rodas são planos?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 17,
+          "nome": "Cinemas, teatros, auditórios e similares"
+        }
+    },
+    {
+        "id": 219,
+        "pergunta": "Há uma faixa de no mínimo 30cm para circulação localizada na frente do espaço para cadeira de rodas, atrás ou em ambas as posições?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 17,
+          "nome": "Cinemas, teatros, auditórios e similares"
+        }
+    },
+    {
+        "id": 220,
+        "pergunta": "Os espaços para cadeira de rodas estão distribuídos pelo recinto?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 17,
+          "nome": "Cinemas, teatros, auditórios e similares"
+        }
+    },
+    {
+        "id": 221,
+        "pergunta": "Os espaços para pessoas em cadeira de rodas permitem que estes possam sentar-se próximo a seus acompanhantes?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 17,
+          "nome": "Cinemas, teatros, auditórios e similares"
+        }
+    },
+    {
+        "id": 222,
+        "pergunta": "Os espaços para cadeira de rodas estão localizados em uma rota acessível, vinculada a uma rota de fuga?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 17,
+          "nome": "Cinemas, teatros, auditórios e similares"
+        }
+    },
+    {
+        "id": 223,
+        "pergunta": "Há uma rota acessível interligando os espaços PCR* ao palco e aos bastidores?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 17,
+          "nome": "Cinemas, teatros, auditórios e similares"
+        }
+    },
+    {
+        "id": 224,
+        "pergunta": "Há vagas de garagem ou estacionamento reservadas para veículos utilizados por pessoas com deficiência (PcD), localizadas próximo aos acessos de circulação de pedestres?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 18,
+          "nome": "Estacionamento"
+        }
+    },
+    {
+        "id": 225,
+        "pergunta": "Há vagas de garagem ou estacionamento reservadas para veículos utilizados por idosos, respeitando o mínimo de 5% do total de vagas (Lei 10.741/03) localizadas próximo ao acesso de circulação de pedestres?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 18,
+          "nome": "Estacionamento"
+        }
+    },
+    {
+        "id": 226,
+        "pergunta": "Há vagas de garagem ou estacionamento reservadas para veículos utilizados por gestantes, na mesma proporção das vagas para PCR e PMR (tabela abaixo), localizadas próximo aos acessos de circulação de pedestres?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 18,
+          "nome": "Estacionamento"
+        }
+    },
+    {
+        "id": 227,
+        "pergunta": "Há sinalização nestas vagas, por meio de faixa de 1,20m de largura pintada no piso, em amarelo, lateral à vaga?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 18,
+          "nome": "Estacionamento"
+        }
+    },
+    {
+        "id": 228,
+        "pergunta": "As vagas reservadas são demarcadas com linha contínua na cor branca sobre o pavimento?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 18,
+          "nome": "Estacionamento"
+        }
+    },
+    {
+        "id": 229,
+        "pergunta": "Nas áreas externas ou internas da edificação, destinadas a garagem e a estacionamentos, as vagas reservadas para veículos utilizados por pessoas com deficiência na mobilidade são devidamente sinalizadas?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 18,
+          "nome": "Estacionamento"
+        }
+    },
+    {
+        "id": 230,
+        "pergunta": "As vagas reservadas têm o Símbolo Internacional de acesso pintado no piso?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 18,
+          "nome": "Estacionamento"
+        }
+    },
+    {
+        "id": 231,
+        "pergunta": "As vagas reservadas são identificadas com placa vertical, com o Símbolo Internacional de Acesso e com identificação escrita relativa à condição de reserva da vaga e do público-alvo?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 18,
+          "nome": "Estacionamento"
+        }
+    },
+    {
+        "id": 232,
+        "pergunta": "Há rebaixamento do meio-fio e rampa na calçada para ligar a vaga à calçada ou passeio?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 18,
+          "nome": "Estacionamento"
+        }
+    },
+    {
+        "id": 233,
+        "pergunta": "O caminho a ser percorrido pela pessoa com deficiência na mobilidade é livre e sem obstáculos?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 18,
+          "nome": "Estacionamento"
+        }
+    },
+    {
+        "id": 234,
+        "pergunta": "O percurso que une a edificação à via pública, às edificações e aos serviços anexos de uso comum e aos edifícios vizinhos é acessível?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 19,
+          "nome": "Geral"
+        }
+    },
+    {
+        "id": 235,
+        "pergunta": "Pelo menos um dos acessos ao interior da edificação está livre de barreiras arquitetônicas e de obstáculos que impeçam ou dificultem a acessibilidade?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 19,
+          "nome": "Geral"
+        }
+    },
+    {
+        "id": 236,
+        "pergunta": "A circulação é acessível desde a rua até o saguão onde se localiza o elevador?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 19,
+          "nome": "Geral"
+        }
+    },
+    {
+        "id": 237,
+        "pergunta": "Se não há elevador ou outro equipamento eletromecânico acessível, há rampas ligando os pavimentos?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 19,
+          "nome": "Geral"
+        }
+    },
+    {
+        "id": 238,
+        "pergunta": "Há rampa em qualquer caso onde ocorra um desnível maior que 1,5cm e menor que 48cm, já que são proibidos lances de escadas com menos de três degraus?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 19,
+          "nome": "Geral"
+        }
+    },
+    {
+        "id": 239,
+        "pergunta": "Pelo menos um dos itinerários que comuniquem horizontal e verticalmente todas as dependências e serviços do edifício, entre si e o exterior, cumpre os requisitos legais de acessibilidade?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 19,
+          "nome": "Geral"
+        }
+    },
+    {
+        "id": 240,
+        "pergunta": "As dependências em que ocorre maior fluxo de pessoas estão situadas no andar térreo?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 19,
+          "nome": "Geral"
+        }
+    },
+    {
+        "id": 241,
+        "pergunta": "Há pelo menos um banheiro acessível, com seus equipamentos e acessórios distribuídos de maneira que possa ser utilizado por pessoa com deficiência ou com mobilidade reduzida?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 19,
+          "nome": "Geral"
+        }
+    },
+    {
+        "id": 242,
+        "pergunta": "Na entrada dos prédios públicos totalmente adaptados às exigências desta lei, está fixado o símbolo internacional de acessibilidade?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 19,
+          "nome": "Geral"
+        }
+    },
+    {
+        "id": 243,
+        "pergunta": "Os locais de espetáculos, conferências, aulas e outros de natureza similar dispõem de espaços reservados para cadeira de rodas, de acordo com a ABNT, de modo que facilite as condições de acesso, circulação e comunicação?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 19,
+          "nome": "Geral"
+        }
+    },
+    {
+        "id": 244,
+        "pergunta": "Se existe legislação municipal referente à acessibilidade, a edificação cumpre as determinações desta legislação?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 19,
+          "nome": "Geral"
+        }
+    },
+    {
+        "id": 245,
+        "pergunta": "Existe projeto de Plano de Prevenção e Proteção contra Incêndio (PPCI) para o câmpus?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 19,
+          "nome": "Geral"
+        }
+    },
+    {
+        "id": 246,
+        "pergunta": "O Plano de Prevenção Contra Incêndios (PPCI) do câmpus está de acordo com o estabelecido na NBR 9050/2004?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 19,
+          "nome": "Geral"
+        }
+    },
+    {
+        "id": 247,
+        "pergunta": "Os extintores de incêndio são instalados com suporte de piso?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 19,
+          "nome": "Geral"
+        }
+    },
+    {
+        "id": 248,
+        "pergunta": "Os extintores de incêndio estão sinalizados com piso podotátil de alerta na sua projeção, afastados do obstáculo no mínimo 60cm, conforme NBR 9050/2004?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 19,
+          "nome": "Geral"
+        }
+    },
+    {
+        "id": 249,
+        "pergunta": "Há sistema de alarme de incêndio, pelo menos nos ambientes de maior acúmulo de pessoas que emita som e também luz (para alertar os surdos)?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 19,
+          "nome": "Geral"
+        }
+    },
+    {
+        "id": 250,
+        "pergunta": "Existe mapa tátil de localização das edificações no câmpus, que indique onde a pessoa está e como chegar às demais dependências?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 19,
+          "nome": "Geral"
+        }
+    },
+    {
+        "id": 251,
+        "pergunta": "Nos locais onde há lixeiras, essas possuem aberturas em duas alturas ou em uma altura até 1,20m, que possibilitem o uso por PcD?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 19,
+          "nome": "Geral"
+        }
+    },
+    {
+        "id": 252,
+        "pergunta": "Nos locais destinados à prática esportiva (quadras, ginásios, etc.), o piso é antiderrapante e com poucas cores, porém contrastantes?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "",
+        "feedbackParcial": "",
+        "categoria":{
+          "id": 19,
+          "nome": "Geral"
+        }
+    }
+]
