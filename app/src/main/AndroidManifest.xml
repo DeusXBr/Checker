@@ -19,7 +19,7 @@
         <activity android:name=".view.activities.AvaliacaoActivity" />
         <activity android:name=".view.activities.ListaRelatorioActivity" />
         <activity android:name=".view.activities.SobreActivity" />
-        <activity android:name=".view.activities.QuestaoActivity"></activity>
+        <activity android:name=".view.activities.QuestaoActivity"/>
     </application>
 
 </manifest>
