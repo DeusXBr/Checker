@@ -1,11 +1,7 @@
 package checker.ifrs.edu.checker.vo;
 
-import android.util.Log;
-
-import java.text.DateFormat;
-import java.util.Date;
-
 import checker.ifrs.edu.checker.utils.ModelUtils;
+import checker.ifrs.edu.checker.utils.StringUtils;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 import io.realm.annotations.Required;
@@ -47,7 +43,7 @@ public class Avaliacao extends RealmObject{
     }
 
     private void setDataCriacao() {
-        this.dataCriacao = DateFormat.getDateInstance().format(new Date());
+        this.dataCriacao = StringUtils.getDataAtual();
     }
 
     public void setDataModificado(String dataModificado) {

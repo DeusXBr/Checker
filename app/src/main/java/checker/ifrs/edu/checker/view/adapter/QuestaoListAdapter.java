@@ -48,6 +48,8 @@ public class QuestaoListAdapter extends BaseAdapter {
         textViewNumeracao.setText(" " + (position + 1)); // coloca a numeracao das perguntas
         textViewPergunta.setText(mQuestaoList.get(position).getPergunta()); // set o text do textView
 
+
+
         return v;
     }
 }

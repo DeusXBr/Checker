@@ -2,14 +2,28 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
 
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
 
-    <!-- verificar o layout de cada item no drive -->
-    <TextView
-        android:layout_width="match_parent"
+    <!-- Imagem -->
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/seila"/>
+        android:src="@drawable/ic_list_black" />
+
+    <TextView
+        android:id="@+id/seila"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:id="@+id/data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- Status do relatório -->
 
 </LinearLayout>
