@@ -1,9 +1,12 @@
 package checker.ifrs.edu.checker.view.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import java.util.List;
@@ -48,7 +51,18 @@ public class QuestaoListAdapter extends BaseAdapter {
         textViewNumeracao.setText(" " + (position + 1)); // coloca a numeracao das perguntas
         textViewPergunta.setText(mQuestaoList.get(position).getPergunta()); // set o text do textView
 
+        RadioGroup radioGroup = (RadioGroup) v.findViewById(R.id.radiogroup_linha);
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int checked) {
+                RadioButton checkedRadioButton = (RadioButton)radioGroup.findViewById(checked);
 
+                boolean isChecked = checkedRadioButton.isChecked();
+                if (isChecked) {
+                    Log.i("MeuTeste", "RadioButton foi checked");
+                }
+            }
+        });
 
         return v;
     }
