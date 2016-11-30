@@ -38,6 +38,8 @@ public class QuestaoListAdapter extends BaseAdapter {
 
     @Override
     public View getView(final int position, View view, ViewGroup viewGroup) {
+        //TODO arrumar layout -> item_listview_questao.xml, texto cortado
+
         View v = View.inflate(mContext, R.layout.item_listview_questao, null); // set o layout de cada item
 
         TextView textViewNumeracao = (TextView) v.findViewById(R.id.textview_numeracao); //recupera objeto do layout
@@ -45,8 +47,6 @@ public class QuestaoListAdapter extends BaseAdapter {
 
         textViewNumeracao.setText(" " + (position + 1)); // coloca a numeracao das perguntas
         textViewPergunta.setText(mQuestaoList.get(position).getPergunta()); // set o text do textView
-
-        //TODO arrumar layout -> item_listview_questao.xml
 
         return v;
     }

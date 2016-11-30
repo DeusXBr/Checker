@@ -55,8 +55,8 @@
 
 
 
-    <!-- Itens do toolbar da activity_lista_avaliacao -->
-    <string name="relatorio_toolbar_title">Lista de Relatórios</string>
+    <!-- Itens do toolbar da activity_listarelatorio -->
+    <string name="listarelatorio_toolbar_title">Lista de Relatórios</string>
 
 
 

@@ -1,10 +1,11 @@
 package checker.ifrs.edu.checker.model.dal;
 
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import checker.ifrs.edu.checker.vo.Categoria;
+import checker.ifrs.edu.checker.vo.Avaliacao;
 import io.realm.Realm;
 import io.realm.RealmResults;
 import io.realm.exceptions.RealmPrimaryKeyConstraintException;
@@ -12,7 +13,7 @@ import io.realm.exceptions.RealmPrimaryKeyConstraintException;
 import static checker.ifrs.edu.checker.utils.StringUtils.isNegativeOrZero;
 import static checker.ifrs.edu.checker.utils.StringUtils.isNullOrEmpty;
 
-public class CategoriaDal {
+public class AvaliacaoDal {
 
     private Realm mRealm;
 
@@ -23,15 +24,15 @@ public class CategoriaDal {
      * Metodo construtor
      *
      */
-    public CategoriaDal(){
+    public AvaliacaoDal(){
         this.mRealm = Realm.getDefaultInstance();
     }
 
-    public int criarCategoria(Categoria categoria){
+    public int criarAvaliacao(Avaliacao avaliacao){
         this.mRealm.beginTransaction();
 
         try {
-            this.mRealm.copyToRealm(categoria);
+            this.mRealm.copyToRealm(avaliacao);
         } catch (IllegalArgumentException | RealmPrimaryKeyConstraintException e){
             this.mRealm.cancelTransaction();
             return FAIL_OPERATION;
@@ -42,38 +43,28 @@ public class CategoriaDal {
         return SUCCESS_OPERATION;
     }
 
-    public Categoria trazerCategoria(int id){
-        Categoria categoria = null;
-
-        if(!isNegativeOrZero(id)){
-            categoria = this.mRealm.where(Categoria.class).equalTo("id", id).findFirst();
-        }
-
-        return categoria;
-    }
-
-    public Categoria trazerCategoria(String nome){
-        Categoria categoria = null;
+    public Avaliacao trazerAvaliacao(String nome){
+        Avaliacao avaliacao = null;
 
         if(!isNullOrEmpty(nome)){
-            categoria = this.mRealm.where(Categoria.class).equalTo("nome", nome).findFirst();
+            avaliacao = this.mRealm.where(Avaliacao.class).equalTo("nome", nome).findFirst();
         }
 
-        return categoria;
+        return avaliacao;
     }
 
-    public List<Categoria> trazerCategorias(){
-        List<Categoria> categoriaArrayList = new ArrayList<>();
+    public List<Avaliacao> trazerAvaliacoes(){
+        ArrayList<Avaliacao> avaliacaoArrayList = new ArrayList<>();
 
-        RealmResults<Categoria> results = this.mRealm.where(Categoria.class).findAll();
+        RealmResults<Avaliacao> results = this.mRealm.where(Avaliacao.class).findAll();
 
         if(results.size() != 0){
-            for (Categoria result: results) {
-                categoriaArrayList.add(result);
+            for (Avaliacao result: results) {
+                avaliacaoArrayList.add(result);
             }
         }
 
-        return categoriaArrayList;
+        return avaliacaoArrayList;
     }
 
     private void resetDatabase(){
@@ -86,7 +77,7 @@ public class CategoriaDal {
         resetDatabase();
 
         mRealm.beginTransaction();
-        mRealm.where(Categoria.class).findAll().deleteAllFromRealm();
+        mRealm.where(Avaliacao.class).findAll().deleteAllFromRealm();
         mRealm.commitTransaction();
     }
 

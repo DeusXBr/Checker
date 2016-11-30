@@ -35,12 +35,6 @@ public class QuestaoDal {
         return questaoList;
     }
 
-
-
-
-
-
-
     private void resetDatabase(){
         if(mRealm != null && mRealm.isInTransaction()){
             mRealm.cancelTransaction();
@@ -53,13 +47,6 @@ public class QuestaoDal {
         mRealm.beginTransaction();
         mRealm.where(Questao.class).findAll().deleteAllFromRealm();
         mRealm.commitTransaction();
-
-        this.closeRealm();
     }
-
-    public void closeRealm(){
-        mRealm.close();
-    }
-
 
 }
