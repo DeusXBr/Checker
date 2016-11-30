@@ -22,11 +22,10 @@ public class CategoriaTest {
         Context appContext = InstrumentationRegistry.getTargetContext();
         Realm.init(appContext);
 
-        CategoriaDal categoriaDal = new CategoriaDal(appContext);
-        CategoriaBll categoriaBll = new CategoriaBll(categoriaDal);
+        CategoriaBll categoriaBll = new CategoriaBll();
 
         // limpa database antes do teste
-        categoriaDal.clearDatabase();
+        categoriaBll.limparBancoDados();
 
         Categoria categoria = new Categoria(1, "categoria1");
         Categoria categoria2 = new Categoria(1, "categoria2");
@@ -43,11 +42,10 @@ public class CategoriaTest {
         Context appContext = InstrumentationRegistry.getTargetContext();
         Realm.init(appContext);
 
-        CategoriaDal categoriaDal = new CategoriaDal(appContext);
-        CategoriaBll categoriaBll = new CategoriaBll(categoriaDal);
+        CategoriaBll categoriaBll = new CategoriaBll();
 
         // limpar database
-        categoriaDal.clearDatabase();
+        categoriaBll.limparBancoDados();
 
         // busca todas as categorias
         categoriaBll.getAllCategorias();

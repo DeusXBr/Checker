@@ -1,6 +1,6 @@
 package checker.ifrs.edu.checker.model.bll;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import checker.ifrs.edu.checker.model.dal.CategoriaDal;
 import checker.ifrs.edu.checker.utils.exception.InvalidStringException;
@@ -81,10 +81,14 @@ public class CategoriaBll {
     /**
      * Retorna todas as Categorias do banco de dados
      *
-     * @return ArrayList - Lista de categorias
+     * @return List - Lista de categorias
      */
-    public ArrayList<Categoria> getAllCategorias(){
+    public List<Categoria> getAllCategorias(){
         return this.mCategoriaDal.trazerCategorias();
+    }
+
+    public void limparBancoDados(){
+        mCategoriaDal.clearDatabase();
     }
 
 }
