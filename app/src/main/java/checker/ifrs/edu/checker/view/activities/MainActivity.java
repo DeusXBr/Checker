@@ -2,6 +2,7 @@ package checker.ifrs.edu.checker.view.activities;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ import checker.ifrs.edu.checker.vo.Avaliacao;
 public class MainActivity extends AppCompatActivity {
 
     public static final String KEY_EXTRA = "checker.ifrs.edu.checker.TITULO_AVALIACAO";
+    public static final String PREFS_NAME = "Preferences";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,9 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
                 AvaliacaoBll mAvaliacaoBll = new AvaliacaoBll();
 
-                //Log.i("MeuTeste", "Titulo preenchido pelo usuario:" + titulo.getText() + "!");
-                titulo.setText(titulo.getText().toString().trim());
-                //Log.i("MeuTeste", "Titulo preenchido pelo usuario:" + titulo.getText() + "!");
+                titulo.setText(titulo.getText().toString().trim()); // retira espacos em branco do inicio e do fim
 
                 // verifica se foi preenchido o titulo
                 if (titulo.getText().toString().length() > 0) {
@@ -77,12 +77,14 @@ public class MainActivity extends AppCompatActivity {
 
                         mAvaliacaoBll.addAvaliacao(avaliacao); // adiciona no realm
 
-                        Bundle bundle = new Bundle();
-                        bundle.putString(MainActivity.KEY_EXTRA, titulo.getText().toString());
+                        // titulo da avaliacao salva no sharedPreferences
+                        SharedPreferences.Editor editor = getSharedPreferences(PREFS_NAME, MODE_PRIVATE).edit();
+                        editor.putInt("avaliacaoId", avaliacao.getId());
+                        editor.putString("avaliacaoTitulo", avaliacao.getNome());
+                        editor.apply();
 
                         // Intent para nova activity
                         Intent intent = new Intent(MainActivity.this, AvaliacaoActivity.class);
-                        intent.putExtras(bundle);
                         startActivity(intent);
                     }
                 }

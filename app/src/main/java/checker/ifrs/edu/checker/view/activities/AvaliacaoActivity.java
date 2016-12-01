@@ -1,9 +1,11 @@
 package checker.ifrs.edu.checker.view.activities;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
@@ -28,10 +30,15 @@ public class AvaliacaoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_avaliacao);
 
+        // pega os dados do sharedPreference
+        SharedPreferences sharedPrefs = getSharedPreferences(MainActivity.PREFS_NAME, MODE_PRIVATE);
+        String avaliacaoTitulo = sharedPrefs.getString("avaliacaoTitulo", null);
+
+
         CategoriaBll mCategoriaBll = new CategoriaBll();
 
-        if( getIntent().hasExtra(MainActivity.KEY_EXTRA) ) { //verifica se tem dados passados pela intent
-            this.titulo = getIntent().getStringExtra(MainActivity.KEY_EXTRA); //pega o dado passado
+        if( avaliacaoTitulo != null ) { //verifica se tem dados no sharedPreferences
+            this.titulo = avaliacaoTitulo;
 
             initToolBar();
 
