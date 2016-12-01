@@ -1,6 +1,5 @@
 package checker.ifrs.edu.checker.model.dal;
 
-
 import java.util.ArrayList;
 import java.util.List;
 

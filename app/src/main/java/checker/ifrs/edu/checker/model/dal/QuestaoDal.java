@@ -7,6 +7,8 @@ import checker.ifrs.edu.checker.vo.Questao;
 import io.realm.Realm;
 import io.realm.RealmResults;
 
+import static checker.ifrs.edu.checker.utils.StringUtils.isNegativeOrZero;
+
 public class QuestaoDal {
 
     private Realm mRealm;
@@ -17,6 +19,16 @@ public class QuestaoDal {
      */
     public QuestaoDal(){
         this.mRealm = Realm.getDefaultInstance();
+    }
+
+    public Questao trazerQuestao(int id){
+        Questao questao = null;
+
+        if(!isNegativeOrZero(id)){
+            questao = this.mRealm.where(Questao.class).equalTo("id", id).findFirst();
+        }
+
+        return questao;
     }
 
     public List<Questao> trazerQuestoes(String nomeCategoria){

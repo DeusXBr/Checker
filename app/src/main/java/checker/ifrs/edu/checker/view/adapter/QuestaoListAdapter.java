@@ -10,20 +10,34 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import checker.ifrs.edu.checker.R;
+import checker.ifrs.edu.checker.model.bll.AvaliacaoBll;
+import checker.ifrs.edu.checker.model.bll.QuestaoBll;
+import checker.ifrs.edu.checker.model.bll.RespostaBll;
 import checker.ifrs.edu.checker.view.activities.MainActivity;
+import checker.ifrs.edu.checker.vo.Avaliacao;
 import checker.ifrs.edu.checker.vo.Questao;
+import checker.ifrs.edu.checker.vo.RealmInt;
+import checker.ifrs.edu.checker.vo.Resposta;
+import io.realm.Realm;
+import io.realm.RealmList;
 
 public class QuestaoListAdapter extends BaseAdapter {
 
     private Context mContext;
     private List<Questao> mQuestaoList;
+    private Map<Integer, Integer> myMap;
 
     public QuestaoListAdapter(Context mContext, List<Questao> mQuestaoList) {
         this.mContext = mContext;
         this.mQuestaoList = mQuestaoList;
+
+        this.myMap = new HashMap<Integer, Integer>();
     }
 
     @Override
@@ -49,7 +63,6 @@ public class QuestaoListAdapter extends BaseAdapter {
         SharedPreferences sharedPrefs = mContext.getSharedPreferences(MainActivity.PREFS_NAME, Context.MODE_PRIVATE);
         final String avaliacaoTitulo = sharedPrefs.getString("avaliacaoTitulo", null);
 
-
         View v = View.inflate(mContext, R.layout.item_listview_questao, null); // set o layout de cada item
 
         TextView textViewNumeracao = (TextView) v.findViewById(R.id.textview_numeracao); //recupera objeto do layout
@@ -59,6 +72,18 @@ public class QuestaoListAdapter extends BaseAdapter {
         textViewPergunta.setText(mQuestaoList.get(position).getPergunta()); // set o text do textView
 
         RadioGroup radioGroup = (RadioGroup) v.findViewById(R.id.radiogroup_linha);
+
+        if( myMap.get(mQuestaoList.get(position).getId()) != null ){
+            radioGroup.check(myMap.get(mQuestaoList.get(position).getId()));
+        }
+//        if(listRespostasView.size() != 0){
+//            int result = listRespostasView.get(position);
+//            RadioButton rb = (RadioButton)radioGroup.getChildAt(result);
+//            if(rb != null){
+//                rb.setChecked(true);
+//            }
+//        }
+
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int checked) {
@@ -66,12 +91,39 @@ public class QuestaoListAdapter extends BaseAdapter {
 
                 boolean isChecked = checkedRadioButton.isChecked();
                 if (isChecked) {
-                    Log.i("MeuTeste", "Avaliacao: " + avaliacaoTitulo);
-                    Log.i("MeuTeste", "Questão: " + mQuestaoList.get(position).getId());
-                    Log.i("MeuTeste", "Resposta: " + checkedRadioButton.getText());
+
+                    AvaliacaoBll avaliacaoBll = new AvaliacaoBll();
+                    Avaliacao avaliacao = avaliacaoBll.getAvaliacao(avaliacaoTitulo);
+
+                    QuestaoBll questaoBll = new QuestaoBll();
+                    Questao questao = questaoBll.getQuestao(mQuestaoList.get(position).getId());
+
+                    RealmInt realmInt = new RealmInt();
+                    realmInt.setValor(checkedRadioButton.getText().toString());
+
+                    Log.i("MeuTeste", "checkRadioButton" + checkedRadioButton.getId());
+
+                    myMap.put(mQuestaoList.get(position).getId(), checkedRadioButton.getId());
+
+                    // verificar se a resposta ja está criada
+                    RespostaBll respostaBll = new RespostaBll();
+                    Resposta resposta = respostaBll.getResposta(avaliacao);
+
+                    if(resposta != null){
+                        resposta.setQuestoes(questao);
+                        resposta.setInts(realmInt);
+                    }else{
+                        resposta = new Resposta(avaliacao, questao, realmInt);
+                        respostaBll.addResposta(resposta);
+                    }
+
+                    Log.i("MeuTeste", "Avaliacao: " + resposta.getAvaliacao().getNome());
+                    Log.i("MeuTeste", "Questão: " + resposta.getQuestoes().size());
+                    Log.i("MeuTeste", "Resposta: " + resposta.getInts().size());
                 }
             }
         });
+
 
         return v;
     }
