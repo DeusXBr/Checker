@@ -1,6 +1,7 @@
 package checker.ifrs.edu.checker.view.adapter;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import checker.ifrs.edu.checker.R;
+import checker.ifrs.edu.checker.view.activities.MainActivity;
 import checker.ifrs.edu.checker.vo.Questao;
 
 public class QuestaoListAdapter extends BaseAdapter {
@@ -43,6 +45,11 @@ public class QuestaoListAdapter extends BaseAdapter {
     public View getView(final int position, View view, ViewGroup viewGroup) {
         //TODO arrumar layout -> item_listview_questao.xml, texto cortado
 
+        // pega os dados do sharedPreference
+        SharedPreferences sharedPrefs = mContext.getSharedPreferences(MainActivity.PREFS_NAME, Context.MODE_PRIVATE);
+        final String avaliacaoTitulo = sharedPrefs.getString("avaliacaoTitulo", null);
+
+
         View v = View.inflate(mContext, R.layout.item_listview_questao, null); // set o layout de cada item
 
         TextView textViewNumeracao = (TextView) v.findViewById(R.id.textview_numeracao); //recupera objeto do layout
@@ -59,7 +66,9 @@ public class QuestaoListAdapter extends BaseAdapter {
 
                 boolean isChecked = checkedRadioButton.isChecked();
                 if (isChecked) {
-                    Log.i("MeuTeste", "RadioButton foi checked");
+                    Log.i("MeuTeste", "Avaliacao: " + avaliacaoTitulo);
+                    Log.i("MeuTeste", "Questão: " + mQuestaoList.get(position).getId());
+                    Log.i("MeuTeste", "Resposta: " + checkedRadioButton.getText());
                 }
             }
         });
