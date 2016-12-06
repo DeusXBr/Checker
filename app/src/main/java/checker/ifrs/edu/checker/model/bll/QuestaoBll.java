@@ -5,6 +5,7 @@ import java.util.List;
 import checker.ifrs.edu.checker.model.dal.QuestaoDal;
 import checker.ifrs.edu.checker.utils.exception.InvalidStringException;
 import checker.ifrs.edu.checker.vo.Questao;
+import io.realm.RealmResults;
 
 import static checker.ifrs.edu.checker.utils.StringUtils.isNegativeOrZero;
 import static checker.ifrs.edu.checker.utils.StringUtils.isNullOrEmpty;
@@ -24,9 +25,9 @@ public class QuestaoBll {
     /**
      * Retorna todas as Questões de uma categoria
      *
-     * @return List - Lista de questoes
+     * @return RealmResult lista com os dados do realm
      */
-    public List<Questao> getAllQuestoesByCategoria(String nomeCategoria){
+    public RealmResults<Questao> getAllQuestoesByCategoria(String nomeCategoria){
         return this.mQuestaoDal.trazerQuestoes(nomeCategoria);
     }
 

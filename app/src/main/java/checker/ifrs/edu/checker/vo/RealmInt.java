@@ -1,19 +1,22 @@
 package checker.ifrs.edu.checker.vo;
 
-import io.realm.RealmObject;
-
-public class RealmInt extends RealmObject{
+public class RealmInt{
 
     private int valor;
 
+    /**
+     * Construtor
+     */
     public RealmInt(){
-
     }
 
     public RealmInt(int valor){
         this.valor = valor;
     }
 
+    /**
+     * Set
+     */
     public void setValor(int valor){
         this.valor = valor;
     }
@@ -22,10 +25,16 @@ public class RealmInt extends RealmObject{
         opcaoStringToInt(opcao);
     }
 
+    /**
+     * Get
+     */
     public int getValor(){
         return this.valor;
     }
 
+    /**
+     * Util
+     */
     private void opcaoStringToInt(String opcao){
         switch (opcao){
             case "Sim":

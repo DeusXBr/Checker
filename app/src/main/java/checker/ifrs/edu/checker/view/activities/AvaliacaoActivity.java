@@ -1,21 +1,21 @@
 package checker.ifrs.edu.checker.view.activities;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
-
-import java.util.List;
 
 import checker.ifrs.edu.checker.R;
 import checker.ifrs.edu.checker.model.bll.CategoriaBll;
 import checker.ifrs.edu.checker.view.adapter.CategoriaListAdapter;
 import checker.ifrs.edu.checker.vo.Categoria;
+import io.realm.RealmResults;
 
 public class AvaliacaoActivity extends AppCompatActivity {
 
@@ -34,7 +34,6 @@ public class AvaliacaoActivity extends AppCompatActivity {
         SharedPreferences sharedPrefs = getSharedPreferences(MainActivity.PREFS_NAME, MODE_PRIVATE);
         String avaliacaoTitulo = sharedPrefs.getString("avaliacaoTitulo", null);
 
-
         CategoriaBll mCategoriaBll = new CategoriaBll();
 
         if( avaliacaoTitulo != null ) { //verifica se tem dados no sharedPreferences
@@ -43,15 +42,32 @@ public class AvaliacaoActivity extends AppCompatActivity {
             initToolBar();
 
             this.listCategorias = (ListView) findViewById(R.id.listViewAvaliacao); // pega layout com o listView
-            List<Categoria> resultCategoria = mCategoriaBll.getAllCategorias(); // pega as categorias do realm
+            RealmResults<Categoria> resultCategoria = mCategoriaBll.getAllCategorias(); // pega as categorias do realm
 
             this.categoriaListAdapter = new CategoriaListAdapter(this, resultCategoria);
             this.listCategorias.setAdapter(categoriaListAdapter); // adiciona o adapter criado acima no listView
 
+            listCategorias.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                    Bundle bundle = new Bundle();
+                    bundle.putString(AvaliacaoActivity.KEY_EXTRA, categoriaListAdapter.getItem(position).getNome());
+
+                    Intent intent = new Intent(view.getContext(), QuestaoActivity.class);
+                    intent.putExtras(bundle);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    view.getContext().startActivity(intent);
+                }
+            });
+
         }else{
             throw new IllegalArgumentException("Activity extra não encontrada: " + MainActivity.KEY_EXTRA);
         }
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 
     /**

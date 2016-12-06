@@ -31,20 +31,9 @@ public class QuestaoDal {
         return questao;
     }
 
-    public List<Questao> trazerQuestoes(String nomeCategoria){
-        List<Questao> questaoList = new ArrayList<>();
-
-        RealmResults<Questao> results = this.mRealm.where(Questao.class)
-                                                    .equalTo("categoria.nome", nomeCategoria)
-                                                    .findAll();
-
-        if(results.size() != 0){
-            for (Questao result: results) {
-                questaoList.add(result);
-            }
-        }
-
-        return questaoList;
+    public RealmResults<Questao> trazerQuestoes(String nomeCategoria){
+         return this.mRealm.where(Questao.class).equalTo("categoria.nome", nomeCategoria)
+                                                .findAll();
     }
 
     private void resetDatabase(){

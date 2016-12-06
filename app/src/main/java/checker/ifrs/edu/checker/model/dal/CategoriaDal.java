@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import checker.ifrs.edu.checker.vo.Categoria;
+import checker.ifrs.edu.checker.vo.Questao;
 import io.realm.Realm;
 import io.realm.RealmResults;
 import io.realm.exceptions.RealmPrimaryKeyConstraintException;
@@ -61,19 +62,41 @@ public class CategoriaDal {
         return categoria;
     }
 
-    public List<Categoria> trazerCategorias(){
-        List<Categoria> categoriaArrayList = new ArrayList<>();
+    public RealmResults<Categoria> trazerCategorias(){
+        return this.mRealm.where(Categoria.class).findAll();
+    }
 
-        RealmResults<Categoria> results = this.mRealm.where(Categoria.class).findAll();
+
+    public List<Questao> trazerQuestoes(){
+        List<Questao> questaosArrayList = new ArrayList<>();
+
+        RealmResults<Questao> results = this.mRealm.where(Questao.class).findAll();
 
         if(results.size() != 0){
-            for (Categoria result: results) {
-                categoriaArrayList.add(result);
+            for (Questao result: results) {
+                questaosArrayList.add(result);
             }
         }
 
-        return categoriaArrayList;
+        return questaosArrayList;
     }
+
+    public List<Questao> trazerQuestoes(Categoria categoria){
+        List<Questao> questaosArrayList = new ArrayList<>();
+
+        RealmResults<Questao> results = this.mRealm.where(Questao.class).equalTo("categoria.id", categoria.getId())
+                                                                        .findAll();
+
+        if(results.size() != 0){
+            for (Questao result: results) {
+                questaosArrayList.add(result);
+            }
+        }
+
+        return questaosArrayList;
+    }
+
+
 
     private void resetDatabase(){
         if(mRealm != null && mRealm.isInTransaction()){

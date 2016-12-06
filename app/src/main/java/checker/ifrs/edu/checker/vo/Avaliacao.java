@@ -1,7 +1,11 @@
 package checker.ifrs.edu.checker.vo;
 
+import android.util.Log;
+
 import checker.ifrs.edu.checker.utils.ModelUtils;
 import checker.ifrs.edu.checker.utils.StringUtils;
+import io.realm.Realm;
+import io.realm.RealmList;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 import io.realm.annotations.Required;
@@ -12,23 +16,30 @@ public class Avaliacao extends RealmObject{
     private int id;
     @Required
     private String nome;
-    private String resultado; // tipo não definido
+    private String estado;
     private String dataCriacao;
     private String dataModificado;
+    private RealmList<Resposta> respostas;
 
+    /**
+     *  Construtor
+     */
     public Avaliacao() {
         setId();
         setDataCriacao();
     }
 
-    public Avaliacao(String nome, String resultado, String dataModificado) {
+    public Avaliacao(String nome, String estado, String dataModificado) {
         setId();
         this.nome = nome;
-        this.resultado = resultado;
+        this.estado = estado;
         setDataCriacao();
         this.dataModificado = dataModificado;
     }
 
+    /**
+     *  Set
+     */
     private void setId() {
         ModelUtils mModelUtils = new ModelUtils();
         this.id = mModelUtils.getProximaIndex(Avaliacao.class);
@@ -38,8 +49,8 @@ public class Avaliacao extends RealmObject{
         this.nome = nome;
     }
 
-    public void setResultado(String resultado) {
-        this.resultado = resultado;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
     private void setDataCriacao() {
@@ -50,6 +61,24 @@ public class Avaliacao extends RealmObject{
         this.dataModificado = dataModificado;
     }
 
+    public void setRespostas(RealmList<Resposta> respostas){
+        Realm realm = Realm.getDefaultInstance();
+        realm.beginTransaction();
+        this.respostas = respostas;
+        realm.commitTransaction();
+    }
+
+    public void setResposta(Resposta resposta){
+        Realm realm = Realm.getDefaultInstance();
+
+        realm.beginTransaction();
+        this.respostas.add(resposta);
+        realm.commitTransaction();
+    }
+
+    /**
+     * Get
+     */
     public int getId() {
         return id;
     }
@@ -58,8 +87,8 @@ public class Avaliacao extends RealmObject{
         return nome;
     }
 
-    public String getResultado() {
-        return resultado;
+    public String getEstado() {
+        return estado;
     }
 
     public String getDataCriacao() {
@@ -68,5 +97,9 @@ public class Avaliacao extends RealmObject{
 
     public String getDataModificado() {
         return dataModificado;
+    }
+
+    public RealmList<Resposta> getRespostas(){
+        return respostas;
     }
 }
