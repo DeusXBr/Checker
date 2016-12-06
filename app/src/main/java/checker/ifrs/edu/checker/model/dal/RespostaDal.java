@@ -47,6 +47,16 @@ public class RespostaDal {
         return resposta;
     }
 
+    public Resposta trazerRespostaByQuestaoId(int id){
+        Resposta resposta = null;
+
+        if(!isNegativeOrZero(id)){
+            resposta = this.mRealm.where(Resposta.class).equalTo("questao.id", id).findFirst();
+        }
+
+        return resposta;
+    }
+
     public Resposta trazerResposta(Avaliacao avaliacao){
         Resposta resposta = null;
 
@@ -55,5 +65,14 @@ public class RespostaDal {
         }
 
         return resposta;
+    }
+
+    public void removeFromRealm(int id){
+        Resposta resposta = null;
+        resposta = trazerResposta(id);
+        if(resposta != null)
+        {
+            resposta.deleteFromRealm();
+        }
     }
 }

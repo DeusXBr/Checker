@@ -26,7 +26,8 @@ public class RespostaBll {
      * @param resposta RealmObject
      */
     public void addResposta(Resposta resposta){
-        if (resposta == null){
+        if (resposta == null)
+        {
             throw new NullPointerException();
         }
 
@@ -76,6 +77,4 @@ public class RespostaBll {
 
         return resposta;
     }
-
-
 }

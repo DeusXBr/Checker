@@ -1,12 +1,12 @@
 package checker.ifrs.edu.checker.model.dal;
 
-import android.util.Log;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import checker.ifrs.edu.checker.vo.Avaliacao;
+import checker.ifrs.edu.checker.vo.Resposta;
 import io.realm.Realm;
+import io.realm.RealmList;
 import io.realm.RealmResults;
 import io.realm.exceptions.RealmPrimaryKeyConstraintException;
 
@@ -43,6 +43,34 @@ public class AvaliacaoDal {
         return SUCCESS_OPERATION;
     }
 
+    public void editRespostaFromAvaliacao(int avaliacaoId, Resposta resposta){
+        Avaliacao avaliacao = trazerAvaliacao(avaliacaoId);
+
+        if(avaliacao != null)
+        {
+            RealmList<Resposta> respostaList = avaliacao.getRespostas();
+            for (Resposta item : respostaList) {
+                if( item.getQuestao().getId() == resposta.getQuestao().getId() )
+                {
+                    this.mRealm.beginTransaction();
+                    item.setResposta(resposta.getResposta());
+                    this.mRealm.commitTransaction();
+                }
+            }
+        }
+
+    }
+
+    public Avaliacao trazerAvaliacao(int id){
+        Avaliacao avaliacao = null;
+
+        if(!isNegativeOrZero(id)){
+            avaliacao = this.mRealm.where(Avaliacao.class).equalTo("id", id).findFirst();
+        }
+
+        return avaliacao;
+    }
+
     public Avaliacao trazerAvaliacao(String nome){
         Avaliacao avaliacao = null;
 
@@ -66,6 +94,25 @@ public class AvaliacaoDal {
 
         return avaliacaoArrayList;
     }
+
+    public boolean hasResposta(int avaliacaoId, Resposta resposta){
+
+        Avaliacao avaliacao = trazerAvaliacao(avaliacaoId);
+
+        if(avaliacao != null)
+        {
+            RealmList<Resposta> respostaList = avaliacao.getRespostas();
+            for (Resposta item : respostaList) {
+                if( item.getQuestao().getId() == resposta.getQuestao().getId() )
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
 
     private void resetDatabase(){
         if(mRealm != null && mRealm.isInTransaction()){

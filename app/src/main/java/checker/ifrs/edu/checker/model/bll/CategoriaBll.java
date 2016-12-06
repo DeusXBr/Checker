@@ -5,6 +5,8 @@ import java.util.List;
 import checker.ifrs.edu.checker.model.dal.CategoriaDal;
 import checker.ifrs.edu.checker.utils.exception.InvalidStringException;
 import checker.ifrs.edu.checker.vo.Categoria;
+import checker.ifrs.edu.checker.vo.Questao;
+import io.realm.RealmResults;
 
 import static checker.ifrs.edu.checker.utils.StringUtils.isNegativeOrZero;
 import static checker.ifrs.edu.checker.utils.StringUtils.isNullOrEmpty;
@@ -83,8 +85,13 @@ public class CategoriaBll {
      *
      * @return List - Lista de categorias
      */
-    public List<Categoria> getAllCategorias(){
+    public RealmResults<Categoria> getAllCategorias(){
         return this.mCategoriaDal.trazerCategorias();
+    }
+
+
+    public List<Questao> getQuestoes(Categoria categoria){
+        return this.mCategoriaDal.trazerQuestoes(categoria);
     }
 
     public void limparBancoDados(){

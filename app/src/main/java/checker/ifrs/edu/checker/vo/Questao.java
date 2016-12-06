@@ -13,6 +13,9 @@ public class Questao extends RealmObject{
     private String feedbackParcial;
     private Categoria categoria;
 
+    /**
+     * Construtor
+     */
     public Questao(){};
 
     public Questao(int id, String pergunta, String feedbackCorreto, String feedbackErrado, String feedbackParcial, Categoria categoria) {
@@ -24,6 +27,9 @@ public class Questao extends RealmObject{
         this.categoria = categoria;
     }
 
+    /**
+     * Set
+     */
     public void setId(int id) {
         this.id = id;
     }
@@ -48,6 +54,9 @@ public class Questao extends RealmObject{
         this.categoria = categoria;
     }
 
+    /**
+     * Get
+     */
     public int getId() {
         return id;
     }

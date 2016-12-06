@@ -33,6 +33,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.close, menu);
@@ -46,6 +51,10 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * Callback
+     * @param view
+     */
     public void novaAvaliacao(View view) {
         LayoutInflater li = LayoutInflater.from(this);
         View promptsView = li.inflate(R.layout.dialog, null);
@@ -58,10 +67,10 @@ public class MainActivity extends AppCompatActivity {
         builder.setPositiveButton("criar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int id) {
+                titulo.setText(titulo.getText().toString().trim()); // retira espacos em branco do inicio e do fim
+
 
                 AvaliacaoBll mAvaliacaoBll = new AvaliacaoBll();
-
-                titulo.setText(titulo.getText().toString().trim()); // retira espacos em branco do inicio e do fim
 
                 // verifica se foi preenchido o titulo
                 if (titulo.getText().toString().length() > 0) {
@@ -74,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
                         // cria nova avaliacao
                         Avaliacao avaliacao = new Avaliacao();
                         avaliacao.setNome(titulo.getText().toString());
+                        avaliacao.setEstado("Novo");
 
                         mAvaliacaoBll.addAvaliacao(avaliacao); // adiciona no realm
 
@@ -98,11 +108,19 @@ public class MainActivity extends AppCompatActivity {
         alert.show();
     }
 
+    /**
+     * Callback
+     * @param view
+     */
     public void listarAvaliacoes(View view) {
         Intent intent = new Intent(MainActivity.this, ListaRelatorioActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * Callback
+     * @param view
+     */
     public void sobre(View view) {
         Intent intent = new Intent(MainActivity.this, SobreActivity.class);
         startActivity(intent);
