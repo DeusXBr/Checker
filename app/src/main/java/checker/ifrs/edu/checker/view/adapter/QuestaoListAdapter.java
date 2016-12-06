@@ -66,8 +66,8 @@ public class QuestaoListAdapter extends RealmBaseAdapter<Questao> implements Lis
 
         Questao questao = realmResults.get(position);
 
-        holder.numeracao.setText(String.valueOf((position+1)));
-        holder.pergunta.setText(questao.getPergunta());
+//        holder.numeracao.setText(String.valueOf((position+1)));
+        holder.pergunta.setText((position+1)+". "+questao.getPergunta());
         holder.radioGroup.setTag(position);
 
         //holder.radioGroup.clearCheck();
@@ -97,13 +97,13 @@ public class QuestaoListAdapter extends RealmBaseAdapter<Questao> implements Lis
     }
 
     private static class CustomViewHolder{
-        TextView numeracao = null;
+//        TextView numeracao = null;
         TextView pergunta = null;
         RadioGroup radioGroup;
         RadioButton radioButton1, radioButton2, radioButton3, radioButton4;
 
         CustomViewHolder(View view){
-            numeracao = (TextView) view.findViewById(R.id.textview_numeracao);
+//            numeracao = (TextView) view.findViewById(R.id.textview_numeracao);
             pergunta = (TextView) view.findViewById(R.id.textview_pergunta);
             radioGroup = (RadioGroup) view.findViewById(R.id.radiogroup_linha);
             radioButton1 = (RadioButton) view.findViewById(R.id.mRadio1);
