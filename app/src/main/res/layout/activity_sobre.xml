@@ -10,7 +10,16 @@
 
     <include layout="@layout/toolbar" />
 
-    <include layout="@layout/content_sobre" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include"
+        android:layout_marginTop="47dp"
+        android:layout_marginBottom="70dp">
+
+        <include layout="@layout/content_sobre" />
+
+    </ScrollView>
 
     <include layout="@layout/footer" />
 

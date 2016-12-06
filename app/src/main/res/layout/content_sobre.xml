@@ -18,7 +18,7 @@
         android:layout_height="100dp"
         android:id="@+id/imageView"
         android:src="@drawable/logo_checker"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="20dp"
         android:contentDescription="@string/footer_description_image"/>
 
     <TextView
@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:text="@string/sobre_texto"
         android:layout_below="@+id/imageView"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="10dp"/>
 
 </RelativeLayout>
