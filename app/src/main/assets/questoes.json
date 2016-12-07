@@ -2,9 +2,9 @@
 	{
 	    "id": 1,
 	    "pergunta": "Tem largura mínima de 120cm (circulação de uma pessoa em pé e outra em uma cadeira de rodas)?",
-	    "feedbackCorreto": "",
-	    "feedbackErrado": "",
-	    "feedbackParcial": "",
+	    "feedbackCorreto": "Parabéns, largura ideal para um cadeirante e seu acompanhante!",
+	    "feedbackErrado": "Essas calçadas tem pouca largura e não são acessíveis, elas devem ser mais largas.",
+	    "feedbackParcial": "O ideal seria padronizar a largura destas calçadas.",
 	    "categoria":{
           "id": 1,
           "nome": "Calçadas"
@@ -13,9 +13,9 @@
   	{
 	    "id": 2,
 	    "pergunta": "No caso de faixa gramada junto ao meio fio, a faixa pavimentada tem largura mínima de 150cm?",
-	    "feedbackCorreto": "",
-	    "feedbackErrado": "",
-	    "feedbackParcial": "",
+	    "feedbackCorreto": "Parabéns, largura ideal para um cadeirante e seu acompanhante andarem ao lada da área gramada!",
+	    "feedbackErrado": "Essa calçada ao lado da área gramada tem pouca largura e não são acessíveis, elas devem ser mais largas.",
+	    "feedbackParcial": "O ideal seria padronizar a largura destas calçadas.",
 	    "categoria":{
           "id": 1,
           "nome": "Calçadas"
@@ -24,9 +24,9 @@
   	{
 	    "id": 3,
 	    "pergunta": "O Revestimento no piso é antiderrapante?",
-	    "feedbackCorreto": "",
-	    "feedbackErrado": "",
-	    "feedbackParcial": "",
+	    "feedbackCorreto": "Muito bem, assim evita acidentes!",
+	    "feedbackErrado": "As pessoas podem escorregar e cair, mude para um piso antiderrapante.",
+	    "feedbackParcial": "Altere as áreas faltantes para antiderrapante evitando acidente e deixando o ambiente mais acessível.",
 	    "categoria":{
           "id": 1,
           "nome": "Calçadas"
@@ -36,8 +36,8 @@
 	    "id": 4,
 	    "pergunta": "O Revestimento do piso é contínuo, sem ressaltos ou depressões?",
 	    "feedbackCorreto": "",
-	    "feedbackErrado": "",
-	    "feedbackParcial": "",
+	    "feedbackErrado": "O piso não pode ter ressaltos ou depressões",
+	    "feedbackParcial": "Altere o piso para que não haja ressaltos ou depressões",
 	    "categoria":{
           "id": 1,
           "nome": "Calçadas"
@@ -47,8 +47,8 @@
 	    "id": 5,
 	    "pergunta": "O Revestimento no piso tem superfície regular, firme e estável, sem provocar trepidações?",
 	    "feedbackCorreto": "",
-	    "feedbackErrado": "",
-	    "feedbackParcial": "",
+	    "feedbackErrado": "Fixe o revestimento do piso para que todo ele fique firme e estável",
+	    "feedbackParcial": "Mesmo sendo um pequena parte do revestimento que apresenta problemas, conserte-o para melhorar a segurança de quem trasita ali",
 	    "categoria":{
           "id": 1,
           "nome": "Calçadas"
@@ -58,8 +58,8 @@
 	    "id": 6,
 	    "pergunta": "A Inclinação transversal do piso é de no máximo 3%?",
 	    "feedbackCorreto": "",
-	    "feedbackErrado": "",
-	    "feedbackParcial": "",
+	    "feedbackErrado": "Essa calçada é muito inclinada, alguém pode se machucar. Ela deve ser modificada respeitando o máximo de 3% de inclinação.",
+	    "feedbackParcial": "Ajuste a calçada para que toda ela tenha no máximo 3% de inclinação.",
 	    "categoria":{
           "id": 1,
           "nome": "Calçadas"
@@ -69,8 +69,8 @@
 	    "id": 7,
 	    "pergunta": "A calçada possui inclinação longitudinal de até 5%?",
 	    "feedbackCorreto": "",
-	    "feedbackErrado": "",
-	    "feedbackParcial": "",
+	    "feedbackErrado": "A calçada é muito inclinada e assim não é acessível, respeite os 5%.",
+	    "feedbackParcial": "Ao decorrer de toda calçada a inclinação máxima a ser respeitada é de 5%, ajuste as áreas que não ficam dentro do adequado.",
 	    "categoria":{
           "id": 1,
           "nome": "Calçadas"
