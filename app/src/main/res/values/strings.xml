@@ -27,11 +27,10 @@
     <string name="sobre_toolbar_title">Sobre</string>
 
     <!-- Itens activity_sobre -->
-    <string name="sobre_texto"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                \n Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                \n Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                \n Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                \n Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="sobre_texto"> Este aplicativo tem como objetivo facilitar a avaliação de acessibilidade física dos campo do IFRS, armazenando as avaliações realizadas, gerando um resultado de cada avaliação assim como um relatório provisório.
+                                \n\nO presente aplicativo é um projeto em desenvolvimento, iniciado na disciplina de Tópicos I e atualmente reformulado na disciplina de Desenvolvimento III do curso de ADS do IFRS-BG. Foi desenvolvido em Java no AndroidStudio  e utiliza Realm como banco de dados.
+                                \n\nPara mais informações contate os desenvolvedores: Fernando Soares (fernando.soares@bento.ifrs.edu.br) ou Lael Nervis (lael.nervis@ifrs.edu.br).
+    </string>
 
 
 
