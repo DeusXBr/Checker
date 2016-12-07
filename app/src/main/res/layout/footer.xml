@@ -4,34 +4,38 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/activity_vertical_margin"
-    android:layout_alignParentBottom="true">
+    android:layout_alignParentBottom="true"
+    >
 
     <ImageView
+        android:id="@+id/imageView5"
         android:layout_width="wrap_content"
         android:layout_height="16dp"
-        android:id="@+id/imageView5"
         android:layout_above="@+id/textView2"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/icon_accessibility_32"
         android:layout_marginBottom="5dp"
-        android:contentDescription="@string/footer_description_image"/>
+        android:src="@drawable/icon_accessibility_32"
+        android:contentDescription="@string/footer_description_image"
+        />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/footer_text_1"
         android:id="@+id/textView2"
-        android:layout_above="@+id/textView"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:text="@string/footer_text_1"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/footer_text_2"
+        />
+
+    <TextView
         android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:text="@string/footer_text_2"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        />
 
 </RelativeLayout>
