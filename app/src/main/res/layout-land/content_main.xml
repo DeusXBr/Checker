@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="56dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:src="@drawable/logo_checker"
+        android:contentDescription="@string/footer_description_image"
+        />
+
+    <Button
+        android:id="@+id/nova_avaliacao"
+        android:layout_width="260dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="56dp"
+        android:layout_gravity="center"
+        android:onClick="novaAvaliacao"
+        android:text="@string/main_button_1_title"
+        />
+
+    <Button
+        android:id="@+id/avaliacaoes_realizadas"
+        android:layout_width="260dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:onClick="listarAvaliacoes"
+        android:text="@string/main_button_2_title"
+        />
+
+    <Button
+        android:id="@+id/sobre"
+        android:layout_width="260dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:onClick="sobre"
+        android:text="@string/main_button_3_title"
+        />
+
+</LinearLayout>
