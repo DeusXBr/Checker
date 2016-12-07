@@ -11,8 +11,10 @@
 
     <include layout="@layout/toolbar" />
 
-    <include layout="@layout/content_listarelatorio" />
+    <include layout="@layout/content_listarelatorio"
+        />
 
-    <include layout="@layout/footer"/>
+    <include layout="@layout/footer"
+        />
 
 </RelativeLayout>
