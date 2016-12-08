@@ -1,9 +1,11 @@
 package checker.ifrs.edu.checker.view.activities;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -35,6 +37,7 @@ public class QuestaoActivity extends AppCompatActivity {
     private ListView listQuestao;
     private QuestaoListAdapter questaoListAdapter;
     private String nomeCategoria;
+    private AlertDialog alerta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,15 +85,6 @@ public class QuestaoActivity extends AppCompatActivity {
 
         int questoesRespondidas = myMap.size();
 
-        if(categoriaSize == questoesRespondidas)
-        {
-            Log.i("MeuTeste", "conluirEtapa: Parabens voce respondeu tudo");
-        }
-        else
-        {
-            Log.i("MeuTeste", "conluirEtapa2: Voce não respodeu tudo faltou: " + (categoriaSize - questoesRespondidas));
-        }
-
         QuestaoBll questaoBll = new QuestaoBll();
         RespostaBll respostaBll = new RespostaBll();
         RealmResults result = null;
@@ -116,8 +110,42 @@ public class QuestaoActivity extends AppCompatActivity {
 //            item.showDadosResposta();
 //        }
 
-        Intent intent = new Intent(QuestaoActivity.this, AvaliacaoActivity.class);
-        startActivity(intent);
+        if(categoriaSize == questoesRespondidas)
+        {
+            Log.i("MeuTeste", "conluirEtapa: Parabens voce respondeu tudo");
+
+            Intent intent = new Intent(QuestaoActivity.this, AvaliacaoActivity.class);
+            startActivity(intent);
+        }
+        else
+        {
+            Log.i("MeuTeste", "conluirEtapa2: Voce não respodeu tudo faltou: " + (categoriaSize - questoesRespondidas));
+
+            //Cria o gerador do AlertDialog
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            //define o titulo
+            builder.setTitle("Titulo");
+            //define a mensagem
+            builder.setMessage("Você não respondeu todas as perguntas deste item. Sair mesmo assim?");
+            //define um botão como positivo
+                builder.setPositiveButton("Sair", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int arg1) {
+                        //Usuário preferiu voltar pra listagem de itens
+                        Intent intent = new Intent(QuestaoActivity.this, AvaliacaoActivity.class);
+                        startActivity(intent);
+                    }
+                });
+                //define um botão como negativo.
+                builder.setNegativeButton("Continuar respondendo", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int arg1) {
+                        //Usuário cancelou a dialog
+                    }
+                });
+            //cria o AlertDialog
+            alerta = builder.create();
+            //Exibe
+            alerta.show();
+        }
 
     }
 
