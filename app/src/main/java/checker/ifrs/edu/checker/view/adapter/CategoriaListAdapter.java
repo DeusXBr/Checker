@@ -1,9 +1,11 @@
 package checker.ifrs.edu.checker.view.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ListAdapter;
 
 import checker.ifrs.edu.checker.R;
@@ -23,7 +25,7 @@ public class CategoriaListAdapter extends RealmBaseAdapter<Categoria> implements
 
     @Override
     public View getView(int position, View converterView, ViewGroup viewGroup) {
-        CustomViewHolder holder;
+        final CustomViewHolder holder;
 
         if(converterView == null)
         {
@@ -37,6 +39,8 @@ public class CategoriaListAdapter extends RealmBaseAdapter<Categoria> implements
         {
             holder = (CustomViewHolder) converterView.getTag();
         }
+
+        // TODO verificar se esta categoria tem todas as resposta respondidas
 
         Categoria categoria = realmResults.get(position);
         holder.checkBox.setText(categoria.getNome());

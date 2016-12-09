@@ -14,6 +14,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import checker.ifrs.edu.checker.R;
 import checker.ifrs.edu.checker.model.bll.AvaliacaoBll;
@@ -67,8 +68,19 @@ public class MainActivity extends AppCompatActivity {
         builder.setPositiveButton("criar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int id) {
-                titulo.setText(titulo.getText().toString().trim()); // retira espacos em branco do inicio e do fim
 
+            }
+
+        })
+            .setNegativeButton("Cancelar", null);
+
+        final AlertDialog alert = builder.create();
+        alert.show();
+
+        alert.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                titulo.setText(titulo.getText().toString().trim()); // retira espacos em branco do inicio e do fim
 
                 AvaliacaoBll mAvaliacaoBll = new AvaliacaoBll();
 
@@ -97,15 +109,17 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = new Intent(MainActivity.this, AvaliacaoActivity.class);
                         startActivity(intent);
                     }
+                    else
+                    {
+                        Toast.makeText(getApplicationContext(), "Título já existe.",Toast.LENGTH_SHORT).show();
+                    }
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(), "Título não pode ficar em branco.",Toast.LENGTH_SHORT).show();
                 }
             }
-
-        })
-            .setNegativeButton("Cancelar", null)
-            .setCancelable(false);
-
-        AlertDialog alert = builder.create();
-        alert.show();
+        });
     }
 
     /**

@@ -1,7 +1,5 @@
 package checker.ifrs.edu.checker.vo;
 
-import android.util.Log;
-
 import checker.ifrs.edu.checker.utils.ModelUtils;
 import checker.ifrs.edu.checker.utils.StringUtils;
 import io.realm.Realm;
@@ -17,6 +15,7 @@ public class Avaliacao extends RealmObject{
     @Required
     private String nome;
     private String estado;
+    private int nota;
     private String dataCriacao;
     private String dataModificado;
     private RealmList<Resposta> respostas;
@@ -51,6 +50,10 @@ public class Avaliacao extends RealmObject{
 
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    public void setNota(int nota){
+        this.nota = nota;
     }
 
     private void setDataCriacao() {
@@ -89,6 +92,10 @@ public class Avaliacao extends RealmObject{
 
     public String getEstado() {
         return estado;
+    }
+
+    public int getNota(){
+        return this.nota;
     }
 
     public String getDataCriacao() {

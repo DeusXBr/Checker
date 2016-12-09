@@ -65,8 +65,6 @@ public class QuestaoActivity extends AppCompatActivity {
      *
      *  Obs: onClick esta no activity_perguntas.xml -> content_questao.xml    */
     public void conluirEtapa(View view){
-        //TODO criar nova intent para finalizar etapa.
-
         SharedPreferences sharedPrefs = this.getSharedPreferences(MainActivity.PREFS_NAME, Context.MODE_PRIVATE);
         final String avaliacaoTitulo = sharedPrefs.getString("avaliacaoTitulo", null);
 
@@ -110,13 +108,8 @@ public class QuestaoActivity extends AppCompatActivity {
             }
         }
 
-//        RealmList<Resposta> respostaList = avaliacao.getRespostas();
-//        Log.i("MeuTeste", "Itens no array de resopsta: " + respostaList.size());
-//        for (Resposta item : respostaList) {
-//            item.showDadosResposta();
-//        }
-
         Intent intent = new Intent(QuestaoActivity.this, AvaliacaoActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
 
     }

@@ -51,6 +51,9 @@ public class QuestaoListAdapter extends RealmBaseAdapter<Questao> implements Lis
 
     @Override
     public View getView(final int position, View converterView, ViewGroup viewGroup) {
+
+        Log.i("MeuTeste", "Posicao: " + position);
+
         CustomViewHolder holder;
 
         if(converterView == null)
@@ -66,11 +69,8 @@ public class QuestaoListAdapter extends RealmBaseAdapter<Questao> implements Lis
 
         Questao questao = realmResults.get(position);
 
-//        holder.numeracao.setText(String.valueOf((position+1)));
         holder.pergunta.setText((position+1)+". "+questao.getPergunta());
         holder.radioGroup.setTag(position);
-
-        //holder.radioGroup.clearCheck();
 
         holder.radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override

@@ -6,15 +6,22 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import checker.ifrs.edu.checker.R;
+import checker.ifrs.edu.checker.model.bll.AvaliacaoBll;
 import checker.ifrs.edu.checker.model.bll.CategoriaBll;
+import checker.ifrs.edu.checker.utils.CalculaAvaliacaoUtils;
 import checker.ifrs.edu.checker.view.adapter.CategoriaListAdapter;
+import checker.ifrs.edu.checker.vo.Avaliacao;
 import checker.ifrs.edu.checker.vo.Categoria;
+import checker.ifrs.edu.checker.vo.Resposta;
+import io.realm.RealmList;
 import io.realm.RealmResults;
 
 public class AvaliacaoActivity extends AppCompatActivity {
@@ -76,7 +83,24 @@ public class AvaliacaoActivity extends AppCompatActivity {
      *  Obs: onClick esta no activity_avaliacao.xml -> content_avaliacao.xml
      */
     public void gerarRelatorio(View view){
-        //TODO criar nova intent, validar e calcular os resultado.
+        AvaliacaoBll avaliacaoBll = new AvaliacaoBll();
+        Avaliacao avaliacao = avaliacaoBll.getAvaliacao(this.titulo);
+
+        CalculaAvaliacaoUtils calculaAvaliacaoUtils = new CalculaAvaliacaoUtils(avaliacao.getRespostas());
+
+        try{
+            float nota = calculaAvaliacaoUtils.avaliar();
+            Log.i("MeuTeste", "Nota: " + nota);
+
+            // TODO salvar a nota no realm
+
+            Intent intent = new Intent(AvaliacaoActivity.this, ResultadoActivity.class);
+            startActivity(intent);
+
+        }catch (NullPointerException e){
+            Toast.makeText(getApplicationContext(), "Não tem nenhuma questão respondida! ",Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     /**
