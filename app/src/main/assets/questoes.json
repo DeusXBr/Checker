@@ -2,9 +2,9 @@
 	{
 	    "id": 1,
 	    "pergunta": "Tem largura mínima de 120cm (circulação de uma pessoa em pé e outra em uma cadeira de rodas)?",
-	    "feedbackCorreto": "",
-	    "feedbackErrado": "",
-	    "feedbackParcial": "",
+	    "feedbackCorreto": "Parabéns, largura ideal para um cadeirante e seu acompanhante!",
+	    "feedbackErrado": "Essas calçadas tem pouca largura e não são acessíveis, elas devem ser mais largas.",
+	    "feedbackParcial": "O ideal seria padronizar a largura destas calçadas.",
 	    "categoria":{
           "id": 1,
           "nome": "Calçadas"
@@ -13,9 +13,9 @@
   	{
 	    "id": 2,
 	    "pergunta": "No caso de faixa gramada junto ao meio fio, a faixa pavimentada tem largura mínima de 150cm?",
-	    "feedbackCorreto": "",
-	    "feedbackErrado": "",
-	    "feedbackParcial": "",
+	    "feedbackCorreto": "Parabéns, largura ideal para um cadeirante e seu acompanhante andarem ao lada da área gramada!",
+	    "feedbackErrado": "Essa calçada ao lado da área gramada tem pouca largura e não são acessíveis, elas devem ser mais largas.",
+	    "feedbackParcial": "O ideal seria padronizar a largura destas calçadas.",
 	    "categoria":{
           "id": 1,
           "nome": "Calçadas"
@@ -24,9 +24,9 @@
   	{
 	    "id": 3,
 	    "pergunta": "O Revestimento no piso é antiderrapante?",
-	    "feedbackCorreto": "",
-	    "feedbackErrado": "",
-	    "feedbackParcial": "",
+	    "feedbackCorreto": "Muito bem, assim evita acidentes!",
+	    "feedbackErrado": "As pessoas podem escorregar e cair, mude para um piso antiderrapante.",
+	    "feedbackParcial": "Altere as áreas faltantes para antiderrapante evitando acidente e deixando o ambiente mais acessível.",
 	    "categoria":{
           "id": 1,
           "nome": "Calçadas"
@@ -36,8 +36,8 @@
 	    "id": 4,
 	    "pergunta": "O Revestimento do piso é contínuo, sem ressaltos ou depressões?",
 	    "feedbackCorreto": "",
-	    "feedbackErrado": "",
-	    "feedbackParcial": "",
+	    "feedbackErrado": "O piso não pode ter ressaltos ou depressões",
+	    "feedbackParcial": "Altere o piso para que não haja ressaltos ou depressões",
 	    "categoria":{
           "id": 1,
           "nome": "Calçadas"
@@ -47,8 +47,8 @@
 	    "id": 5,
 	    "pergunta": "O Revestimento no piso tem superfície regular, firme e estável, sem provocar trepidações?",
 	    "feedbackCorreto": "",
-	    "feedbackErrado": "",
-	    "feedbackParcial": "",
+	    "feedbackErrado": "Fixe o revestimento do piso para que todo ele fique firme e estável",
+	    "feedbackParcial": "Mesmo sendo um pequena parte do revestimento que apresenta problemas, conserte-o para melhorar a segurança de quem trasita ali",
 	    "categoria":{
           "id": 1,
           "nome": "Calçadas"
@@ -58,8 +58,8 @@
 	    "id": 6,
 	    "pergunta": "A Inclinação transversal do piso é de no máximo 3%?",
 	    "feedbackCorreto": "",
-	    "feedbackErrado": "",
-	    "feedbackParcial": "",
+	    "feedbackErrado": "Essa calçada é muito inclinada, alguém pode se machucar. Ela deve ser modificada respeitando o máximo de 3% de inclinação.",
+	    "feedbackParcial": "Ajuste a calçada para que toda ela tenha no máximo 3% de inclinação.",
 	    "categoria":{
           "id": 1,
           "nome": "Calçadas"
@@ -67,10 +67,10 @@
   	},
   	{
 	    "id": 7,
-	    "pergunta": "A calçada possui inclinação longitudinal de até 5%?",
-	    "feedbackCorreto": "",
-	    "feedbackErrado": "",
-	    "feedbackParcial": "",
+        "pergunta": "A calçada é plana e sem inclinação contínua?",
+        "feedbackCorreto": "",
+        "feedbackErrado": "Fique atento com o grau de inclinação.",
+        "feedbackParcial": "Fique atento com o grau de inclinação",
 	    "categoria":{
           "id": 1,
           "nome": "Calçadas"
@@ -78,10 +78,10 @@
   	},
   	{
 	    "id": 8,
-	    "pergunta": "Se a calçada possui inclinação longitudinal maior que 5%, esta inclinação é menor que 12,5%?",
-	    "feedbackCorreto": "",
-	    "feedbackErrado": "",
-	    "feedbackParcial": "",
+      "pergunta": "A calçada possui inclinação longitudinal de até 5%?",
+      "feedbackCorreto": "",
+      "feedbackErrado": "A calçada é um pouco inclinada, respeite os 5%.",
+      "feedbackParcial": "Ao decorrer de toda calçada a inclinação máxima a ser respeitada é de 5%, ajuste as áreas que não ficam dentro do adequado.",
 	    "categoria":{
           "id": 1,
           "nome": "Calçadas"
@@ -89,10 +89,10 @@
   	},
   	{
 	    "id": 9,
-	    "pergunta": "A calçada tem inclinação contínua?",
+        "pergunta": "Se a calçada possui inclinação longitudinal maior que 5%, esta inclinação é menor que 12,5%?",
 	    "feedbackCorreto": "",
-	    "feedbackErrado": "",
-	    "feedbackParcial": "",
+	    "feedbackErrado": "Inclinação perigosa e inacessível.",
+	    "feedbackParcial": "Alguns pontos da calçada a inclinação é perigosa.",
 	    "categoria":{
           "id": 1,
           "nome": "Calçadas"
@@ -100,10 +100,10 @@
   	},
   	{
 	    "id": 10,
-	    "pergunta": "Se existirem degraus em qualquer das inclinações, assinale a opção não.",
+	    "pergunta": "As calçadas com inclinação estão livres de degraus?",
 	    "feedbackCorreto": "",
-	    "feedbackErrado": "",
-	    "feedbackParcial": "",
+	    "feedbackErrado": "Verificar a necessidade da existência destes degraus",
+	    "feedbackParcial": "Verificar a necessidade da existência destes degraus",
 	    "categoria":{
           "id": 1,
           "nome": "Calçadas"
@@ -113,8 +113,8 @@
 	    "id": 11,
 	    "pergunta": "Os degraus têm espelhos com altura máxima de 18cm e piso mínimo de 28cm?",
 	    "feedbackCorreto": "",
-	    "feedbackErrado": "",
-	    "feedbackParcial": "",
+	    "feedbackErrado": "Degraus inacessíveis pois são muito pequenos",
+	    "feedbackParcial": "Estes degraus dificuldam o acesso, procure aumentá-los",
 	    "categoria":{
           "id": 1,
           "nome": "Calçadas"
@@ -124,8 +124,8 @@
 	    "id": 12,
 	    "pergunta": "Se existirem obstáculos como caixas de coleta, lixeiras, telefones públicos e outros, estes obstáculos estão fora do espaço de passagem de pedestres?",
 	    "feedbackCorreto": "",
-	    "feedbackErrado": "",
-	    "feedbackParcial": "",
+	    "feedbackErrado": "É indicado que removam-se estes obstáculos para melhorar a acessibilidade",
+	    "feedbackParcial": "Certifique-se que estes obstáculos não intefiram na acessibilidade das pessoas",
 	    "categoria":{
           "id": 1,
           "nome": "Calçadas"
@@ -135,8 +135,8 @@
 	    "id": 13,
 	    "pergunta": "Obstáculos aéreos, como marquises, placas, toldos, e vegetação, estão localizados a uma altura superior a 210cm?",
 	    "feedbackCorreto": "",
-	    "feedbackErrado": "",
-	    "feedbackParcial": "",
+	    "feedbackErrado": "As pessoas podem se machucar, eleve estes obstáculos aéreos.",
+	    "feedbackParcial": "Certifique-se que todos os obstáculos estejam numa altura que não cause acidentes.",
 	    "categoria":{
           "id": 1,
           "nome": "Calçadas"
@@ -146,8 +146,8 @@
 	    "id": 14,
 	    "pergunta": "A acomodação do acesso de veículos é feita exclusivamente dentro do imóvel, de forma a não criar degraus ou desníveis abruptos na calçada?",
 	    "feedbackCorreto": "",
-	    "feedbackErrado": "",
-	    "feedbackParcial": "",
+	    "feedbackErrado": "Desníveis abruptos são inacessíveis, utilize rampas.",
+	    "feedbackParcial": "Desníveis abruptos são inacessíveis, utilize rampas.",
 	    "categoria":{
           "id": 1,
           "nome": "Calçadas"
@@ -157,8 +157,8 @@
 	    "id": 15,
 	    "pergunta": "No alinhamento entre a calçada e o lote particular, o portão de garagem ou portão de acesso à área privativa, abre para o interior do lote?",
 	    "feedbackCorreto": "",
-	    "feedbackErrado": "",
-	    "feedbackParcial": "",
+	    "feedbackErrado": "Os portões devem ser modificados para abrir para dentro",
+	    "feedbackParcial": "Os portões devem ser modificados para abrir para dentro",
 	    "categoria":{
           "id": 1,
           "nome": "Calçadas"
@@ -168,8 +168,8 @@
 	    "id": 16,
 	    "pergunta": "Junto ao portão da garagem ou ao portão de acesso à área privativa há sinalizador que emite luz e som para alertar os pedestres quando os carros entram e saem?",
 	    "feedbackCorreto": "",
-	    "feedbackErrado": "",
-	    "feedbackParcial": "",
+	    "feedbackErrado": "Recomenda-se o uso de alermes sonoros e visuais para alertar as pessoas sobre o acesso de veículos neste local",
+	    "feedbackParcial": "Recomenda-se o uso de alermes sonoros e visuais para alertar as pessoas sobre o acesso de veículos neste local",
 	    "categoria":{
           "id": 1,
           "nome": "Calçadas"
@@ -179,8 +179,8 @@
 	    "id": 17,
 	    "pergunta": "O semáforo, se existir, em frente à escola possui sinalizador sonoro?",
 	    "feedbackCorreto": "",
-	    "feedbackErrado": "",
-	    "feedbackParcial": "",
+	    "feedbackErrado": "Deve ser adaptado um sinal sonoro junto ao semáforo",
+	    "feedbackParcial": "Deve ser adaptado um sinal sonoro junto ao semáforo",
 	    "categoria":{
           "id": 1,
           "nome": "Calçadas"
@@ -190,8 +190,8 @@
 	    "id": 18,
 	    "pergunta": "O semáforo, se existir, em frente à escola possui uma luz com cronômetro de abertura de sinal?",
 	    "feedbackCorreto": "",
-	    "feedbackErrado": "",
-	    "feedbackParcial": "",
+	    "feedbackErrado": "Deve ser adaptado um sinal visual junto ao semáforo",
+        "feedbackErrado": "Deve ser adaptado um sinal visual junto ao semáforo",
 	    "categoria":{
           "id": 1,
           "nome": "Calçadas"
