@@ -105,6 +105,8 @@ public class MainActivity extends AppCompatActivity {
                         editor.putString("avaliacaoTitulo", avaliacao.getNome());
                         editor.apply();
 
+                        alert.dismiss();
+
                         // Intent para nova activity
                         Intent intent = new Intent(MainActivity.this, AvaliacaoActivity.class);
                         startActivity(intent);
