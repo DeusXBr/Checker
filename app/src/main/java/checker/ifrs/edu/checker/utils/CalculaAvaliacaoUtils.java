@@ -1,5 +1,7 @@
 package checker.ifrs.edu.checker.utils;
 
+import android.util.Log;
+
 import checker.ifrs.edu.checker.vo.Resposta;
 import io.realm.RealmList;
 
@@ -7,6 +9,7 @@ public class CalculaAvaliacaoUtils {
 
     private RealmList<Resposta> listRespostas;
     private float nota;
+    private String status;
     private int respostasRespondidas;
 
     public CalculaAvaliacaoUtils(){}
@@ -14,8 +17,9 @@ public class CalculaAvaliacaoUtils {
     public CalculaAvaliacaoUtils(RealmList<Resposta> listRespostas){
         this.listRespostas = listRespostas;
 
+        this.status = "Novo";
         this.nota = 0;
-        this.respostasRespondidas = 0;
+        this.respostasRespondidas = listRespostas.size();
     }
 
     public float avaliar() throws NullPointerException{
@@ -43,24 +47,50 @@ public class CalculaAvaliacaoUtils {
                 }
             }
 
+            // verifica qual status ficou
+            setStatus();
+
             return nota;
         }
+    }
 
+    public void setStatus(){
+        float porcentagem = (100*this.nota)/this.respostasRespondidas;
+
+        if( porcentagem < 50 )
+        {
+            this.status = "Ruim";
+        }
+        else
+        {
+            if(porcentagem == 50 || porcentagem < 70)
+            {
+                this.status = "Regular";
+            }
+            else
+            {
+                this.status = "Bom";
+            }
+        }
     }
 
     private void setNota(float nota){
         this.nota = nota;
     }
 
-    private int getTotalRespostas(){
+    public String getStatus(){
+        return this.status;
+    }
+
+    public int getTotalRespostas(){
         return listRespostas.size();
     }
 
-    private int getTotalRespondidas(){
+    public int getTotalRespondidas(){
         return this.respostasRespondidas;
     }
 
-    private float getNota(){
+    public float getNota(){
         return this.nota;
     }
 

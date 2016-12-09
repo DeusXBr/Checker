@@ -21,6 +21,7 @@ import checker.ifrs.edu.checker.view.adapter.CategoriaListAdapter;
 import checker.ifrs.edu.checker.vo.Avaliacao;
 import checker.ifrs.edu.checker.vo.Categoria;
 import checker.ifrs.edu.checker.vo.Resposta;
+import io.realm.Realm;
 import io.realm.RealmList;
 import io.realm.RealmResults;
 
@@ -90,9 +91,12 @@ public class AvaliacaoActivity extends AppCompatActivity {
 
         try{
             float nota = calculaAvaliacaoUtils.avaliar();
-            Log.i("MeuTeste", "Nota: " + nota);
+            String status = calculaAvaliacaoUtils.getStatus();
 
-            // TODO salvar a nota no realm
+            Realm.getDefaultInstance().beginTransaction();
+            avaliacao.setEstado(status);
+            avaliacao.setNota(nota);
+            Realm.getDefaultInstance().commitTransaction();
 
             Intent intent = new Intent(AvaliacaoActivity.this, ResultadoActivity.class);
             startActivity(intent);
