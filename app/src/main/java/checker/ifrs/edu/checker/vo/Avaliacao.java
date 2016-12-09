@@ -15,7 +15,7 @@ public class Avaliacao extends RealmObject{
     @Required
     private String nome;
     private String estado;
-    private int nota;
+    private float nota;
     private String dataCriacao;
     private String dataModificado;
     private RealmList<Resposta> respostas;
@@ -32,6 +32,7 @@ public class Avaliacao extends RealmObject{
         setId();
         this.nome = nome;
         this.estado = estado;
+        this.nota = 0;
         setDataCriacao();
         this.dataModificado = dataModificado;
     }
@@ -52,7 +53,7 @@ public class Avaliacao extends RealmObject{
         this.estado = estado;
     }
 
-    public void setNota(int nota){
+    public void setNota(float nota){
         this.nota = nota;
     }
 
@@ -94,7 +95,7 @@ public class Avaliacao extends RealmObject{
         return estado;
     }
 
-    public int getNota(){
+    public float getNota(){
         return this.nota;
     }
 

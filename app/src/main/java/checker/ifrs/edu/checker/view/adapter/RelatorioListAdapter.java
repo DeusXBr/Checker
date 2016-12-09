@@ -47,6 +47,9 @@ public class RelatorioListAdapter extends BaseAdapter {
         TextView textViewDataCriacao = (TextView) v.findViewById(R.id.data); //recupera objeto do layout
         textViewDataCriacao.setText(mAvaliacaoList.get(position).getDataCriacao()); // set o text do textView
 
+        TextView textViewStatus = (TextView) v.findViewById(R.id.status); //recupera objeto do layout
+        textViewStatus.setText(mAvaliacaoList.get(position).getEstado()); // set o text do textView
+
         return v;
     }
 }
