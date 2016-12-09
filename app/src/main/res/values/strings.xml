@@ -9,7 +9,6 @@
     <string name="location">CTA - IFRS</string>
 
 
-
     <!-- Itens do toolbar da activity_main -->
     <string name="main_toolbar_title">Checker</string>
     <string name="main_toolbar_item_menu1">Sair</string>
@@ -20,7 +19,6 @@
     <string name="main_button_3_title">Sobre</string>
     <string name="main_dialog_title">Entre com o título da nova avaliação.</string>
     <string name="main_dialog_edittext_hint">Título</string>
-
 
 
     <!-- Itens do toolbar da activity_sobre -->
@@ -34,13 +32,11 @@
                                 \n Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
 
 
-
     <!-- Itens do toolbar da activity_avalicao -->
     <string name="avaliacao_toolbar_title">Avaliação</string>
 
     <!-- Itens activity_avalicao -->
     <string name="avaliacao_button_text">Resultado</string>
-
 
 
     <!-- Itens do toolbar da activity_questao -->
@@ -56,10 +52,17 @@
     <string name="questao_radiobutton_4">Não se aplica</string>
 
 
-
     <!-- Itens do toolbar da activity_listarelatorio -->
     <string name="listarelatorio_toolbar_title">Lista de Relatórios</string>
 
+
+    <!-- Itens activity_resultado -->
+    <string name="resultado_button_1_title">Editar</string>
+    <string name="resultado_button_2_title">Avaliar Novamente</string>
+    <string name="resultado_button_3_title">Compartilhar</string>
+
+    <!-- Itens do toolbar da activity_resultado -->
+    <string name="resultado_toolbar_title">Resultado</string>
 
 
     <!-- Itens footer -->

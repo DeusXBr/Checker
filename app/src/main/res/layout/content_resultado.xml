@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="64dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="70dp"
+        android:clickable="true"
+        android:onClick="verRelatorio"
+        android:contentDescription="@string/footer_description_image"
+        />
+
+    <Button
+        android:id="@+id/resultado_button_1_id"
+        android:layout_width="260dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/imageView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="editarAvaliacao"
+        android:text="@string/resultado_button_1_title"
+        />
+
+    <Button
+        android:id="@+id/resultado_button_2_id"
+        android:layout_width="260dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/resultado_button_1_id"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="avaliarNovamente"
+        android:text="@string/resultado_button_2_title"
+        />
+
+    <Button
+        android:id="@+id/resultado_button_3_id"
+        android:layout_width="260dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/resultado_button_2_id"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="compartilhar"
+        android:text="@string/resultado_button_2_title"
+        />
+
+</RelativeLayout>
