@@ -17,6 +17,7 @@
         android:layout_weight="1"
         android:dividerHeight="0dip"
         android:paddingTop="15dp"
+        android:longClickable="true"
         />
 
 </LinearLayout>
