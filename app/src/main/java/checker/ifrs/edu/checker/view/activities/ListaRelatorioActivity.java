@@ -1,10 +1,14 @@
 package checker.ifrs.edu.checker.view.activities;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.List;
@@ -18,6 +22,7 @@ public class ListaRelatorioActivity extends AppCompatActivity {
 
     private ListView listRelatorios;
     private RelatorioListAdapter relatorioListAdapter;
+    public static final String PREFS_NAME = "Preferences";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +39,22 @@ public class ListaRelatorioActivity extends AppCompatActivity {
 
         this.relatorioListAdapter = new RelatorioListAdapter(this, resultAvaliacao);
         this.listRelatorios.setAdapter(relatorioListAdapter); // adiciona o adapter criado acima no listView
+
+        listRelatorios.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+
+                // titulo da avaliacao salva no sharedPreferences
+                SharedPreferences.Editor editor = getSharedPreferences(PREFS_NAME, MODE_PRIVATE).edit();
+                Avaliacao avaliacao = (Avaliacao)relatorioListAdapter.getItem(position);
+                editor.putInt("avaliacaoId", avaliacao.getId());
+                editor.putString("avaliacaoTitulo", avaliacao.getNome());
+                editor.apply();
+
+                Intent intent = new Intent(ListaRelatorioActivity.this, ResultadoActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     /**

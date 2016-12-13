@@ -63,6 +63,8 @@ public class ResultadoActivity extends AppCompatActivity {
      */
     public void editarAvaliacao(View view) {
         Log.i("MeuTeste", "Click no editar");
+        Intent intent = new Intent(ResultadoActivity.this, AvaliacaoActivity.class);
+        startActivity(intent);
     }
 
     /**
