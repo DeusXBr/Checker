@@ -10,12 +10,16 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="40dp"
         android:clickable="true"
+        android:src="@drawable/bom"
         android:onClick="verRelatorio"
         android:contentDescription="@string/footer_description_image"
-        />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_height="200dp" />
 
     <Button
         android:id="@+id/resultado_button_1_id"
@@ -26,7 +30,7 @@
         android:layout_centerHorizontal="true"
         android:onClick="editarAvaliacao"
         android:text="@string/resultado_button_1_title"
-        />
+        android:layout_marginTop="30dp" />
 
     <Button
         android:id="@+id/resultado_button_2_id"
@@ -47,7 +51,7 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:onClick="compartilhar"
-        android:text="@string/resultado_button_2_title"
+        android:text="@string/resultado_button_3_title"
         />
 
 </RelativeLayout>

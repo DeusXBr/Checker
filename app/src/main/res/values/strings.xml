@@ -59,6 +59,9 @@
     <string name="resultado_button_1_title">Editar</string>
     <string name="resultado_button_2_title">Avaliar Novamente</string>
     <string name="resultado_button_3_title">Compartilhar</string>
+    <string name="resultado_bom">Bom</string>
+    <string name="resultado_regular">Regular</string>
+    <string name="resultado_ruim">Ruim</string>
 
     <!-- Itens do toolbar da activity_resultado -->
     <string name="resultado_toolbar_title">Resultado</string>
