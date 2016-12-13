@@ -87,4 +87,8 @@ public class AvaliacaoBll {
         mAvaliacaoDal.clearDatabase();
     }
 
+    public void removeAvaliacao(Avaliacao avaliacao){
+        this.mAvaliacaoDal.remove(avaliacao);
+    }
+
 }

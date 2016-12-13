@@ -128,4 +128,12 @@ public class AvaliacaoDal {
         mRealm.commitTransaction();
     }
 
+    public void remove(Avaliacao avaliacao){
+        if(avaliacao != null){
+            this.mRealm.beginTransaction();
+            avaliacao.deleteFromRealm();
+            this.mRealm.commitTransaction();
+        }
+    }
+
 }

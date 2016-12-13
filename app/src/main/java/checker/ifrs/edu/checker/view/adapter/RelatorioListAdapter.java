@@ -37,6 +37,12 @@ public class RelatorioListAdapter extends BaseAdapter {
         return position;
     }
 
+    public void updateList(List<Avaliacao> mAvaliacaoList){
+        this.mAvaliacaoList.clear();
+        this.mAvaliacaoList.addAll(mAvaliacaoList);
+        notifyDataSetChanged();
+    }
+
     @Override
     public View getView(int position, View view, ViewGroup viewGroup) {
         View v = view.inflate(mContext, R.layout.item_listview_listarelatorio, null); // set o layout de cada item

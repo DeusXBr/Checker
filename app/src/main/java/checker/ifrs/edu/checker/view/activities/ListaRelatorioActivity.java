@@ -9,7 +9,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -31,7 +33,7 @@ public class ListaRelatorioActivity extends AppCompatActivity {
 
         initToolBar();
 
-        AvaliacaoBll mAvaliacaoBll = new AvaliacaoBll();
+        final AvaliacaoBll mAvaliacaoBll = new AvaliacaoBll();
 
         this.listRelatorios = (ListView) findViewById(R.id.listViewlrelatorios); // pega layout com o listView
 
@@ -53,6 +55,19 @@ public class ListaRelatorioActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(ListaRelatorioActivity.this, ResultadoActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        listRelatorios.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long l) {
+
+                Avaliacao avaliacao = (Avaliacao)relatorioListAdapter.getItem(position);
+                mAvaliacaoBll.removeAvaliacao(avaliacao);
+
+                relatorioListAdapter.updateList(mAvaliacaoBll.getAllAvaliacoes());
+
+                return true;
             }
         });
     }
