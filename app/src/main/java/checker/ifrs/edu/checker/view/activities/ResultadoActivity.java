@@ -80,7 +80,18 @@ public class ResultadoActivity extends AppCompatActivity {
      * @param view
      */
     public void compartilhar(View view) {
-        Log.i("MeuTeste", "Click no compartilhar");
+        SharedPreferences sharedPrefs = this.getSharedPreferences(MainActivity.PREFS_NAME, Context.MODE_PRIVATE);
+        final String avaliacaoTitulo = sharedPrefs.getString("avaliacaoTitulo", null);
+
+        AvaliacaoBll avaliacaoBll = new AvaliacaoBll();
+        Avaliacao avaliacao = avaliacaoBll.getAvaliacao(avaliacaoTitulo);
+
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, "Avaliei a acessibilidade física de um lugar chamado "+avaliacao.getNome()+" e o resultado foi "+avaliacao.getEstado()+"! Use o Checker você também =D");
+        sendIntent.setType("text/plain");
+        Intent.createChooser(sendIntent,"Share via");
+        startActivity(sendIntent);
     }
 
 
