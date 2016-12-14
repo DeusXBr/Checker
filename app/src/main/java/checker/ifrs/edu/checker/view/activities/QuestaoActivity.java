@@ -80,6 +80,11 @@ public class QuestaoActivity extends AppCompatActivity {
 
         int questoesRespondidas = myMap.size();
 
+        if(questoesRespondidas > 0 && avaliacao.getEstado().equals("Novo"))
+        {
+            avaliacao.setEstadoDirect("Iniciado");
+        }
+
         if(categoriaSize == questoesRespondidas)
         {
             Log.i("MeuTeste", "conluirEtapa: Parabens voce respondeu tudo");
