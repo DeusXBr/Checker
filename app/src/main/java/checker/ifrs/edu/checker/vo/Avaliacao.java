@@ -5,6 +5,7 @@ import checker.ifrs.edu.checker.utils.StringUtils;
 import io.realm.Realm;
 import io.realm.RealmList;
 import io.realm.RealmObject;
+import io.realm.annotations.Ignore;
 import io.realm.annotations.PrimaryKey;
 import io.realm.annotations.Required;
 
@@ -20,12 +21,16 @@ public class Avaliacao extends RealmObject{
     private String dataModificado;
     private RealmList<Resposta> respostas;
 
+    @Ignore
+    private Realm mRealm;
+
     /**
      *  Construtor
      */
     public Avaliacao() {
         setId();
         setDataCriacao();
+        this.mRealm = Realm.getDefaultInstance();
     }
 
     public Avaliacao(String nome, String estado, String dataModificado) {
@@ -35,6 +40,7 @@ public class Avaliacao extends RealmObject{
         this.nota = 0;
         setDataCriacao();
         this.dataModificado = dataModificado;
+        this.mRealm = Realm.getDefaultInstance();
     }
 
     /**
@@ -53,6 +59,12 @@ public class Avaliacao extends RealmObject{
         this.estado = estado;
     }
 
+    public void setEstadoDirect(String estado) {
+        this.mRealm.beginTransaction();
+        this.estado = estado;
+        this.mRealm.commitTransaction();
+    }
+
     public void setNota(float nota){
         this.nota = nota;
     }
@@ -66,18 +78,15 @@ public class Avaliacao extends RealmObject{
     }
 
     public void setRespostas(RealmList<Resposta> respostas){
-        Realm realm = Realm.getDefaultInstance();
-        realm.beginTransaction();
+        this.mRealm.beginTransaction();
         this.respostas = respostas;
-        realm.commitTransaction();
+        this.mRealm.commitTransaction();
     }
 
     public void setResposta(Resposta resposta){
-        Realm realm = Realm.getDefaultInstance();
-
-        realm.beginTransaction();
+        this.mRealm.beginTransaction();
         this.respostas.add(resposta);
-        realm.commitTransaction();
+        this.mRealm.commitTransaction();
     }
 
     /**
