@@ -4,21 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
 
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context="checker.ifrs.edu.checker.view.activities.SobreActivity">
 
-    <include layout="@layout/toolbar"
-        android:id="@+id/sobre_include"/>
+    <include
+        android:id="@+id/sobre_include"
+        layout="@layout/toolbar"
+        />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/sobre_include">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/sobre_include"
+        >
 
-        <include layout="@layout/content_sobre" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/content_sobre" />
+
+            <include layout="@layout/footer" />
+
+        </LinearLayout>
 
     </ScrollView>
-
-    <include layout="@layout/footer" />
 
 </RelativeLayout>

@@ -9,10 +9,26 @@
     tools:context="checker.ifrs.edu.checker.view.activities.ResultadoActivity"
     >
 
-    <include layout="@layout/toolbar" />
+    <include
+        android:id="@+id/layout.activityresultado.toolbar"
+        layout="@layout/toolbar"
+        />
 
-    <include layout="@layout/content_resultado"/>
+    <include
+        android:id="@+id/layout.activityresultado.content_resultado"
+        layout="@layout/content_resultado"
+        />
 
-    <include layout="@layout/footer" />
+    <RelativeLayout
+        android:id="@+id/rl_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <include
+            android:id="@+id/layout.activityresultado.footer"
+            layout="@layout/footer"
+            />
+    </RelativeLayout>
 
 </RelativeLayout>

@@ -4,6 +4,7 @@ import checker.ifrs.edu.checker.model.dal.RespostaDal;
 import checker.ifrs.edu.checker.utils.exception.InvalidStringException;
 import checker.ifrs.edu.checker.vo.Avaliacao;
 import checker.ifrs.edu.checker.vo.Resposta;
+import io.realm.RealmResults;
 
 import static checker.ifrs.edu.checker.utils.StringUtils.isNegativeOrZero;
 import static checker.ifrs.edu.checker.utils.StringUtils.isNullOrEmpty;

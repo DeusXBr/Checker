@@ -25,10 +25,24 @@
     <string name="sobre_toolbar_title">Sobre</string>
 
     <!-- Itens activity_sobre -->
-    <string name="sobre_texto"> Este aplicativo tem como objetivo facilitar a avaliação de acessibilidade física dos campo do IFRS, armazenando as avaliações realizadas, gerando um resultado de cada avaliação assim como um relatório provisório.
-                                \n\nO presente aplicativo é um projeto em desenvolvimento, iniciado na disciplina de Tópicos I e atualmente reformulado na disciplina de Desenvolvimento III do curso de ADS do IFRS-BG. Foi desenvolvido em Java no AndroidStudio  e utiliza Realm como banco de dados.
-                                \n\nPara mais informações contate os desenvolvedores: Fernando Soares (fernando.soares@bento.ifrs.edu.br) ou Lael Nervis (lael.nervis@ifrs.edu.br).
+    <string name="sobre_texto">
+        Este aplicativo tem, como objetivo, facilitar a avaliação de acessibilidade física dos ambientes, mais especificamente, os estabelecimentos comerciais do município de Garibaldi - RS.
+         \n\nO aplicativo se propõe a armazenar as avaliações realizadas, gerando um resultado de cada avaliação, bem como um relatório provisório.
+         \n\nO presente projeto faz parte dos estudos do trabalho de conclusão do curso de Tecnologia em Analise e Desenvolvimento de Sistemas do IFRS/BG.
+         \n\nFoi desenvolvido em Java no AndroidStudio  e utiliza Realm como banco de dados.
+         \n\nPara mais informações, entre em contato com Fernando Sebenello Soares:
+         \nTelefone: (54)999360382
+         \nE-mail: sebenello@gmail.com
     </string>
+
+    <!--Este aplicativo tem como objetivo facilitar a avaliação de acessibilidade física dos campo do IFRS, armazenando as avaliações realizadas, gerando um resultado de cada avaliação assim como um relatório provisório.-->
+    <!--\n\nO presente aplicativo é um projeto em desenvolvimento, iniciado na disciplina de Tópicos I e atualmente reformulado na disciplina de Desenvolvimento III do curso de ADS do IFRS-BG. Foi desenvolvido em Java no AndroidStudio  e utiliza Realm como banco de dados.-->
+    <!--\n\nPara mais informações contate os desenvolvedores: Fernando Soares (fernando.soares@bento.ifrs.edu.br) ou Lael Nervis (lael.nervis@ifrs.edu.br).-->
+
+    <!-- Este aplicativo tem, como objetivo, facilitar a avaliação de acessibilidade física dos ambientes, mais especificamente, os estabelecimentos comerciais do município de Garibaldi - RS.
+         \n O aplicativo se propoe a armazenar as avaliações realizadas, gerando um resultado de cada avaliação, bem como um relatório provisório.
+         \n O presente projeto faz parte dos estudos do trabalho de conclusão do curso de Tecnologia em Analise e Desenvolvimento de Sistemas do IFRS/BG.
+         \n Foi desenvolvido em Java no AndroidStudio  e utiliza Realm como banco de dados.-->
 
 
     <!-- Itens do toolbar da activity_avalicao -->
@@ -68,8 +82,8 @@
 
 
     <!-- Itens footer -->
-    <string name="footer_text_1">Checker &#8211; v2.0 &#8211; 2016</string>
-    <string name="footer_text_2">CTA - IFRS | Fernando Soares | Lael Nervis</string>
+    <string name="footer_text_1">Checker &#8211; v1.0 Beta &#8211; 2017</string>
+    <string name="footer_text_2">IFRS | Fernando Sebenello Soares</string>
     <string name="footer_description_image">Logo do app</string>
 
 </resources>

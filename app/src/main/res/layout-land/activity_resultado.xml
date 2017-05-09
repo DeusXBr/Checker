@@ -3,21 +3,21 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
 
-    android:id="@+id/land.activitysobre"
+    android:id="@+id/land.activityresultado"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="checker.ifrs.edu.checker.view.activities.SobreActivity"
+    tools:context="checker.ifrs.edu.checker.view.activities.ResultadoActivity"
     >
 
     <include
-        android:id="@+id/land.activitysobre.toolbar"
+        android:id="@+id/land.activityresultado.toolbar"
         layout="@layout/toolbar"
         />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/land.activitysobre.toolbar"
+        android:layout_below="@+id/land.activityresultado.toolbar"
         >
 
         <LinearLayout
@@ -27,10 +27,15 @@
             android:weightSum="1"
             >
 
-            <include layout="@layout/content_sobre" />
+            <include
+                android:id="@+id/land.activityresultado.contentresultado"
+                layout="@layout/content_resultado"
+                />
 
-            <include layout="@layout/footer" />
-
+            <include
+                android:id="@+id/land.activityresultado.footer"
+                layout="@layout/footer"
+                />
         </LinearLayout>
 
     </ScrollView>

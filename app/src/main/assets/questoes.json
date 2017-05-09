@@ -191,7 +191,7 @@
 	    "pergunta": "O semáforo, se existir, em frente à escola possui uma luz com cronômetro de abertura de sinal?",
 	    "feedbackCorreto": "",
 	    "feedbackErrado": "Deve ser adaptado um sinal visual junto ao semáforo",
-        "feedbackErrado": "Deve ser adaptado um sinal visual junto ao semáforo",
+        "feedbackParcial": "Deve ser adaptado um sinal visual junto ao semáforo",
 	    "categoria":{
           "id": 1,
           "nome": "Calçadas"

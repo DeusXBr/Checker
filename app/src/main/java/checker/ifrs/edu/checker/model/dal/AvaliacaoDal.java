@@ -1,9 +1,12 @@
 package checker.ifrs.edu.checker.model.dal;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import checker.ifrs.edu.checker.vo.Avaliacao;
+import checker.ifrs.edu.checker.vo.Categoria;
 import checker.ifrs.edu.checker.vo.Resposta;
 import io.realm.Realm;
 import io.realm.RealmList;
@@ -63,7 +66,6 @@ public class AvaliacaoDal {
 
     public Avaliacao trazerAvaliacao(int id){
         Avaliacao avaliacao = null;
-
         if(!isNegativeOrZero(id)){
             avaliacao = this.mRealm.where(Avaliacao.class).equalTo("id", id).findFirst();
         }
@@ -73,7 +75,6 @@ public class AvaliacaoDal {
 
     public Avaliacao trazerAvaliacao(String nome){
         Avaliacao avaliacao = null;
-
         if(!isNullOrEmpty(nome)){
             avaliacao = this.mRealm.where(Avaliacao.class).equalTo("nome", nome).findFirst();
         }
@@ -83,7 +84,6 @@ public class AvaliacaoDal {
 
     public List<Avaliacao> trazerAvaliacoes(){
         ArrayList<Avaliacao> avaliacaoArrayList = new ArrayList<>();
-
         RealmResults<Avaliacao> results = this.mRealm.where(Avaliacao.class).findAll();
 
         if(results.size() != 0){
@@ -96,9 +96,7 @@ public class AvaliacaoDal {
     }
 
     public boolean hasResposta(int avaliacaoId, Resposta resposta){
-
         Avaliacao avaliacao = trazerAvaliacao(avaliacaoId);
-
         if(avaliacao != null)
         {
             RealmList<Resposta> respostaList = avaliacao.getRespostas();
@@ -112,7 +110,6 @@ public class AvaliacaoDal {
 
         return false;
     }
-
 
     private void resetDatabase(){
         if(mRealm != null && mRealm.isInTransaction()){

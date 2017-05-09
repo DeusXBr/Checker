@@ -4,13 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
 
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="checker.ifrs.edu.checker.view.activities.MainActivity">
+    android:layout_height="wrap_content"
+    tools:context="checker.ifrs.edu.checker.view.activities.SobreActivity">
 
-    <include layout="@layout/toolbar" />
+    <include
+        android:id="@+id/layout.activitymain.toolbar"
+        layout="@layout/toolbar"
+        />
 
-    <include layout="@layout/content_main"/>
+    <include
+        android:id="@+id/layout.activitymain.contentmain"
+        layout="@layout/content_main"
+        />
 
-    <include layout="@layout/footer" />
+    <RelativeLayout
+        android:id="@+id/rl_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <include
+            android:id="@+id/layout.activitymain.footer"
+            layout="@layout/footer"
+            />
+    </RelativeLayout>
+
 
 </RelativeLayout>

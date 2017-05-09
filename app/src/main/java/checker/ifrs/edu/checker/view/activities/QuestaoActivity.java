@@ -1,19 +1,15 @@
 package checker.ifrs.edu.checker.view.activities;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.util.SparseIntArray;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
-
-import java.util.HashMap;
-import java.util.List;
 
 import checker.ifrs.edu.checker.R;
 import checker.ifrs.edu.checker.model.bll.AvaliacaoBll;
@@ -23,18 +19,23 @@ import checker.ifrs.edu.checker.model.bll.RespostaBll;
 import checker.ifrs.edu.checker.view.adapter.QuestaoListAdapter;
 import checker.ifrs.edu.checker.vo.Avaliacao;
 import checker.ifrs.edu.checker.vo.Categoria;
-import checker.ifrs.edu.checker.vo.Questao;
-import checker.ifrs.edu.checker.vo.RealmInt;
 import checker.ifrs.edu.checker.vo.Resposta;
-import io.realm.Realm;
-import io.realm.RealmList;
-import io.realm.RealmResults;
+
+import static checker.ifrs.edu.checker.utils.Helper.getAvaliacao;
+import static checker.ifrs.edu.checker.utils.ModelUtils.getRespostas;
 
 public class QuestaoActivity extends AppCompatActivity {
 
     private ListView listQuestao;
     private QuestaoListAdapter questaoListAdapter;
     private String nomeCategoria;
+
+    private Avaliacao avaliacao;
+    private QuestaoBll mQuestaoBll;
+    private AvaliacaoBll mAvaliacaoBll;
+    private CategoriaBll mCategoriaBll;
+    private RespostaBll mRespostaBll;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,16 +44,32 @@ public class QuestaoActivity extends AppCompatActivity {
 
         initToolBar();
 
-        QuestaoBll mQuestaoBll = new QuestaoBll();
+        // pega a atual avaliacao no sharedPreferences
+        avaliacao = getAvaliacao(this);
 
-        if (getIntent().hasExtra(AvaliacaoActivity.KEY_EXTRA)) { //verifica se tem dados passados pela intent
-            this.nomeCategoria = getIntent().getStringExtra(AvaliacaoActivity.KEY_EXTRA); //pega o dado passado
+        // cria os objetos que serão utilizados para acessar o banco
+        mQuestaoBll = new QuestaoBll();
+        mAvaliacaoBll = new AvaliacaoBll();
+        mCategoriaBll = new CategoriaBll();
+        mQuestaoBll = new QuestaoBll();
+        mRespostaBll = new RespostaBll();
 
-            this.listQuestao = (ListView) findViewById(R.id.listViewPerguntas); // pega layout com o listView
-            //List<Questao> resultPerguntas = mQuestaoBll.getAllQuestoesByCategoria(nomeCategoria); // pega as perguntas da categoria especificada acima
+        //verifica se tem dados passados pela intent
+        if (getIntent().hasExtra(AvaliacaoActivity.KEY_EXTRA)) {
+            //pega o dado passado
+            this.nomeCategoria = getIntent().getStringExtra(AvaliacaoActivity.KEY_EXTRA);
 
-            this.questaoListAdapter = new QuestaoListAdapter(this, mQuestaoBll.getAllQuestoesByCategoria(nomeCategoria));
-            this.listQuestao.setAdapter(questaoListAdapter); // adiciona o adapter criado acima no listView
+            // pega layout com o listView
+            this.listQuestao = (ListView) findViewById(R.id.listViewPerguntas);
+
+            // iniciar o QuestaoListAdapter precisa de todas as questoes e se houver as respostas
+            this.questaoListAdapter = new QuestaoListAdapter(this,
+                                                             mQuestaoBll.getAllQuestoesByCategoria(nomeCategoria),
+                                                             getRespostas(avaliacao, nomeCategoria)
+                                                            );
+
+            // adiciona o adapter criado acima no listView
+            this.listQuestao.setAdapter(questaoListAdapter);
 
         } else {
             throw new IllegalArgumentException("Activity extra não encontrada: " + AvaliacaoActivity.KEY_EXTRA);
@@ -63,26 +80,19 @@ public class QuestaoActivity extends AppCompatActivity {
     /**
      *  CallBack para finalizar a etapa
      *
-     *  Obs: onClick esta no activity_perguntas.xml -> content_questao.xml    */
+     *  Obs: onClick esta no activity_perguntas.xml -> content_questao.xml
+     */
     public void conluirEtapa(View view){
-        SharedPreferences sharedPrefs = this.getSharedPreferences(MainActivity.PREFS_NAME, Context.MODE_PRIVATE);
-        final String avaliacaoTitulo = sharedPrefs.getString("avaliacaoTitulo", null);
+        Categoria categoria = mCategoriaBll.getCategoria(nomeCategoria);
 
-        AvaliacaoBll avaliacaoBll = new AvaliacaoBll();
-        Avaliacao avaliacao = avaliacaoBll.getAvaliacao(avaliacaoTitulo);
+        int categoriaSize = mCategoriaBll.getQuestoes(categoria).size();
 
-        CategoriaBll categoriaBll = new CategoriaBll();
-        Categoria categoria = categoriaBll.getCategoria(nomeCategoria);
-
-        int categoriaSize = categoriaBll.getQuestoes(categoria).size();
-
-        HashMap<Integer, Integer> myMap = questaoListAdapter.getRespostas();
-
-        int questoesRespondidas = myMap.size();
+        SparseIntArray sparseIntArray = questaoListAdapter.getRespostas();
+        int questoesRespondidas = sparseIntArray.size();
 
         if(questoesRespondidas > 0 && avaliacao.getEstado().equals("Novo"))
         {
-            avaliacao.setEstadoDirect("Iniciado");
+            this.avaliacao.setEstadoDirect("Iniciado");
         }
 
         if(categoriaSize == questoesRespondidas)
@@ -94,22 +104,22 @@ public class QuestaoActivity extends AppCompatActivity {
             Log.i("MeuTeste", "conluirEtapa2: Voce não respodeu tudo faltou: " + (categoriaSize - questoesRespondidas));
         }
 
-        QuestaoBll questaoBll = new QuestaoBll();
-        RespostaBll respostaBll = new RespostaBll();
-        RealmResults result = null;
+        for (int i = 0; i < questoesRespondidas; i++)
+        {
+            int key = sparseIntArray.keyAt(i);
 
-        for (int key : myMap.keySet()) {
             Resposta resposta = new Resposta();
-            resposta.setQuestao(questaoBll.getQuestao(key));
-            resposta.setResposta(myMap.get(key));
 
-            if(!avaliacaoBll.temResposta(avaliacao.getId(),resposta))
+            resposta.setQuestao(mQuestaoBll.getQuestao(key));
+            resposta.setResposta(sparseIntArray.get(key));
+            if(!mAvaliacaoBll.temResposta(avaliacao.getId(),resposta))
             {
-                respostaBll.addResposta(resposta);
+                mRespostaBll.addResposta(resposta);
                 avaliacao.setResposta(resposta);
             }
-            else{
-                avaliacaoBll.editRespostaDeUmaAvaliacao(avaliacao.getId(), resposta);
+            else
+            {
+                mAvaliacaoBll.editRespostaDeUmaAvaliacao(avaliacao.getId(), resposta);
             }
         }
 
