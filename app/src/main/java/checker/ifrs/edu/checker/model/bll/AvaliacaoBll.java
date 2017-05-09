@@ -1,14 +1,19 @@
 package checker.ifrs.edu.checker.model.bll;
+import android.util.Log;
+
 import java.util.List;
 
 import checker.ifrs.edu.checker.model.dal.AvaliacaoDal;
 import checker.ifrs.edu.checker.utils.exception.InvalidStringException;
 import checker.ifrs.edu.checker.vo.Avaliacao;
+import checker.ifrs.edu.checker.vo.Categoria;
 import checker.ifrs.edu.checker.vo.Resposta;
+import io.realm.RealmResults;
 
 import static checker.ifrs.edu.checker.utils.StringUtils.isNullOrEmpty;
 
-public class AvaliacaoBll {
+public class AvaliacaoBll
+{
 
     private AvaliacaoDal mAvaliacaoDal;
 
@@ -16,7 +21,8 @@ public class AvaliacaoBll {
      * Metodo construtor
      *
      */
-    public AvaliacaoBll(){
+    public AvaliacaoBll()
+    {
         mAvaliacaoDal = new AvaliacaoDal();
     }
 
@@ -25,7 +31,8 @@ public class AvaliacaoBll {
      *
      * @param avaliacao RealmObject
      */
-    public void addAvaliacao(Avaliacao avaliacao){
+    public void addAvaliacao(Avaliacao avaliacao)
+    {
         if (avaliacao == null)
         {
             throw new NullPointerException();
@@ -40,7 +47,8 @@ public class AvaliacaoBll {
      * @param avalicaoId identifica qual avaliação a ser editada
      * @param resposta nova resposta
      */
-    public void editRespostaDeUmaAvaliacao(int avalicaoId, Resposta resposta){
+    public void editRespostaDeUmaAvaliacao(int avalicaoId, Resposta resposta)
+    {
         this.mAvaliacaoDal.editRespostaFromAvaliacao(avalicaoId, resposta);
     }
 
@@ -51,7 +59,8 @@ public class AvaliacaoBll {
      * @return Retorna um RealmObject Avaliacao.
      * Caso não encontrar nada retornará um RealmObject nullo.
      */
-    public Avaliacao getAvaliacao(String nome){
+    public Avaliacao getAvaliacao(String nome)
+    {
         Avaliacao avaliacao = null;
 
         try
@@ -74,20 +83,23 @@ public class AvaliacaoBll {
      *
      * @return List - Lista de Avaliacoes
      */
-    public List<Avaliacao> getAllAvaliacoes(){
+    public List<Avaliacao> getAllAvaliacoes()
+    {
         return this.mAvaliacaoDal.trazerAvaliacoes();
     }
 
-
-    public boolean temResposta(int avalicaoId, Resposta resposta){
+    public boolean temResposta(int avalicaoId, Resposta resposta)
+    {
         return this.mAvaliacaoDal.hasResposta(avalicaoId, resposta);
     }
 
-    public void limparBancoDados(){
+    public void limparBancoDados()
+    {
         mAvaliacaoDal.clearDatabase();
     }
 
-    public void removeAvaliacao(Avaliacao avaliacao){
+    public void removeAvaliacao(Avaliacao avaliacao)
+    {
         this.mAvaliacaoDal.remove(avaliacao);
     }
 

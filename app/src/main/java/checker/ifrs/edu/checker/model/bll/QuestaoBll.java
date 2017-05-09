@@ -27,7 +27,8 @@ public class QuestaoBll {
      *
      * @return RealmResult lista com os dados do realm
      */
-    public RealmResults<Questao> getAllQuestoesByCategoria(String nomeCategoria){
+    public RealmResults<Questao> getAllQuestoesByCategoria(String nomeCategoria)
+    {
         return this.mQuestaoDal.trazerQuestoes(nomeCategoria);
     }
 

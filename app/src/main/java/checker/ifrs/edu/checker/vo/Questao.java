@@ -1,6 +1,8 @@
 package checker.ifrs.edu.checker.vo;
 
+import io.realm.Realm;
 import io.realm.RealmObject;
+import io.realm.annotations.Ignore;
 import io.realm.annotations.PrimaryKey;
 
 public class Questao extends RealmObject{
@@ -13,10 +15,15 @@ public class Questao extends RealmObject{
     private String feedbackParcial;
     private Categoria categoria;
 
+    @Ignore
+    private Realm mRealm;
+
     /**
      * Construtor
      */
-    public Questao(){};
+    public Questao()
+    {
+    };
 
     public Questao(int id, String pergunta, String feedbackCorreto, String feedbackErrado, String feedbackParcial, Categoria categoria) {
         this.id = id;
@@ -51,7 +58,11 @@ public class Questao extends RealmObject{
     }
 
     public void setCategoria(Categoria categoria) {
+        this.mRealm = Realm.getDefaultInstance();
+
+        this.mRealm.beginTransaction();
         this.categoria = categoria;
+        this.mRealm.commitTransaction();
     }
 
     /**

@@ -90,8 +90,7 @@ public class ResultadoActivity extends AppCompatActivity {
         sendIntent.setAction(Intent.ACTION_SEND);
         sendIntent.putExtra(Intent.EXTRA_TEXT, "Avaliei a acessibilidade física de um lugar chamado "+avaliacao.getNome()+" e o resultado foi "+avaliacao.getEstado()+"! Use o Checker você também =D");
         sendIntent.setType("text/plain");
-        Intent.createChooser(sendIntent,"Share via");
-        startActivity(sendIntent);
+        startActivity(Intent.createChooser(sendIntent,"Share via"));
     }
 
 

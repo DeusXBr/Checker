@@ -66,6 +66,7 @@ public class Resposta extends RealmObject {
     public void showDadosResposta(){
         Log.i("MeuTeste", "id: " + this.id);
         Log.i("MeuTeste", "Questao: " + this.questao);
+        Log.i("MeuTeste", "QuestaoCategoria: " + this.questao.getCategoria().getNome());
         Log.i("MeuTeste", "id: " + this.resposta);
     }
 }
