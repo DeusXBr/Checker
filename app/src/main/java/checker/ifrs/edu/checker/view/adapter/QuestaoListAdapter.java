@@ -6,6 +6,7 @@ import android.util.SparseIntArray;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListAdapter;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
@@ -51,7 +52,7 @@ public class QuestaoListAdapter extends RealmBaseAdapter<Questao> implements Lis
         }
 
         final Questao questao = realmResults.get(position);
-        holder.pergunta.setText((position+1)+". "+questao.getPergunta());
+        holder.pergunta.setText((position+1) + " . " + questao.getPergunta());
 
         holder.radioGroup.setOnCheckedChangeListener(null);
         holder.radioGroup.clearCheck();
@@ -73,8 +74,6 @@ public class QuestaoListAdapter extends RealmBaseAdapter<Questao> implements Lis
 
                 if ( checkedId > -1 )
                 {
-//                    Log.i("MeuTeste", "Seila: " + questao.getId());
-//                    Log.i("MeuTeste", "Seila2: " + position);
                     sparseIntArray.put(questao.getId(), checkedId);
                 }
                 else
@@ -86,6 +85,7 @@ public class QuestaoListAdapter extends RealmBaseAdapter<Questao> implements Lis
                 }
             }
         });
+
 
         return converterView;
     }

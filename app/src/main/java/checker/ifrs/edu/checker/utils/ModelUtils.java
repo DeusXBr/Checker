@@ -10,9 +10,7 @@ import checker.ifrs.edu.checker.model.bll.AvaliacaoBll;
 import checker.ifrs.edu.checker.model.bll.CategoriaBll;
 import checker.ifrs.edu.checker.vo.Avaliacao;
 import checker.ifrs.edu.checker.vo.Categoria;
-import checker.ifrs.edu.checker.vo.Resposta;
 import io.realm.Realm;
-import io.realm.RealmResults;
 
 import static checker.ifrs.edu.checker.utils.StringUtils.isNullOrEmpty;
 
@@ -130,7 +128,7 @@ public class ModelUtils
             }
         }
 
-        Log.i("MeuTeste", "Respostas: " + sparseIntArray.toString());
+        //Log.i("MeuTeste", "Respostas: " + sparseIntArray.toString());
 
         return sparseIntArray;
     }

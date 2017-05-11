@@ -1,51 +1,54 @@
 package checker.ifrs.edu.checker.view.activities;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.media.Image;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
 import checker.ifrs.edu.checker.R;
-import checker.ifrs.edu.checker.model.bll.AvaliacaoBll;
 import checker.ifrs.edu.checker.vo.Avaliacao;
 
-public class ResultadoActivity extends AppCompatActivity {
+import static checker.ifrs.edu.checker.utils.CalculaAvaliacaoUtils.STATUS_NEGATIVO;
+import static checker.ifrs.edu.checker.utils.CalculaAvaliacaoUtils.STATUS_POSITIVO;
+import static checker.ifrs.edu.checker.utils.CalculaAvaliacaoUtils.STATUS_REGULAR;
+import static checker.ifrs.edu.checker.utils.Helper.getAvaliacao;
+
+public class ResultadoActivity extends AppCompatActivity
+{
 
     private ImageView vejaRelatorio;
+    private Avaliacao avaliacao;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultado);
 
         initToolBar();
 
-        SharedPreferences sharedPrefs = this.getSharedPreferences(MainActivity.PREFS_NAME, Context.MODE_PRIVATE);
-        final String avaliacaoTitulo = sharedPrefs.getString("avaliacaoTitulo", null);
-
-        AvaliacaoBll avaliacaoBll = new AvaliacaoBll();
-        Avaliacao avaliacao = avaliacaoBll.getAvaliacao(avaliacaoTitulo);
+        // pega a atual avaliacao no sharedPreferences
+        avaliacao = getAvaliacao(this);
 
         ImageView imageView = (ImageView) findViewById(R.id.imageView);
 
-        switch (avaliacao.getEstado())
+        switch ( avaliacao.getEstado() )
         {
-            case "Bom": imageView.setImageResource(R.drawable.bom);
-                        break;
+            case STATUS_POSITIVO: imageView.setImageResource(R.drawable.bom);
+                                  break;
 
-            case "Regular": imageView.setImageResource(R.drawable.regular);
-                            break;
+            case STATUS_REGULAR: imageView.setImageResource(R.drawable.regular);
+                                 break;
 
-            case "Ruim": imageView.setImageResource(R.drawable.ruim);
-                        break;
+            case STATUS_NEGATIVO: imageView.setImageResource(R.drawable.ruim);
+                                  break;
         }
     }
 
@@ -53,16 +56,18 @@ public class ResultadoActivity extends AppCompatActivity {
      * Callback
      * @param view
      */
-    public void verRelatorio(View view) {
-        Log.i("MeuTeste", "Click na imagem");
+    public void verRelatorio(View view)
+    {
+        Intent intent = new Intent(ResultadoActivity.this, RelatorioActivity.class);
+        startActivity(intent);
     }
 
     /**
      * Callback
      * @param view
      */
-    public void editarAvaliacao(View view) {
-        Log.i("MeuTeste", "Click no editar");
+    public void editarAvaliacao(View view)
+    {
         Intent intent = new Intent(ResultadoActivity.this, AvaliacaoActivity.class);
         startActivity(intent);
     }
@@ -71,7 +76,8 @@ public class ResultadoActivity extends AppCompatActivity {
      * Callback
      * @param view
      */
-    public void avaliarNovamente(View view) {
+    public void avaliarNovamente(View view)
+    {
         Log.i("MeuTeste", "Click no avaliar");
     }
 
@@ -79,32 +85,48 @@ public class ResultadoActivity extends AppCompatActivity {
      * Callback
      * @param view
      */
-    public void compartilhar(View view) {
-        SharedPreferences sharedPrefs = this.getSharedPreferences(MainActivity.PREFS_NAME, Context.MODE_PRIVATE);
-        final String avaliacaoTitulo = sharedPrefs.getString("avaliacaoTitulo", null);
-
-        AvaliacaoBll avaliacaoBll = new AvaliacaoBll();
-        Avaliacao avaliacao = avaliacaoBll.getAvaliacao(avaliacaoTitulo);
+    public void compartilhar(View view)
+    {
+        String texto = "Avaliei a acessibilidade física de um lugar chamado " + avaliacao.getNome() +
+                       " e o resultado foi "+avaliacao.getEstado() +
+                       "! Use o Checker você também =D";
 
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_TEXT, "Avaliei a acessibilidade física de um lugar chamado "+avaliacao.getNome()+" e o resultado foi "+avaliacao.getEstado()+"! Use o Checker você também =D");
+        sendIntent.putExtra(Intent.EXTRA_TEXT, texto);
         sendIntent.setType("text/plain");
         startActivity(Intent.createChooser(sendIntent,"Share via"));
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.home, menu);
+
+        return super.onCreateOptionsMenu(menu);
+    }
 
     /**
-     * Metodo retornar para activity anterior
+     * Metodo retornar para tela inicial
      *
      * @param item menuItem do menu
      * @return boolean
      */
     @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        if(item.getItemId() == android.R.id.home){
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        if (item.getItemId() == R.id.menu_home)
+        {
+            Intent intent = new Intent(ResultadoActivity.this, MainActivity.class);
+            startActivity(intent);
+        }
+
+        if (item.getItemId() == android.R.id.home)
+        {
             finish();
         }
+
         return super.onOptionsItemSelected(item);
     }
 
@@ -114,7 +136,8 @@ public class ResultadoActivity extends AppCompatActivity {
      * Obs: chamada esta no construtor da classe
      *
      */
-    public void initToolBar(){
+    public void initToolBar()
+    {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         // recupera o titulo do app no xml strings
@@ -127,7 +150,8 @@ public class ResultadoActivity extends AppCompatActivity {
 
         // mostra o botao voltar no toolbar
         ActionBar actionbar = getSupportActionBar();
-        if (actionbar != null) {
+        if (actionbar != null)
+        {
             actionbar.setDisplayHomeAsUpEnabled(true);
         }
     }
