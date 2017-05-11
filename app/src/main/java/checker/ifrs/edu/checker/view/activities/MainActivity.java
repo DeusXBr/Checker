@@ -44,22 +44,6 @@ public class MainActivity extends AppCompatActivity
         super.onResume();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.close, menu);
-
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem Item)
-    {
-        finish();
-        return true;
-    }
-
     /**
      * Callback
      * @param view

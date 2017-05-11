@@ -8,10 +8,12 @@ import android.view.MenuItem;
 
 import checker.ifrs.edu.checker.R;
 
-public class SobreActivity extends AppCompatActivity {
+public class SobreActivity extends AppCompatActivity
+{
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sobre);
 
@@ -20,15 +22,18 @@ public class SobreActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item){
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
         // acao para voltar no toolbar
-        if(item.getItemId() == android.R.id.home){
+        if(item.getItemId() == android.R.id.home)
+        {
             finish();
         }
         return super.onOptionsItemSelected(item);
     }
 
-    public void initToolBar(){
+    public void initToolBar()
+    {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         // Recupera o titulo do app no xml strings
@@ -41,7 +46,8 @@ public class SobreActivity extends AppCompatActivity {
 
         // mostra o botao voltar no toolbar
         ActionBar actionbar = getSupportActionBar();
-        if (actionbar != null) {
+        if (actionbar != null)
+        {
             actionbar.setDisplayHomeAsUpEnabled(true);
         }
     }

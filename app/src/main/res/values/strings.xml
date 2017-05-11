@@ -12,6 +12,7 @@
     <!-- Itens do toolbar da activity_main -->
     <string name="main_toolbar_title">Checker</string>
     <string name="main_toolbar_item_menu1">Sair</string>
+    <string name="main_toolbar_item_menu2">Tela Inicial</string>
 
     <!-- Itens activity_main -->
     <string name="main_button_1_title">Avaliação</string>
@@ -85,5 +86,6 @@
     <string name="footer_text_1">Checker &#8211; v1.0 Beta &#8211; 2017</string>
     <string name="footer_text_2">IFRS | Fernando Sebenello Soares</string>
     <string name="footer_description_image">Logo do app</string>
+    <string name="title_activity_relatorio">RelatorioActivity</string>
 
 </resources>
