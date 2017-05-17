@@ -6,10 +6,12 @@ import android.util.SparseIntArray;
 import java.util.ArrayList;
 import java.util.List;
 
+import checker.ifrs.edu.checker.R;
 import checker.ifrs.edu.checker.model.bll.AvaliacaoBll;
 import checker.ifrs.edu.checker.model.bll.CategoriaBll;
 import checker.ifrs.edu.checker.vo.Avaliacao;
 import checker.ifrs.edu.checker.vo.Categoria;
+import checker.ifrs.edu.checker.vo.Resposta;
 import io.realm.Realm;
 
 import static checker.ifrs.edu.checker.utils.StringUtils.isNullOrEmpty;
@@ -106,8 +108,6 @@ public class ModelUtils
             }
         }
 
-        //Log.i("MeuTeste", categoria.getNome() + ": " + quantidadeCategorias + " - " + quantidade);
-
         if ( quantidade == quantidadeCategorias && quantidade != 0)
         {
             return true;
@@ -131,6 +131,24 @@ public class ModelUtils
         //Log.i("MeuTeste", "Respostas: " + sparseIntArray.toString());
 
         return sparseIntArray;
+    }
+
+    public static List<Resposta> getRespostasErradasRegulares(Avaliacao avaliacao)
+    {
+        List<Resposta> listResposta = new ArrayList<>();
+
+        if (avaliacao != null)
+        {
+            for ( Resposta item : avaliacao.getRespostas() )
+            {
+                if (item.getResposta() == R.id.mRadio2 || item.getResposta() == R.id.mRadio3)
+                {
+                   listResposta.add(item);
+                }
+            }
+        }
+
+        return listResposta;
     }
 
 }

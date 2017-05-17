@@ -6,9 +6,8 @@ import java.util.List;
 import checker.ifrs.edu.checker.model.dal.AvaliacaoDal;
 import checker.ifrs.edu.checker.utils.exception.InvalidStringException;
 import checker.ifrs.edu.checker.vo.Avaliacao;
-import checker.ifrs.edu.checker.vo.Categoria;
 import checker.ifrs.edu.checker.vo.Resposta;
-import io.realm.RealmResults;
+import io.realm.RealmList;
 
 import static checker.ifrs.edu.checker.utils.StringUtils.isNullOrEmpty;
 
@@ -86,6 +85,20 @@ public class AvaliacaoBll
     public List<Avaliacao> getAllAvaliacoes()
     {
         return this.mAvaliacaoDal.trazerAvaliacoes();
+    }
+
+    /**
+     * Metodo traz todas as respostas da avaliacao especifica
+     * @param avaliacao
+     */
+    public RealmList<Resposta> getAllRespostas(Avaliacao avaliacao)
+    {
+        if (avaliacao != null)
+        {
+            return avaliacao.getRespostas();
+        }
+
+        return null;
     }
 
     public boolean temResposta(int avalicaoId, Resposta resposta)

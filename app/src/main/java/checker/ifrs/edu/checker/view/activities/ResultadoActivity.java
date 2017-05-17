@@ -58,7 +58,7 @@ public class ResultadoActivity extends AppCompatActivity
      */
     public void verRelatorio(View view)
     {
-        Intent intent = new Intent(ResultadoActivity.this, RelatorioActivity.class);
+        Intent intent = new Intent(ResultadoActivity.this, ListaFeedBackActivity.class);
         startActivity(intent);
     }
 

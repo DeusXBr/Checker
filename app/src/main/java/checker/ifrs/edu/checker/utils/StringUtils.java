@@ -1,9 +1,6 @@
 package checker.ifrs.edu.checker.utils;
 
-import android.util.SparseIntArray;
-
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 
@@ -58,5 +55,20 @@ public class StringUtils
         }
 
         return texto;
+    }
+
+    /**
+     * Metodo coloca o primeiro caracter da string em maiusculo
+     * @param string texto/palavra qualquer
+     * @return string modificada
+     */
+    public static String primeiroCaracterMaiusculo(String string)
+    {
+        if (!string.isEmpty())
+        {
+            return string.substring(0, 1).toUpperCase() + string.substring(1);
+        }
+
+        return string;
     }
 }

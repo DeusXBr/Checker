@@ -7,7 +7,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="checker.ifrs.edu.checker.view.activities.ListaRelatorioActivity">
+    tools:context="checker.ifrs.edu.checker.view.activities.ListaRelatorioActivity"
+    >
 
     <include
         android:id="@+id/layout.activitylistarelatorio.toolbar"

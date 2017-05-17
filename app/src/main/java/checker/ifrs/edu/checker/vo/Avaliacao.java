@@ -9,7 +9,10 @@ import io.realm.annotations.Ignore;
 import io.realm.annotations.PrimaryKey;
 import io.realm.annotations.Required;
 
-public class Avaliacao extends RealmObject{
+import static checker.ifrs.edu.checker.utils.StringUtils.primeiroCaracterMaiusculo;
+
+public class Avaliacao extends RealmObject
+{
 
     @PrimaryKey
     private int id;
@@ -27,16 +30,18 @@ public class Avaliacao extends RealmObject{
     /**
      *  Construtor
      */
-    public Avaliacao() {
+    public Avaliacao()
+    {
         setId();
         setDataCriacao();
         this.mRealm = Realm.getDefaultInstance();
     }
 
-    public Avaliacao(String nome, String estado, String dataModificado) {
+    public Avaliacao(String nome, String estado, String dataModificado)
+    {
         setId();
         this.nome = nome;
-        this.estado = estado;
+        this.estado = primeiroCaracterMaiusculo(estado);
         this.nota = 0;
         setDataCriacao();
         this.dataModificado = dataModificado;
@@ -46,44 +51,53 @@ public class Avaliacao extends RealmObject{
     /**
      *  Set
      */
-    private void setId() {
+    private void setId()
+    {
         ModelUtils mModelUtils = new ModelUtils();
         this.id = mModelUtils.getProximaIndex(Avaliacao.class);
     }
 
-    public void setNome(String nome) {
+    public void setNome(String nome)
+    {
         this.nome = nome;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setEstado(String estado)
+    {
+        this.estado = primeiroCaracterMaiusculo(estado);
     }
 
-    public void setEstadoDirect(String estado) {
+    public void setEstadoDirect(String estado)
+    {
         this.mRealm.beginTransaction();
-        this.estado = estado;
+        this.estado = primeiroCaracterMaiusculo(estado);
         this.mRealm.commitTransaction();
     }
 
-    public void setNota(float nota){
+    public void setNota(float nota)
+    {
         this.nota = nota;
     }
 
-    private void setDataCriacao() {
+    private void setDataCriacao()
+    {
         this.dataCriacao = StringUtils.getDataAtual();
     }
 
-    public void setDataModificado(String dataModificado) {
+    public void setDataModificado(String dataModificado)
+    {
         this.dataModificado = dataModificado;
     }
 
-    public void setRespostas(RealmList<Resposta> respostas){
+    public void setRespostas(RealmList<Resposta> respostas)
+    {
         this.mRealm.beginTransaction();
         this.respostas = respostas;
         this.mRealm.commitTransaction();
     }
 
-    public void setResposta(Resposta resposta){
+    public void setResposta(Resposta resposta)
+    {
         this.mRealm.beginTransaction();
         this.respostas.add(resposta);
         this.mRealm.commitTransaction();
@@ -92,31 +106,38 @@ public class Avaliacao extends RealmObject{
     /**
      * Get
      */
-    public int getId() {
+    public int getId()
+    {
         return id;
     }
 
-    public String getNome() {
+    public String getNome()
+    {
         return nome;
     }
 
-    public String getEstado() {
+    public String getEstado()
+    {
         return estado;
     }
 
-    public float getNota(){
+    public float getNota()
+    {
         return this.nota;
     }
 
-    public String getDataCriacao() {
+    public String getDataCriacao()
+    {
         return dataCriacao;
     }
 
-    public String getDataModificado() {
+    public String getDataModificado()
+    {
         return dataModificado;
     }
 
-    public RealmList<Resposta> getRespostas(){
+    public RealmList<Resposta> getRespostas()
+    {
         return respostas;
     }
 }

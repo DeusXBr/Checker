@@ -4,23 +4,44 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ListView;
+
+import java.util.List;
 
 import checker.ifrs.edu.checker.R;
+import checker.ifrs.edu.checker.view.adapter.FeedBackListAdapter;
+import checker.ifrs.edu.checker.vo.Avaliacao;
+import checker.ifrs.edu.checker.vo.Resposta;
 
-public class RelatorioActivity extends AppCompatActivity {
+import static checker.ifrs.edu.checker.utils.Helper.getAvaliacao;
+import static checker.ifrs.edu.checker.utils.ModelUtils.getRespostasErradasRegulares;
+
+public class ListaFeedBackActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_relatorio);
+        setContentView(R.layout.activity_listafeedback);
 
         initToolBar();
 
-        //TODO pegar as respostas negativas e mostrar o feedback
-        //TODO ver a tela no drive
+        Avaliacao avaliacao = getAvaliacao(this);
+        List<Resposta> listRespostas = getRespostasErradasRegulares(avaliacao);
+
+        if(listRespostas.size() > 0)
+        {
+            Log.i("MeuTeste", "Entrou");
+
+            FeedBackListAdapter adapter = new FeedBackListAdapter(this, listRespostas);
+
+            ListView listViewFeedback = (ListView) findViewById(R.id.listview_feedback);
+            listViewFeedback.setAdapter(adapter);
+
+        }
     }
 
     @Override
@@ -57,7 +78,7 @@ public class RelatorioActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         // recupera o titulo do app no xml strings
-        String title = getResources().getString(R.string.resultado_toolbar_title);
+        String title = getResources().getString(R.string.relatorio_toolbar_title);
 
         // coloca o title, recuperado da linha acima, como titulo do toolbar
         toolbar.setTitle(title);

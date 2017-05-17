@@ -2,6 +2,7 @@ package checker.ifrs.edu.checker.utils;
 
 import android.util.Log;
 
+import checker.ifrs.edu.checker.R;
 import checker.ifrs.edu.checker.vo.Resposta;
 import io.realm.RealmList;
 
@@ -13,10 +14,10 @@ public class CalculaAvaliacaoUtils
     private String status;
     private int respostasRespondidas;
 
-    public static final String STATUS_CRIADO = "novo";
-    public static final String STATUS_POSITIVO = "bom";
-    public static final String STATUS_REGULAR = "regular";
-    public static final String STATUS_NEGATIVO = "ruim";
+    public static final String STATUS_CRIADO = "Novo";
+    public static final String STATUS_POSITIVO = "Bom";
+    public static final String STATUS_REGULAR = "Regular";
+    public static final String STATUS_NEGATIVO = "Ruim";
 
     public CalculaAvaliacaoUtils(){}
 
@@ -41,14 +42,14 @@ public class CalculaAvaliacaoUtils
             {
                 switch (item.getResposta())
                 {
-                    case 2131493032: this.nota += 1;
-                            break;
+                    case R.id.mRadio1: this.nota += 1;
+                                     break;
 
-                    case 2131493034: this.nota += 0.5;
-                            break;
+                    case R.id.mRadio3: this.nota += 0.5;
+                                     break;
 
-                    case 2131493035: this.respostasRespondidas -= 1;
-                            break;
+                    case R.id.mRadio4: this.respostasRespondidas -= 1;
+                                     break;
 
                     default: break;
                 }

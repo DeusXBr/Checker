@@ -18,13 +18,10 @@
         </activity>
         <activity android:name=".view.activities.AvaliacaoActivity" />
         <activity android:name=".view.activities.ListaRelatorioActivity" />
+        <activity android:name=".view.activities.ListaFeedBackActivity" />
         <activity android:name=".view.activities.SobreActivity" />
         <activity android:name=".view.activities.QuestaoActivity" />
         <activity android:name=".view.activities.ResultadoActivity" />
-        <activity
-            android:name=".view.activities.RelatorioActivity"
-            android:label="@string/title_activity_relatorio"
-            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

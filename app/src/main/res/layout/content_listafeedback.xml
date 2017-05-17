@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="56dp"
-    android:orientation="vertical"
     >
 
     <ListView
-        android:id="@+id/listViewlrelatorios"
+        android:id="@+id/listview_feedback"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:dividerHeight="0dip"
-        android:paddingTop="15dp"
-        android:longClickable="true"
+        android:layout_height="match_parent"
+        android:divider="@null"
         />
 
-</LinearLayout>
+
+</RelativeLayout>
