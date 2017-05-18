@@ -9,13 +9,13 @@
 
     <LinearLayout
         android:id="@+id/linear_layout_filhofeeedback"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/background_shape_bom"
-        android:gravity="center"
+        android:gravity="left"
         android:orientation="vertical"
         >
 
@@ -23,22 +23,31 @@
             android:id="@+id/categoria_feedback"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#000"
             android:layout_gravity="left"
-            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:textColor="#413f3f"
             />
 
         <TextView
             android:id="@+id/pergunta_feedback"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:textColor="#000"
+            android:textStyle="bold"
             />
 
         <TextView
             android:id="@+id/texto_feedback"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:textColor="#000"
             />
 

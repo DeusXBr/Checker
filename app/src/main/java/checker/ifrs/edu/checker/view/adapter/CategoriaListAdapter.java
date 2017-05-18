@@ -8,6 +8,7 @@ import android.widget.CompoundButton;
 import android.widget.ListAdapter;
 
 import checker.ifrs.edu.checker.R;
+import checker.ifrs.edu.checker.model.bll.CategoriaBll;
 import checker.ifrs.edu.checker.utils.ModelUtils;
 import checker.ifrs.edu.checker.vo.Avaliacao;
 import checker.ifrs.edu.checker.vo.Categoria;
@@ -15,15 +16,21 @@ import io.realm.RealmBaseAdapter;
 import io.realm.RealmResults;
 
 import static checker.ifrs.edu.checker.utils.Helper.getAvaliacao;
+import static checker.ifrs.edu.checker.utils.ModelUtils.getQuantiadeRespostasCategoria;
+import static checker.ifrs.edu.checker.utils.ModelUtils.getQuantidadeQuestoesCategoria;
 
 public class CategoriaListAdapter extends RealmBaseAdapter<Categoria> implements ListAdapter {
 
     private RealmResults<Categoria> realmResults;
+    private Avaliacao avaliacao;
 
     public CategoriaListAdapter(Context contexto, RealmResults<Categoria> realmResults){
         super(contexto, realmResults);
 
         this.realmResults = realmResults;
+
+        // pega a atual avaliacao no sharedPreferences
+        avaliacao = getAvaliacao(contexto);
     }
 
     @Override
@@ -41,8 +48,10 @@ public class CategoriaListAdapter extends RealmBaseAdapter<Categoria> implements
             holder = (CustomViewHolder) converterView.getTag();
         }
 
-        Categoria categoria = realmResults.get(position);
-        holder.checkBox.setText(categoria.getNome());
+        Categoria categoria = realmResults.get(position); //categoria atual
+        int quantidadeCategorias = getQuantidadeQuestoesCategoria(categoria); // quantas questoes tem nessa categoria
+        int countResposta = getQuantiadeRespostasCategoria(avaliacao, categoria.getNome());
+        holder.checkBox.setText( (categoria.getNome() + " - ("+ countResposta +" de " + quantidadeCategorias + ")") );
 
         holder.checkBox.setOnCheckedChangeListener(null);
         holder.checkBox.setChecked(false);

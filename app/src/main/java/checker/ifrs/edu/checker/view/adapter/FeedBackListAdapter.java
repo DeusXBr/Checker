@@ -60,17 +60,16 @@ public class FeedBackListAdapter extends BaseAdapter {
         textViewCategoria.setText(currentResposta.getQuestao().getCategoria().getNome());
 
         TextView textViewTitulo = (TextView) linearLayout.findViewById(R.id.pergunta_feedback);
+        textViewTitulo.setText( currentResposta.getQuestao().getPergunta() );
 
         TextView textViewTexto = (TextView) linearLayout.findViewById(R.id.texto_feedback);
         switch (currentResposta.getResposta())
         {
             case R.id.mRadio2: linearLayout.setBackgroundResource(R.drawable.background_shape_ruim2);
-                 textViewTitulo.setText(currentResposta.getQuestao().getPergunta());
                  textViewTexto.setText(currentResposta.getQuestao().getFeedbackErrado());
                  break;
 
             case R.id.mRadio3: linearLayout.setBackgroundResource(R.drawable.background_shape_regular);
-                 textViewTitulo.setText(currentResposta.getQuestao().getPergunta());
                  textViewTexto.setText(currentResposta.getQuestao().getFeedbackParcial());
                  break;
         }

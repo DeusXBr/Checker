@@ -1,5 +1,6 @@
 package checker.ifrs.edu.checker.view.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -10,9 +11,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ListView;
 
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import checker.ifrs.edu.checker.R;
+import checker.ifrs.edu.checker.utils.RespostaComparator;
 import checker.ifrs.edu.checker.view.adapter.FeedBackListAdapter;
 import checker.ifrs.edu.checker.vo.Avaliacao;
 import checker.ifrs.edu.checker.vo.Resposta;
@@ -32,10 +37,10 @@ public class ListaFeedBackActivity extends AppCompatActivity {
         Avaliacao avaliacao = getAvaliacao(this);
         List<Resposta> listRespostas = getRespostasErradasRegulares(avaliacao);
 
+        Collections.sort(listRespostas, new RespostaComparator());
+
         if(listRespostas.size() > 0)
         {
-            Log.i("MeuTeste", "Entrou");
-
             FeedBackListAdapter adapter = new FeedBackListAdapter(this, listRespostas);
 
             ListView listViewFeedback = (ListView) findViewById(R.id.listview_feedback);
@@ -61,6 +66,12 @@ public class ListaFeedBackActivity extends AppCompatActivity {
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
+        if (item.getItemId() == R.id.menu_home)
+        {
+            Intent intent = new Intent(ListaFeedBackActivity.this, MainActivity.class);
+            startActivity(intent);
+        }
+
         if(item.getItemId() == android.R.id.home){
             finish();
         }

@@ -116,6 +116,12 @@ public class ModelUtils
         return false;
     }
 
+    public static int getQuantidadeQuestoesCategoria(Categoria categoria)
+    {
+        CategoriaBll categoriaBll = new CategoriaBll();
+        return categoriaBll.getQuestoes(categoria).size();
+    }
+
     public static SparseIntArray getRespostas(Avaliacao avaliacao, String nomeCategoria)
     {
         SparseIntArray sparseIntArray = new SparseIntArray();
@@ -128,9 +134,22 @@ public class ModelUtils
             }
         }
 
-        //Log.i("MeuTeste", "Respostas: " + sparseIntArray.toString());
-
         return sparseIntArray;
+    }
+
+    public static int getQuantiadeRespostasCategoria(Avaliacao avaliacao, String nomeCategoria)
+    {
+        int countResposta = 0;
+
+        for (int i = 0; i < avaliacao.getRespostas().size(); i++)
+        {
+            if (avaliacao.getRespostas().get(i).getQuestao().getCategoria().getNome().equals(nomeCategoria) )
+            {
+                countResposta++;
+            }
+        }
+
+        return countResposta;
     }
 
     public static List<Resposta> getRespostasErradasRegulares(Avaliacao avaliacao)
