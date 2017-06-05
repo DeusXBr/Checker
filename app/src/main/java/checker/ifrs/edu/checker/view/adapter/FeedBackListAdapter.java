@@ -1,7 +1,6 @@
 package checker.ifrs.edu.checker.view.adapter;
 
 import android.content.Context;
-import android.os.Build;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,13 +15,15 @@ import java.util.List;
 import checker.ifrs.edu.checker.R;
 import checker.ifrs.edu.checker.vo.Resposta;
 
-public class FeedBackListAdapter extends BaseAdapter {
+public class FeedBackListAdapter extends BaseAdapter
+{
 
     private Context context;
     private List<Resposta> respostas;
 
 
-    public FeedBackListAdapter(Context mContext, List<Resposta> listRespostas) {
+    public FeedBackListAdapter(Context mContext, List<Resposta> listRespostas)
+    {
         Collections.reverse(listRespostas);
 
         this.context = mContext;
@@ -30,17 +31,20 @@ public class FeedBackListAdapter extends BaseAdapter {
     }
 
     @Override
-    public int getCount() {
+    public int getCount()
+    {
         return respostas.size();
     }
 
     @Override
-    public Object getItem(int position) {
+    public Object getItem(int position)
+    {
         return respostas.get(position);
     }
 
     @Override
-    public long getItemId(int position) {
+    public long getItemId(int position)
+    {
         return position;
     }
 
@@ -76,4 +80,5 @@ public class FeedBackListAdapter extends BaseAdapter {
 
         return convertView;
     }
+
 }

@@ -1,16 +1,14 @@
 package checker.ifrs.edu.checker.model.dal;
 
 import checker.ifrs.edu.checker.vo.Avaliacao;
-import checker.ifrs.edu.checker.vo.Categoria;
 import checker.ifrs.edu.checker.vo.Resposta;
 import io.realm.Realm;
-import io.realm.RealmResults;
 import io.realm.exceptions.RealmPrimaryKeyConstraintException;
 
 import static checker.ifrs.edu.checker.utils.StringUtils.isNegativeOrZero;
 
-public class RespostaDal {
-
+public class RespostaDal
+{
     private Realm mRealm;
 
     private static final int SUCCESS_OPERATION = 0;
@@ -20,16 +18,20 @@ public class RespostaDal {
      * Metodo construtor
      *
      */
-    public RespostaDal(){
+    public RespostaDal()
+    {
         this.mRealm = Realm.getDefaultInstance();
     }
 
-    public int criarResposta(Resposta resposta){
+    public int criarResposta(Resposta resposta)
+    {
         this.mRealm.beginTransaction();
 
-        try {
+        try
+        {
             this.mRealm.copyToRealm(resposta);
-        } catch (IllegalArgumentException | RealmPrimaryKeyConstraintException e){
+        } catch (IllegalArgumentException | RealmPrimaryKeyConstraintException e)
+        {
             this.mRealm.cancelTransaction();
             return FAIL_OPERATION;
         }
@@ -39,7 +41,8 @@ public class RespostaDal {
         return SUCCESS_OPERATION;
     }
 
-    public Resposta trazerResposta(int id){
+    public Resposta trazerResposta(int id)
+    {
         Resposta resposta = null;
 
         if(!isNegativeOrZero(id)){
@@ -49,7 +52,8 @@ public class RespostaDal {
         return resposta;
     }
 
-    public Resposta trazerRespostaByQuestaoId(int id){
+    public Resposta trazerRespostaByQuestaoId(int id)
+    {
         Resposta resposta = null;
 
         if(!isNegativeOrZero(id)){
@@ -59,20 +63,23 @@ public class RespostaDal {
         return resposta;
     }
 
-    public Resposta trazerResposta(Avaliacao avaliacao){
+    public Resposta trazerResposta(Avaliacao avaliacao)
+    {
         Resposta resposta = null;
 
-        if(avaliacao != null){
+        if (avaliacao != null)
+        {
             resposta = this.mRealm.where(Resposta.class).equalTo("avaliacao.id", avaliacao.getId()).findFirst();
         }
 
         return resposta;
     }
 
-    public void removeFromRealm(int id){
+    public void removeFromRealm(int id)
+    {
         Resposta resposta = null;
         resposta = trazerResposta(id);
-        if(resposta != null)
+        if (resposta != null)
         {
             resposta.deleteFromRealm();
         }

@@ -24,8 +24,8 @@ import checker.ifrs.edu.checker.vo.Resposta;
 import static checker.ifrs.edu.checker.utils.Helper.getAvaliacao;
 import static checker.ifrs.edu.checker.utils.ModelUtils.getRespostas;
 
-public class QuestaoActivity extends AppCompatActivity {
-
+public class QuestaoActivity extends AppCompatActivity
+{
     private ListView listQuestao;
     private QuestaoListAdapter questaoListAdapter;
     private String nomeCategoria;
@@ -38,7 +38,8 @@ public class QuestaoActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perguntas);
 
@@ -55,7 +56,8 @@ public class QuestaoActivity extends AppCompatActivity {
         mRespostaBll = new RespostaBll();
 
         //verifica se tem dados passados pela intent
-        if (getIntent().hasExtra(AvaliacaoActivity.KEY_EXTRA)) {
+        if (getIntent().hasExtra(AvaliacaoActivity.KEY_EXTRA))
+        {
             //pega o dado passado
             this.nomeCategoria = getIntent().getStringExtra(AvaliacaoActivity.KEY_EXTRA);
 
@@ -71,7 +73,9 @@ public class QuestaoActivity extends AppCompatActivity {
             // adiciona o adapter criado acima no listView
             this.listQuestao.setAdapter(questaoListAdapter);
 
-        } else {
+        }
+        else
+        {
             throw new IllegalArgumentException("Activity extra não encontrada: " + AvaliacaoActivity.KEY_EXTRA);
         }
 
@@ -82,7 +86,8 @@ public class QuestaoActivity extends AppCompatActivity {
      *
      *  Obs: onClick esta no activity_perguntas.xml -> content_questao.xml
      */
-    public void conluirEtapa(View view){
+    public void conluirEtapa(View view)
+    {
         Categoria categoria = mCategoriaBll.getCategoria(nomeCategoria);
 
         int categoriaSize = mCategoriaBll.getQuestoes(categoria).size();
@@ -90,12 +95,12 @@ public class QuestaoActivity extends AppCompatActivity {
         SparseIntArray sparseIntArray = questaoListAdapter.getRespostas();
         int questoesRespondidas = sparseIntArray.size();
 
-        if(questoesRespondidas > 0 && avaliacao.getEstado().equals("Novo"))
+        if (questoesRespondidas > 0 && avaliacao.getEstado().equals("Novo"))
         {
             this.avaliacao.setEstadoDirect("Iniciado");
         }
 
-        if(categoriaSize == questoesRespondidas)
+        if (categoriaSize == questoesRespondidas)
         {
             Log.i("MeuTeste", "conluirEtapa: Parabens voce respondeu tudo");
         }
@@ -112,7 +117,7 @@ public class QuestaoActivity extends AppCompatActivity {
 
             resposta.setQuestao(mQuestaoBll.getQuestao(key));
             resposta.setResposta(sparseIntArray.get(key));
-            if(!mAvaliacaoBll.temResposta(avaliacao.getId(),resposta))
+            if (!mAvaliacaoBll.temResposta(avaliacao.getId(),resposta))
             {
                 mRespostaBll.addResposta(resposta);
                 avaliacao.setResposta(resposta);
@@ -137,8 +142,10 @@ public class QuestaoActivity extends AppCompatActivity {
      * @return boolean
      */
     @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        if(item.getItemId() == android.R.id.home){
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        if (item.getItemId() == android.R.id.home)
+        {
             finish();
         }
         return super.onOptionsItemSelected(item);
@@ -150,7 +157,8 @@ public class QuestaoActivity extends AppCompatActivity {
      * Obs: chamada esta no construtor da classe
      *
      */
-    public void initToolBar(){
+    public void initToolBar()
+    {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         // recupera o titulo do app no xml strings

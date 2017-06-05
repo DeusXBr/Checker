@@ -4,12 +4,11 @@ import checker.ifrs.edu.checker.model.dal.RespostaDal;
 import checker.ifrs.edu.checker.utils.exception.InvalidStringException;
 import checker.ifrs.edu.checker.vo.Avaliacao;
 import checker.ifrs.edu.checker.vo.Resposta;
-import io.realm.RealmResults;
 
 import static checker.ifrs.edu.checker.utils.StringUtils.isNegativeOrZero;
-import static checker.ifrs.edu.checker.utils.StringUtils.isNullOrEmpty;
 
-public class RespostaBll {
+public class RespostaBll
+{
 
     private RespostaDal mRespostaDal;
 
@@ -17,7 +16,8 @@ public class RespostaBll {
      * Metodo construtor
      *
      */
-    public RespostaBll(){
+    public RespostaBll()
+    {
         mRespostaDal = new RespostaDal();
     }
 
@@ -26,7 +26,8 @@ public class RespostaBll {
      *
      * @param resposta RealmObject
      */
-    public void addResposta(Resposta resposta){
+    public void addResposta(Resposta resposta)
+    {
         if (resposta == null)
         {
             throw new NullPointerException();
@@ -41,16 +42,21 @@ public class RespostaBll {
      * @param id Codigo de identificado da resposta
      * @return Resposta Realm
      */
-    public Resposta getResposta(int id){
+    public Resposta getResposta(int id)
+    {
         Resposta resposta = null;
 
-        try{
-            if(isNegativeOrZero(id)){
+        try
+        {
+            if (isNegativeOrZero(id))
+            {
                 throw new InvalidStringException();
             }
 
             resposta = this.mRespostaDal.trazerResposta(id);
-        } catch (InvalidStringException e){
+        }
+        catch (InvalidStringException e)
+        {
             //
         }
 
@@ -63,16 +69,21 @@ public class RespostaBll {
      * @param avaliacao Object para pesquisar no realm
      * @return Resposta Realm
      */
-    public Resposta getResposta(Avaliacao avaliacao){
+    public Resposta getResposta(Avaliacao avaliacao)
+    {
         Resposta resposta = null;
 
-        try{
-            if(avaliacao == null || avaliacao.getId() <= 0){
+        try
+        {
+            if (avaliacao == null || avaliacao.getId() <= 0)
+            {
                 throw new InvalidStringException();
             }
 
             resposta = this.mRespostaDal.trazerResposta(avaliacao);
-        } catch (InvalidStringException e){
+        }
+        catch (InvalidStringException e)
+        {
             //
         }
 

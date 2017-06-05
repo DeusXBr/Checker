@@ -22,8 +22,6 @@ import static checker.ifrs.edu.checker.utils.Helper.getAvaliacao;
 
 public class ResultadoActivity extends AppCompatActivity
 {
-
-    private ImageView vejaRelatorio;
     private Avaliacao avaliacao;
 
     @Override
@@ -39,7 +37,7 @@ public class ResultadoActivity extends AppCompatActivity
 
         ImageView imageView = (ImageView) findViewById(R.id.imageView);
 
-        switch ( avaliacao.getEstado() )
+        switch (avaliacao.getEstado())
         {
             case STATUS_POSITIVO: imageView.setImageResource(R.drawable.bom);
                                   break;

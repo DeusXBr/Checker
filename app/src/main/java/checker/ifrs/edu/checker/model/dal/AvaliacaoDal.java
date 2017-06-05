@@ -1,12 +1,9 @@
 package checker.ifrs.edu.checker.model.dal;
 
-import android.util.Log;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import checker.ifrs.edu.checker.vo.Avaliacao;
-import checker.ifrs.edu.checker.vo.Categoria;
 import checker.ifrs.edu.checker.vo.Resposta;
 import io.realm.Realm;
 import io.realm.RealmList;
@@ -27,16 +24,20 @@ public class AvaliacaoDal {
      * Metodo construtor
      *
      */
-    public AvaliacaoDal(){
+    public AvaliacaoDal()
+    {
         this.mRealm = Realm.getDefaultInstance();
     }
 
-    public int criarAvaliacao(Avaliacao avaliacao){
+    public int criarAvaliacao(Avaliacao avaliacao)
+    {
         this.mRealm.beginTransaction();
 
-        try {
+        try
+        {
             this.mRealm.copyToRealm(avaliacao);
-        } catch (IllegalArgumentException | RealmPrimaryKeyConstraintException e){
+        } catch (IllegalArgumentException | RealmPrimaryKeyConstraintException e)
+        {
             this.mRealm.cancelTransaction();
             return FAIL_OPERATION;
         }
@@ -46,14 +47,16 @@ public class AvaliacaoDal {
         return SUCCESS_OPERATION;
     }
 
-    public void editRespostaFromAvaliacao(int avaliacaoId, Resposta resposta){
+    public void editRespostaFromAvaliacao(int avaliacaoId, Resposta resposta)
+    {
         Avaliacao avaliacao = trazerAvaliacao(avaliacaoId);
 
-        if(avaliacao != null)
+        if (avaliacao != null)
         {
             RealmList<Resposta> respostaList = avaliacao.getRespostas();
-            for (Resposta item : respostaList) {
-                if( item.getQuestao().getId() == resposta.getQuestao().getId() )
+            for (Resposta item : respostaList)
+            {
+                if ( item.getQuestao().getId() == resposta.getQuestao().getId() )
                 {
                     this.mRealm.beginTransaction();
                     item.setResposta(resposta.getResposta());
@@ -64,30 +67,37 @@ public class AvaliacaoDal {
 
     }
 
-    public Avaliacao trazerAvaliacao(int id){
+    private Avaliacao trazerAvaliacao(int id)
+    {
         Avaliacao avaliacao = null;
-        if(!isNegativeOrZero(id)){
+        if (!isNegativeOrZero(id))
+        {
             avaliacao = this.mRealm.where(Avaliacao.class).equalTo("id", id).findFirst();
         }
 
         return avaliacao;
     }
 
-    public Avaliacao trazerAvaliacao(String nome){
+    public Avaliacao trazerAvaliacao(String nome)
+    {
         Avaliacao avaliacao = null;
-        if(!isNullOrEmpty(nome)){
+        if (!isNullOrEmpty(nome))
+        {
             avaliacao = this.mRealm.where(Avaliacao.class).equalTo("nome", nome).findFirst();
         }
 
         return avaliacao;
     }
 
-    public List<Avaliacao> trazerAvaliacoes(){
+    public List<Avaliacao> trazerAvaliacoes()
+    {
         ArrayList<Avaliacao> avaliacaoArrayList = new ArrayList<>();
         RealmResults<Avaliacao> results = this.mRealm.where(Avaliacao.class).findAll();
 
-        if(results.size() != 0){
-            for (Avaliacao result: results) {
+        if (results.size() != 0)
+        {
+            for (Avaliacao result: results)
+            {
                 avaliacaoArrayList.add(result);
             }
         }
@@ -95,13 +105,15 @@ public class AvaliacaoDal {
         return avaliacaoArrayList;
     }
 
-    public boolean hasResposta(int avaliacaoId, Resposta resposta){
+    public boolean hasResposta(int avaliacaoId, Resposta resposta)
+    {
         Avaliacao avaliacao = trazerAvaliacao(avaliacaoId);
-        if(avaliacao != null)
+        if (avaliacao != null)
         {
             RealmList<Resposta> respostaList = avaliacao.getRespostas();
-            for (Resposta item : respostaList) {
-                if( item.getQuestao().getId() == resposta.getQuestao().getId() )
+            for (Resposta item : respostaList)
+            {
+                if ( item.getQuestao().getId() == resposta.getQuestao().getId() )
                 {
                     return true;
                 }
@@ -111,13 +123,16 @@ public class AvaliacaoDal {
         return false;
     }
 
-    private void resetDatabase(){
-        if(mRealm != null && mRealm.isInTransaction()){
+    private void resetDatabase()
+    {
+        if(mRealm != null && mRealm.isInTransaction())
+        {
             mRealm.cancelTransaction();
         }
     }
 
-    public void clearDatabase(){
+    public void clearDatabase()
+    {
         resetDatabase();
 
         mRealm.beginTransaction();
@@ -125,8 +140,10 @@ public class AvaliacaoDal {
         mRealm.commitTransaction();
     }
 
-    public void remove(Avaliacao avaliacao){
-        if(avaliacao != null){
+    public void remove(Avaliacao avaliacao)
+    {
+        if (avaliacao != null)
+        {
             this.mRealm.beginTransaction();
             avaliacao.deleteFromRealm();
             this.mRealm.commitTransaction();

@@ -9,9 +9,6 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -25,7 +22,6 @@ import checker.ifrs.edu.checker.vo.Avaliacao;
 
 public class MainActivity extends AppCompatActivity
 {
-
     public static final String KEY_EXTRA = "checker.ifrs.edu.checker.TITULO_AVALIACAO";
     public static final String PREFS_NAME = "Preferences";
 
@@ -58,10 +54,12 @@ public class MainActivity extends AppCompatActivity
 
         final EditText titulo = (EditText) promptsView.findViewById(R.id.editTextDialogUserInput);
 
-        builder.setPositiveButton("criar", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("criar", new DialogInterface.OnClickListener()
+        {
             @Override
-            public void onClick(DialogInterface dialog, int id) {
-
+            public void onClick(DialogInterface dialog, int id)
+            {
+                // code...
             }
 
         })
@@ -70,9 +68,11 @@ public class MainActivity extends AppCompatActivity
         final AlertDialog alert = builder.create();
         alert.show();
 
-        alert.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener() {
+        alert.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view)
+            {
                 titulo.setText(titulo.getText().toString().trim()); // retira espacos em branco do inicio e do fim
 
                 AvaliacaoBll mAvaliacaoBll = new AvaliacaoBll();

@@ -7,10 +7,38 @@
     android:layout_marginTop="56dp"
     >
 
+    <TextView
+        android:id="@+id/titulo_avaliacao_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Título da avaliação"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#000"
+        />
+
+    <TextView
+        android:id="@+id/data_hora_avaliacao_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titulo_avaliacao_feedback"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="Data da avaliação"
+        android:gravity="center"
+        android:textColor="#000"
+        />
+
     <ListView
         android:id="@+id/listview_feedback"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/data_hora_avaliacao_feedback"
         android:divider="@null"
         />
 

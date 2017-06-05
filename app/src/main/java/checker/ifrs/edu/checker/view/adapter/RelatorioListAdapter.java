@@ -2,11 +2,9 @@ package checker.ifrs.edu.checker.view.adapter;
 
 import android.content.Context;
 import android.content.res.Configuration;
-import android.os.Build;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -21,18 +19,21 @@ import static checker.ifrs.edu.checker.utils.CalculaAvaliacaoUtils.STATUS_POSITI
 import static checker.ifrs.edu.checker.utils.CalculaAvaliacaoUtils.STATUS_REGULAR;
 import static checker.ifrs.edu.checker.utils.StringUtils.mostrarQuantosCaracteres;
 
-public class RelatorioListAdapter extends BaseAdapter {
+public class RelatorioListAdapter extends BaseAdapter
+{
 
     private Context mContext;
     private List<Avaliacao> mAvaliacaoList;
 
-    public RelatorioListAdapter(Context mContext, List<Avaliacao> mAvaliacaoList) {
+    public RelatorioListAdapter(Context mContext, List<Avaliacao> mAvaliacaoList)
+    {
         this.mContext = mContext;
         this.mAvaliacaoList = mAvaliacaoList;
     }
 
     @Override
-    public int getCount() {
+    public int getCount()
+    {
         return mAvaliacaoList.size();
     }
 
@@ -42,18 +43,21 @@ public class RelatorioListAdapter extends BaseAdapter {
     }
 
     @Override
-    public long getItemId(int position) {
+    public long getItemId(int position)
+    {
         return position;
     }
 
-    public void updateList(List<Avaliacao> mAvaliacaoList){
+    public void updateList(List<Avaliacao> mAvaliacaoList)
+    {
         this.mAvaliacaoList.clear();
         this.mAvaliacaoList.addAll(mAvaliacaoList);
         notifyDataSetChanged();
     }
 
     @Override
-    public View getView(int position, View view, ViewGroup viewGroup) {
+    public View getView(int position, View view, ViewGroup viewGroup)
+    {
         View v = View.inflate(mContext, R.layout.item_listview_listarelatorio, null); // set o layout de cada item
 
         if ( this.mContext.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT)
@@ -71,19 +75,16 @@ public class RelatorioListAdapter extends BaseAdapter {
         textViewDataCriacao.setText(mAvaliacaoList.get(position).getDataCriacao()); // set o text do textView
 
         LinearLayout linearLayout = (LinearLayout) v.findViewById(R.id.linear_layout_filho); //recupera objeto do layout
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN)
+        switch (mAvaliacaoList.get(position).getEstado())
         {
-            switch (mAvaliacaoList.get(position).getEstado())
-            {
-                case STATUS_CRIADO: linearLayout.setBackground(mContext.getResources().getDrawable(R.drawable.background_shape_novo));
-                    break;
-                case STATUS_POSITIVO: linearLayout.setBackground(mContext.getResources().getDrawable(R.drawable.background_shape_bom));
-                    break;
-                case STATUS_REGULAR: linearLayout.setBackground(mContext.getResources().getDrawable(R.drawable.background_shape_regular));
-                    break;
-                case STATUS_NEGATIVO: linearLayout.setBackground(mContext.getResources().getDrawable(R.drawable.background_shape_ruim));
-                    break;
-            }
+            case STATUS_CRIADO: linearLayout.setBackgroundResource(R.drawable.background_shape_novo);
+                break;
+            case STATUS_POSITIVO: linearLayout.setBackgroundResource(R.drawable.background_shape_bom);
+                break;
+            case STATUS_REGULAR: linearLayout.setBackgroundResource(R.drawable.background_shape_regular);
+                break;
+            case STATUS_NEGATIVO: linearLayout.setBackgroundResource(R.drawable.background_shape_ruim);
+                break;
         }
 
         TextView textViewStatus = (TextView) v.findViewById(R.id.status); //recupera objeto do layout

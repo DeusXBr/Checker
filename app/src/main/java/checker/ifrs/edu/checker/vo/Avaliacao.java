@@ -34,17 +34,18 @@ public class Avaliacao extends RealmObject
     {
         setId();
         setDataCriacao();
+        setDataModificado();
         this.mRealm = Realm.getDefaultInstance();
     }
 
-    public Avaliacao(String nome, String estado, String dataModificado)
+    public Avaliacao(String nome, String estado)
     {
         setId();
         this.nome = nome;
         this.estado = primeiroCaracterMaiusculo(estado);
         this.nota = 0;
         setDataCriacao();
-        this.dataModificado = dataModificado;
+        setDataModificado();
         this.mRealm = Realm.getDefaultInstance();
     }
 
@@ -84,9 +85,9 @@ public class Avaliacao extends RealmObject
         this.dataCriacao = StringUtils.getDataAtual();
     }
 
-    public void setDataModificado(String dataModificado)
+    public void setDataModificado()
     {
-        this.dataModificado = dataModificado;
+        this.dataModificado = StringUtils.getDataAtual();
     }
 
     public void setRespostas(RealmList<Resposta> respostas)

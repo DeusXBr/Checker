@@ -12,7 +12,8 @@ import io.realm.exceptions.RealmPrimaryKeyConstraintException;
 import static checker.ifrs.edu.checker.utils.StringUtils.isNegativeOrZero;
 import static checker.ifrs.edu.checker.utils.StringUtils.isNullOrEmpty;
 
-public class CategoriaDal {
+public class CategoriaDal
+{
 
     private Realm mRealm;
 
@@ -23,16 +24,20 @@ public class CategoriaDal {
      * Metodo construtor
      *
      */
-    public CategoriaDal(){
+    public CategoriaDal()
+    {
         this.mRealm = Realm.getDefaultInstance();
     }
 
-    public int criarCategoria(Categoria categoria){
+    public int criarCategoria(Categoria categoria)
+    {
         this.mRealm.beginTransaction();
 
-        try {
+        try
+        {
             this.mRealm.copyToRealm(categoria);
-        } catch (IllegalArgumentException | RealmPrimaryKeyConstraintException e){
+        } catch (IllegalArgumentException | RealmPrimaryKeyConstraintException e)
+        {
             this.mRealm.cancelTransaction();
             return FAIL_OPERATION;
         }
@@ -42,7 +47,8 @@ public class CategoriaDal {
         return SUCCESS_OPERATION;
     }
 
-    public Categoria trazerCategoria(int id){
+    public Categoria trazerCategoria(int id)
+    {
         Categoria categoria = null;
 
         if(!isNegativeOrZero(id)){
@@ -52,28 +58,34 @@ public class CategoriaDal {
         return categoria;
     }
 
-    public Categoria trazerCategoria(String nome){
+    public Categoria trazerCategoria(String nome)
+    {
         Categoria categoria = null;
 
-        if(!isNullOrEmpty(nome)){
+        if (!isNullOrEmpty(nome))
+        {
             categoria = this.mRealm.where(Categoria.class).equalTo("nome", nome).findFirst();
         }
 
         return categoria;
     }
 
-    public RealmResults<Categoria> trazerCategorias(){
+    public RealmResults<Categoria> trazerCategorias()
+    {
         return this.mRealm.where(Categoria.class).findAll();
     }
 
 
-    public List<Questao> trazerQuestoes(){
+    public List<Questao> trazerQuestoes()
+    {
         List<Questao> questaosArrayList = new ArrayList<>();
 
         RealmResults<Questao> results = this.mRealm.where(Questao.class).findAll();
 
-        if(results.size() != 0){
-            for (Questao result: results) {
+        if (results.size() != 0)
+        {
+            for (Questao result: results)
+            {
                 questaosArrayList.add(result);
             }
         }
@@ -81,14 +93,17 @@ public class CategoriaDal {
         return questaosArrayList;
     }
 
-    public List<Questao> trazerQuestoes(Categoria categoria){
+    public List<Questao> trazerQuestoes(Categoria categoria)
+    {
         List<Questao> questaosArrayList = new ArrayList<>();
 
         RealmResults<Questao> results = this.mRealm.where(Questao.class).equalTo("categoria.id", categoria.getId())
                                                                         .findAll();
 
-        if(results.size() != 0){
-            for (Questao result: results) {
+        if(results.size() != 0)
+        {
+            for (Questao result: results)
+            {
                 questaosArrayList.add(result);
             }
         }
@@ -98,13 +113,16 @@ public class CategoriaDal {
 
 
 
-    private void resetDatabase(){
-        if(mRealm != null && mRealm.isInTransaction()){
+    private void resetDatabase()
+    {
+        if (mRealm != null && mRealm.isInTransaction())
+        {
             mRealm.cancelTransaction();
         }
     }
 
-    public void clearDatabase(){
+    public void clearDatabase()
+    {
         resetDatabase();
 
         mRealm.beginTransaction();

@@ -72,7 +72,8 @@ public class CategoriaListAdapter extends RealmBaseAdapter<Categoria> implements
         holder.checkBox.setOnCheckedChangeListener(new CheckBox.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                // ... code ..
+                // o click do checkbox sera feito automaticamente pelo sistema.
+                // Isso ocorrerá quando o usuario preencher todas as respostas da categoria
             }
         });
 

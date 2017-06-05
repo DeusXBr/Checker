@@ -44,7 +44,7 @@ public class AvaliacaoActivity extends AppCompatActivity
         CategoriaBll mCategoriaBll = new CategoriaBll();
 
         //verifica se tem dados no sharedPreferences
-        if( avaliacao != null )
+        if ( avaliacao != null )
         {
             initToolBar();
 
@@ -97,6 +97,7 @@ public class AvaliacaoActivity extends AppCompatActivity
             Realm.getDefaultInstance().beginTransaction();
             avaliacao.setEstado(status);
             avaliacao.setNota(nota);
+            avaliacao.setDataModificado();
             Realm.getDefaultInstance().commitTransaction();
 
             Intent intent = new Intent(AvaliacaoActivity.this, ResultadoActivity.class);

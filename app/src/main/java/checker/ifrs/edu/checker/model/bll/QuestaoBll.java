@@ -1,24 +1,22 @@
 package checker.ifrs.edu.checker.model.bll;
 
-import java.util.List;
-
 import checker.ifrs.edu.checker.model.dal.QuestaoDal;
 import checker.ifrs.edu.checker.utils.exception.InvalidStringException;
 import checker.ifrs.edu.checker.vo.Questao;
 import io.realm.RealmResults;
 
 import static checker.ifrs.edu.checker.utils.StringUtils.isNegativeOrZero;
-import static checker.ifrs.edu.checker.utils.StringUtils.isNullOrEmpty;
 
-public class QuestaoBll {
-
+public class QuestaoBll
+{
     private QuestaoDal mQuestaoDal;
 
     /**
      * Metodo construtor
      *
      */
-    public QuestaoBll(){
+    public QuestaoBll()
+    {
         mQuestaoDal = new QuestaoDal();
     }
 
@@ -38,16 +36,20 @@ public class QuestaoBll {
      * @param id Codigo de identificado da questao
      * @return Questao Realm
      */
-    public Questao getQuestao(int id){
+    public Questao getQuestao(int id)
+    {
         Questao questao = null;
 
-        try{
+        try
+        {
             if(isNegativeOrZero(id)){
                 throw new InvalidStringException();
             }
 
             questao = this.mQuestaoDal.trazerQuestao(id);
-        } catch (InvalidStringException e){
+        }
+        catch (InvalidStringException e)
+        {
             //
         }
 

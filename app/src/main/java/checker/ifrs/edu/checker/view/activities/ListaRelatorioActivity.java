@@ -9,9 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.List;
 
@@ -20,14 +18,15 @@ import checker.ifrs.edu.checker.model.bll.AvaliacaoBll;
 import checker.ifrs.edu.checker.view.adapter.RelatorioListAdapter;
 import checker.ifrs.edu.checker.vo.Avaliacao;
 
-public class ListaRelatorioActivity extends AppCompatActivity {
-
+public class ListaRelatorioActivity extends AppCompatActivity
+{
     private ListView listRelatorios;
     private RelatorioListAdapter relatorioListAdapter;
     public static final String PREFS_NAME = "Preferences";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listarelatorio);
 
@@ -58,9 +57,11 @@ public class ListaRelatorioActivity extends AppCompatActivity {
             }
         });
 
-        listRelatorios.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+        listRelatorios.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener()
+        {
             @Override
-            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long l) {
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long l)
+            {
 
                 Avaliacao avaliacao = (Avaliacao)relatorioListAdapter.getItem(position);
                 mAvaliacaoBll.removeAvaliacao(avaliacao);
@@ -79,8 +80,10 @@ public class ListaRelatorioActivity extends AppCompatActivity {
      * @return boolean
      */
     @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        if(item.getItemId() == android.R.id.home){
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        if (item.getItemId() == android.R.id.home)
+        {
             finish();
         }
         return super.onOptionsItemSelected(item);
@@ -92,7 +95,8 @@ public class ListaRelatorioActivity extends AppCompatActivity {
      * Obs: chamada esta no construtor da classe
      *
      */
-    public void initToolBar(){
+    public void initToolBar()
+    {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         // recupera o titulo do app no xml strings
@@ -105,7 +109,8 @@ public class ListaRelatorioActivity extends AppCompatActivity {
 
         // mostra o botao voltar no toolbar
         ActionBar actionbar = getSupportActionBar();
-        if (actionbar != null) {
+        if (actionbar != null)
+        {
             actionbar.setDisplayHomeAsUpEnabled(true);
         }
     }

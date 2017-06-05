@@ -25,7 +25,7 @@ public class SobreActivity extends AppCompatActivity
     public boolean onOptionsItemSelected(MenuItem item)
     {
         // acao para voltar no toolbar
-        if(item.getItemId() == android.R.id.home)
+        if (item.getItemId() == android.R.id.home)
         {
             finish();
         }

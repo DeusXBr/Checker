@@ -11,9 +11,16 @@ import checker.ifrs.edu.checker.vo.Resposta;
 public class RespostaComparator implements Comparator<Resposta>
 {
 
+    /**
+     * Metodo que ordena a lista de respostas
+     *
+     * @param respostaUm uma resposta
+     * @param respostaDois a proxima resposta
+     * @return
+     */
     @Override
-    public int compare(Resposta one, Resposta two)
+    public int compare(Resposta respostaUm, Resposta respostaDois)
     {
-        return ((Integer)two.getQuestao().getId()).compareTo(one.getQuestao().getId());
+        return ((Integer)respostaDois.getQuestao().getId()).compareTo(respostaUm.getQuestao().getId());
     }
 }

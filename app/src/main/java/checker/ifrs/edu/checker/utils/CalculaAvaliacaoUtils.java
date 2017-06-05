@@ -1,14 +1,11 @@
 package checker.ifrs.edu.checker.utils;
 
-import android.util.Log;
-
 import checker.ifrs.edu.checker.R;
 import checker.ifrs.edu.checker.vo.Resposta;
 import io.realm.RealmList;
 
 public class CalculaAvaliacaoUtils
 {
-
     private RealmList<Resposta> listRespostas;
     private float nota;
     private String status;
@@ -19,8 +16,15 @@ public class CalculaAvaliacaoUtils
     public static final String STATUS_REGULAR = "Regular";
     public static final String STATUS_NEGATIVO = "Ruim";
 
+    /**
+     * Contrutor padrão
+     */
     public CalculaAvaliacaoUtils(){}
 
+    /**
+     * Construtor com parametros
+     * @param listRespostas uma lista contendo todas as respostas
+     */
     public CalculaAvaliacaoUtils(RealmList<Resposta> listRespostas)
     {
         this.listRespostas = listRespostas;
@@ -30,6 +34,11 @@ public class CalculaAvaliacaoUtils
         this.respostasRespondidas = listRespostas.size();
     }
 
+    /**
+     * Metodo faz o calculo da avaliacao
+     * @return float/nota
+     * @throws NullPointerException
+     */
     public float avaliar() throws NullPointerException
     {
         if(getTotalRespostas() == 0)
@@ -62,6 +71,9 @@ public class CalculaAvaliacaoUtils
         }
     }
 
+    /**
+     * Metodo define um status para a avaliacao dependendo de sua nota
+     */
     private void setStatus()
     {
         float porcentagem = (100*this.nota)/this.respostasRespondidas;

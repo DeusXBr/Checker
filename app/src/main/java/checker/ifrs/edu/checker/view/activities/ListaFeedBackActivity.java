@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -25,10 +26,12 @@ import checker.ifrs.edu.checker.vo.Resposta;
 import static checker.ifrs.edu.checker.utils.Helper.getAvaliacao;
 import static checker.ifrs.edu.checker.utils.ModelUtils.getRespostasErradasRegulares;
 
-public class ListaFeedBackActivity extends AppCompatActivity {
+public class ListaFeedBackActivity extends AppCompatActivity
+{
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listafeedback);
 
@@ -39,13 +42,18 @@ public class ListaFeedBackActivity extends AppCompatActivity {
 
         Collections.sort(listRespostas, new RespostaComparator());
 
-        if(listRespostas.size() > 0)
+        if (listRespostas.size() > 0)
         {
+            TextView titulo_avaliacao = (TextView)findViewById(R.id.titulo_avaliacao_feedback);
+            titulo_avaliacao.setText("Avaliação: " + avaliacao.getNome());
+
+            TextView data_avalicao = (TextView)findViewById(R.id.data_hora_avaliacao_feedback);
+            data_avalicao.setText(avaliacao.getDataModificado());
+
             FeedBackListAdapter adapter = new FeedBackListAdapter(this, listRespostas);
 
             ListView listViewFeedback = (ListView) findViewById(R.id.listview_feedback);
             listViewFeedback.setAdapter(adapter);
-
         }
     }
 
@@ -65,14 +73,16 @@ public class ListaFeedBackActivity extends AppCompatActivity {
      * @return boolean
      */
     @Override
-    public boolean onOptionsItemSelected(MenuItem item){
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
         if (item.getItemId() == R.id.menu_home)
         {
             Intent intent = new Intent(ListaFeedBackActivity.this, MainActivity.class);
             startActivity(intent);
         }
 
-        if(item.getItemId() == android.R.id.home){
+        if(item.getItemId() == android.R.id.home)
+        {
             finish();
         }
         return super.onOptionsItemSelected(item);
@@ -98,7 +108,8 @@ public class ListaFeedBackActivity extends AppCompatActivity {
 
         // mostra o botao voltar no toolbar
         ActionBar actionbar = getSupportActionBar();
-        if (actionbar != null) {
+        if (actionbar != null)
+        {
             actionbar.setDisplayHomeAsUpEnabled(true);
         }
     }

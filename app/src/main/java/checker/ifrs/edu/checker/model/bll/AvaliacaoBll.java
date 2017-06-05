@@ -1,5 +1,4 @@
 package checker.ifrs.edu.checker.model.bll;
-import android.util.Log;
 
 import java.util.List;
 
@@ -70,7 +69,9 @@ public class AvaliacaoBll
             }
 
             avaliacao = this.mAvaliacaoDal.trazerAvaliacao(nome);
-        } catch (InvalidStringException e){
+        }
+        catch (InvalidStringException e)
+        {
             //
         }
 

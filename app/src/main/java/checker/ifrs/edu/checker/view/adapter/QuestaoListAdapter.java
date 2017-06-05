@@ -14,19 +14,21 @@ import checker.ifrs.edu.checker.vo.Questao;
 import io.realm.RealmBaseAdapter;
 import io.realm.RealmResults;
 
-public class QuestaoListAdapter extends RealmBaseAdapter<Questao> implements ListAdapter {
-
+public class QuestaoListAdapter extends RealmBaseAdapter<Questao> implements ListAdapter
+{
     public static final String TAG = "MeuTeste";
 
     private RealmResults<Questao> realmResults;
     private SparseIntArray sparseIntArray;
 
-    public QuestaoListAdapter(Context context, RealmResults<Questao> realmResults, SparseIntArray realmResultsRespostas) {
+    public QuestaoListAdapter(Context context, RealmResults<Questao> realmResults, SparseIntArray realmResultsRespostas)
+    {
         super(context, realmResults);
         this.realmResults = realmResults;
 
         this.sparseIntArray = new SparseIntArray();
-        for (int i = 0; i < realmResultsRespostas.size(); i++) {
+        for (int i = 0; i < realmResultsRespostas.size(); i++)
+        {
             int key = realmResultsRespostas.keyAt(i);
             int value = realmResultsRespostas.get(key);
 
@@ -35,7 +37,8 @@ public class QuestaoListAdapter extends RealmBaseAdapter<Questao> implements Lis
     }
 
     @Override
-    public View getView(final int position, View converterView, ViewGroup viewGroup) {
+    public View getView(final int position, View converterView, ViewGroup viewGroup)
+    {
 
         CustomViewHolder holder;
 
@@ -94,11 +97,13 @@ public class QuestaoListAdapter extends RealmBaseAdapter<Questao> implements Lis
         return this.sparseIntArray;
     }
 
-    private static class CustomViewHolder{
+    private static class CustomViewHolder
+    {
         TextView pergunta = null;
         RadioGroup radioGroup;
 
-        CustomViewHolder(View view){
+        CustomViewHolder(View view)
+        {
             pergunta = (TextView) view.findViewById(R.id.textview_pergunta);
             radioGroup = (RadioGroup) view.findViewById(R.id.radiogroup_linha);
         }
