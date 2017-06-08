@@ -13,39 +13,44 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="100dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="60dp"
         android:contentDescription="@string/footer_description_image"
         android:src="@drawable/logo_checker"
         />
 
     <Button
         android:id="@+id/nova_avaliacao"
-        android:layout_width="260dp"
-        android:layout_height="55dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:layout_alignLeft="@+id/avaliacaoes_realizadas"
+        android:layout_alignStart="@+id/avaliacaoes_realizadas"
+        android:layout_below="@+id/imageView"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/custom_shape_button"
         android:onClick="novaAvaliacao"
-        android:text="@string/main_button_1_title"
-        />
+        android:text="@string/main_button_1_title"/>
 
     <Button
         android:id="@+id/avaliacaoes_realizadas"
-        android:layout_width="260dp"
-        android:layout_height="55dp"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
         android:layout_below="@+id/nova_avaliacao"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/custom_shape_button"
         android:onClick="listarAvaliacoes"
         android:text="@string/main_button_2_title"
         />
 
     <Button
         android:id="@+id/sobre"
-        android:layout_width="260dp"
-        android:layout_height="55dp"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
         android:layout_below="@+id/avaliacaoes_realizadas"
         android:layout_centerHorizontal="true"
+        android:background="@drawable/custom_shape_button"
         android:onClick="sobre"
-        android:text="@string/main_button_3_title"
-        />
+        android:text="@string/main_button_3_title"/>
 
 </RelativeLayout>

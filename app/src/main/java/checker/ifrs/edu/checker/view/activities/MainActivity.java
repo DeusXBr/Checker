@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity
 
     /**
      * Callback
-     * @param view
+     * @param view View
      */
     public void novaAvaliacao(View view)
     {
@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity
 
     /**
      * Callback
-     * @param view
+     * @param view View
      */
     public void listarAvaliacoes(View view)
     {
@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity
 
     /**
      * Callback
-     * @param view
+     * @param view View
      */
     public void sobre(View view)
     {
@@ -149,6 +149,7 @@ public class MainActivity extends AppCompatActivity
 
         // Coloca o title, recuperado da linha acima, como titulo do toolbar
         toolbar.setTitle(title);
+        toolbar.setTitleMarginStart(200);
 
         setSupportActionBar(toolbar);
     }

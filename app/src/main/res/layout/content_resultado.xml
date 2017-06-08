@@ -26,34 +26,37 @@
 
     <Button
         android:id="@+id/resultado_button_1_id"
-        android:layout_width="260dp"
-        android:layout_height="55dp"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:layout_marginBottom="20dp"
         android:layout_marginTop="30dp"
+        android:background="@drawable/custom_shape_button"
         android:onClick="editarAvaliacao"
-        android:text="@string/resultado_button_1_title"
-        />
+        android:text="@string/resultado_button_1_title"/>
 
     <Button
         android:id="@+id/resultado_button_2_id"
-        android:layout_width="260dp"
-        android:layout_height="55dp"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
         android:layout_below="@+id/resultado_button_1_id"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/custom_shape_button"
         android:onClick="avaliarNovamente"
-        android:text="@string/resultado_button_2_title"
-        />
+        android:text="@string/resultado_button_2_title"/>
 
     <Button
         android:id="@+id/resultado_button_3_id"
-        android:layout_width="260dp"
-        android:layout_height="55dp"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
         android:layout_below="@+id/resultado_button_2_id"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:background="@drawable/custom_shape_button"
         android:onClick="compartilhar"
         android:text="@string/resultado_button_3_title"
         />

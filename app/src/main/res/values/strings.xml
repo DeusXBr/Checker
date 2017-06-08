@@ -15,7 +15,7 @@
     <string name="main_toolbar_item_menu2">Tela Inicial</string>
 
     <!-- Itens activity_main -->
-    <string name="main_button_1_title">Avaliação</string>
+    <string name="main_button_1_title">Avaliar</string>
     <string name="main_button_2_title">Relatórios</string>
     <string name="main_button_3_title">Sobre</string>
     <string name="main_dialog_title">Entre com o título da nova avaliação.</string>

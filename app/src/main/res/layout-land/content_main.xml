@@ -19,26 +19,29 @@
         android:id="@+id/nova_avaliacao"
         android:layout_width="260dp"
         android:layout_height="55dp"
-        android:layout_marginTop="56dp"
         android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/custom_shape_button"
         android:onClick="novaAvaliacao"
-        android:text="@string/main_button_1_title"
-        />
+        android:text="@string/main_button_1_title"/>
 
     <Button
         android:id="@+id/avaliacaoes_realizadas"
         android:layout_width="260dp"
         android:layout_height="55dp"
         android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/custom_shape_button"
         android:onClick="listarAvaliacoes"
-        android:text="@string/main_button_2_title"
-        />
+        android:text="@string/main_button_2_title"/>
 
     <Button
         android:id="@+id/sobre"
         android:layout_width="260dp"
         android:layout_height="55dp"
         android:layout_gravity="center"
+        android:background="@drawable/custom_shape_button"
         android:onClick="sobre"
         android:text="@string/main_button_3_title"
         />

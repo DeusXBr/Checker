@@ -24,28 +24,36 @@
         android:id="@+id/radiogroup_linha">
 
         <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/mRadio1"
-            android:text="@string/questao_radiobutton_1"/>
-
-        <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@drawable/custom_radio_button"
+            android:text="@string/questao_radiobutton_1"
+            />
+
+        <RadioButton
             android:id="@+id/mRadio2"
-            android:text="@string/questao_radiobutton_2"/>
-
-        <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@drawable/custom_radio_button"
+            android:text="@string/questao_radiobutton_2"
+            />
+
+        <RadioButton
             android:id="@+id/mRadio3"
-            android:text="@string/questao_radiobutton_3"/>
-
-        <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@drawable/custom_radio_button"
+            android:text="@string/questao_radiobutton_3"
+            />
+
+        <RadioButton
             android:id="@+id/mRadio4"
-            android:text="@string/questao_radiobutton_4"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@drawable/custom_radio_button"
+            android:text="@string/questao_radiobutton_4"
+            />
 
     </RadioGroup>
 
