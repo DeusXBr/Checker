@@ -6,10 +6,10 @@ import io.realm.RealmList;
 
 public class CalculaAvaliacaoUtils
 {
-    private RealmList<Resposta> listRespostas;
     private float nota;
-    private String status;
     private int respostasRespondidas;
+    private RealmList<Resposta> listRespostas;
+    private String status;
 
     public static final String STATUS_CRIADO = "Novo";
     public static final String STATUS_POSITIVO = "Bom";
@@ -19,13 +19,16 @@ public class CalculaAvaliacaoUtils
     /**
      * Contrutor padrão
      */
-    public CalculaAvaliacaoUtils(){}
+    public CalculaAvaliacaoUtils ()
+    {
+    }
 
     /**
      * Construtor com parametros
+     *
      * @param listRespostas uma lista contendo todas as respostas
      */
-    public CalculaAvaliacaoUtils(RealmList<Resposta> listRespostas)
+    public CalculaAvaliacaoUtils (RealmList<Resposta> listRespostas)
     {
         this.listRespostas = listRespostas;
 
@@ -36,12 +39,14 @@ public class CalculaAvaliacaoUtils
 
     /**
      * Metodo faz o calculo da avaliacao
+     *
      * @return float/nota
+     *
      * @throws NullPointerException
      */
-    public float avaliar() throws NullPointerException
+    public float avaliar () throws NullPointerException
     {
-        if(getTotalRespostas() == 0)
+        if (getTotalRespostas() == 0)
         {
             throw new NullPointerException();
         }
@@ -51,16 +56,20 @@ public class CalculaAvaliacaoUtils
             {
                 switch (item.getResposta())
                 {
-                    case R.id.mRadio1: this.nota += 1;
-                                     break;
+                    case R.id.mRadio1:
+                        this.nota += 1;
+                        break;
 
-                    case R.id.mRadio3: this.nota += 0.5;
-                                     break;
+                    case R.id.mRadio3:
+                        this.nota += 0.5;
+                        break;
 
-                    case R.id.mRadio4: this.respostasRespondidas -= 1;
-                                     break;
+                    case R.id.mRadio4:
+                        this.respostasRespondidas -= 1;
+                        break;
 
-                    default: break;
+                    default:
+                        break;
                 }
             }
 
@@ -74,17 +83,17 @@ public class CalculaAvaliacaoUtils
     /**
      * Metodo define um status para a avaliacao dependendo de sua nota
      */
-    private void setStatus()
+    private void setStatus ()
     {
-        float porcentagem = (100*this.nota)/this.respostasRespondidas;
+        float porcentagem = (100 * this.nota) / this.respostasRespondidas;
 
-        if( porcentagem < 50 )
+        if (porcentagem < 50)
         {
             this.status = STATUS_NEGATIVO;
         }
         else
         {
-            if(porcentagem == 50 || porcentagem < 70)
+            if (porcentagem == 50 || porcentagem < 70)
             {
                 this.status = STATUS_REGULAR;
             }
@@ -95,27 +104,27 @@ public class CalculaAvaliacaoUtils
         }
     }
 
-    private void setNota(float nota)
+    private void setNota (float nota)
     {
         this.nota = nota;
     }
 
-    public String getStatus()
+    public String getStatus ()
     {
         return this.status;
     }
 
-    private int getTotalRespostas()
+    private int getTotalRespostas ()
     {
         return listRespostas.size();
     }
 
-    public int getTotalRespondidas()
+    public int getTotalRespondidas ()
     {
         return this.respostasRespondidas;
     }
 
-    public float getNota()
+    public float getNota ()
     {
         return this.nota;
     }

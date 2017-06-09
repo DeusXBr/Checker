@@ -1,6 +1,6 @@
 package checker.ifrs.edu.checker.model.bll;
 
-import checker.ifrs.edu.checker.model.dal.RespostaDal;
+import checker.ifrs.edu.checker.model.dao.RespostaDao;
 import checker.ifrs.edu.checker.utils.exception.InvalidStringException;
 import checker.ifrs.edu.checker.vo.Avaliacao;
 import checker.ifrs.edu.checker.vo.Resposta;
@@ -10,7 +10,7 @@ import static checker.ifrs.edu.checker.utils.StringUtils.isNegativeOrZero;
 public class RespostaBll
 {
 
-    private RespostaDal mRespostaDal;
+    private RespostaDao mRespostaDao;
 
     /**
      * Metodo construtor
@@ -18,7 +18,7 @@ public class RespostaBll
      */
     public RespostaBll()
     {
-        mRespostaDal = new RespostaDal();
+        mRespostaDao = new RespostaDao();
     }
 
     /**
@@ -33,7 +33,7 @@ public class RespostaBll
             throw new NullPointerException();
         }
 
-        this.mRespostaDal.criarResposta(resposta);
+        this.mRespostaDao.criarResposta(resposta);
     }
 
     /**
@@ -53,7 +53,7 @@ public class RespostaBll
                 throw new InvalidStringException();
             }
 
-            resposta = this.mRespostaDal.trazerResposta(id);
+            resposta = this.mRespostaDao.trazerResposta(id);
         }
         catch (InvalidStringException e)
         {
@@ -80,7 +80,7 @@ public class RespostaBll
                 throw new InvalidStringException();
             }
 
-            resposta = this.mRespostaDal.trazerResposta(avaliacao);
+            resposta = this.mRespostaDao.trazerResposta(avaliacao);
         }
         catch (InvalidStringException e)
         {

@@ -1,6 +1,6 @@
 package checker.ifrs.edu.checker.model.bll;
 
-import checker.ifrs.edu.checker.model.dal.QuestaoDal;
+import checker.ifrs.edu.checker.model.dao.QuestaoDao;
 import checker.ifrs.edu.checker.utils.exception.InvalidStringException;
 import checker.ifrs.edu.checker.vo.Questao;
 import io.realm.RealmResults;
@@ -9,7 +9,7 @@ import static checker.ifrs.edu.checker.utils.StringUtils.isNegativeOrZero;
 
 public class QuestaoBll
 {
-    private QuestaoDal mQuestaoDal;
+    private QuestaoDao mQuestaoDao;
 
     /**
      * Metodo construtor
@@ -17,7 +17,7 @@ public class QuestaoBll
      */
     public QuestaoBll()
     {
-        mQuestaoDal = new QuestaoDal();
+        mQuestaoDao = new QuestaoDao();
     }
 
     /**
@@ -27,7 +27,7 @@ public class QuestaoBll
      */
     public RealmResults<Questao> getAllQuestoesByCategoria(String nomeCategoria)
     {
-        return this.mQuestaoDal.trazerQuestoes(nomeCategoria);
+        return this.mQuestaoDao.trazerQuestoes(nomeCategoria);
     }
 
     /**
@@ -46,7 +46,7 @@ public class QuestaoBll
                 throw new InvalidStringException();
             }
 
-            questao = this.mQuestaoDal.trazerQuestao(id);
+            questao = this.mQuestaoDao.trazerQuestao(id);
         }
         catch (InvalidStringException e)
         {

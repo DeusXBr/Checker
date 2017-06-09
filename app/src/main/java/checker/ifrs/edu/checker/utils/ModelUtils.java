@@ -1,6 +1,5 @@
 package checker.ifrs.edu.checker.utils;
 
-import android.util.Log;
 import android.util.SparseIntArray;
 
 import java.util.ArrayList;

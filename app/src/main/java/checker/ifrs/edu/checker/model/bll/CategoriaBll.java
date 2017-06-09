@@ -2,7 +2,7 @@ package checker.ifrs.edu.checker.model.bll;
 
 import java.util.List;
 
-import checker.ifrs.edu.checker.model.dal.CategoriaDal;
+import checker.ifrs.edu.checker.model.dao.CategoriaDao;
 import checker.ifrs.edu.checker.utils.exception.InvalidStringException;
 import checker.ifrs.edu.checker.vo.Categoria;
 import checker.ifrs.edu.checker.vo.Questao;
@@ -13,7 +13,7 @@ import static checker.ifrs.edu.checker.utils.StringUtils.isNullOrEmpty;
 
 public class CategoriaBll
 {
-    private CategoriaDal mCategoriaDal;
+    private CategoriaDao mCategoriaDao;
 
     /**
      * Metodo construtor
@@ -21,7 +21,7 @@ public class CategoriaBll
      */
     public CategoriaBll()
     {
-        mCategoriaDal = new CategoriaDal();
+        mCategoriaDao = new CategoriaDao();
     }
 
     /**
@@ -36,7 +36,7 @@ public class CategoriaBll
             throw new NullPointerException();
         }
 
-        this.mCategoriaDal.criarCategoria(categoria);
+        this.mCategoriaDao.criarCategoria(categoria);
     }
 
     /**
@@ -56,7 +56,7 @@ public class CategoriaBll
                 throw new InvalidStringException();
             }
 
-            categoria = this.mCategoriaDal.trazerCategoria(id);
+            categoria = this.mCategoriaDao.trazerCategoria(id);
         }
         catch (InvalidStringException e)
         {
@@ -83,7 +83,7 @@ public class CategoriaBll
                 throw new InvalidStringException();
             }
 
-            categoria = this.mCategoriaDal.trazerCategoria(nome);
+            categoria = this.mCategoriaDao.trazerCategoria(nome);
         }
         catch (InvalidStringException e)
         {
@@ -100,18 +100,18 @@ public class CategoriaBll
      */
     public RealmResults<Categoria> getAllCategorias()
     {
-        return this.mCategoriaDal.trazerCategorias();
+        return this.mCategoriaDao.trazerCategorias();
     }
 
 
     public List<Questao> getQuestoes(Categoria categoria)
     {
-        return this.mCategoriaDal.trazerQuestoes(categoria);
+        return this.mCategoriaDao.trazerQuestoes(categoria);
     }
 
     public void limparBancoDados()
     {
-        mCategoriaDal.clearDatabase();
+        mCategoriaDao.clearDatabase();
     }
 
 }

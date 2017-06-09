@@ -8,7 +8,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import checker.ifrs.edu.checker.model.bll.CategoriaBll;
-import checker.ifrs.edu.checker.model.dal.CategoriaDal;
 import checker.ifrs.edu.checker.vo.Categoria;
 import io.realm.Realm;
 

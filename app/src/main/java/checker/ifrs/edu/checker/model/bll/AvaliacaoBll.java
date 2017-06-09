@@ -2,7 +2,7 @@ package checker.ifrs.edu.checker.model.bll;
 
 import java.util.List;
 
-import checker.ifrs.edu.checker.model.dal.AvaliacaoDal;
+import checker.ifrs.edu.checker.model.dao.AvaliacaoDao;
 import checker.ifrs.edu.checker.utils.exception.InvalidStringException;
 import checker.ifrs.edu.checker.vo.Avaliacao;
 import checker.ifrs.edu.checker.vo.Resposta;
@@ -13,7 +13,7 @@ import static checker.ifrs.edu.checker.utils.StringUtils.isNullOrEmpty;
 public class AvaliacaoBll
 {
 
-    private AvaliacaoDal mAvaliacaoDal;
+    private AvaliacaoDao mAvaliacaoDao;
 
     /**
      * Metodo construtor
@@ -21,7 +21,7 @@ public class AvaliacaoBll
      */
     public AvaliacaoBll()
     {
-        mAvaliacaoDal = new AvaliacaoDal();
+        mAvaliacaoDao = new AvaliacaoDao();
     }
 
     /**
@@ -36,7 +36,7 @@ public class AvaliacaoBll
             throw new NullPointerException();
         }
 
-        this.mAvaliacaoDal.criarAvaliacao(avaliacao);
+        this.mAvaliacaoDao.criarAvaliacao(avaliacao);
     }
 
     /**
@@ -47,7 +47,7 @@ public class AvaliacaoBll
      */
     public void editRespostaDeUmaAvaliacao(int avalicaoId, Resposta resposta)
     {
-        this.mAvaliacaoDal.editRespostaFromAvaliacao(avalicaoId, resposta);
+        this.mAvaliacaoDao.editRespostaFromAvaliacao(avalicaoId, resposta);
     }
 
     /**
@@ -68,7 +68,7 @@ public class AvaliacaoBll
                 throw new InvalidStringException();
             }
 
-            avaliacao = this.mAvaliacaoDal.trazerAvaliacao(nome);
+            avaliacao = this.mAvaliacaoDao.trazerAvaliacao(nome);
         }
         catch (InvalidStringException e)
         {
@@ -85,7 +85,7 @@ public class AvaliacaoBll
      */
     public List<Avaliacao> getAllAvaliacoes()
     {
-        return this.mAvaliacaoDal.trazerAvaliacoes();
+        return this.mAvaliacaoDao.trazerAvaliacoes();
     }
 
     /**
@@ -104,17 +104,17 @@ public class AvaliacaoBll
 
     public boolean temResposta(int avalicaoId, Resposta resposta)
     {
-        return this.mAvaliacaoDal.hasResposta(avalicaoId, resposta);
+        return this.mAvaliacaoDao.hasResposta(avalicaoId, resposta);
     }
 
     public void limparBancoDados()
     {
-        mAvaliacaoDal.clearDatabase();
+        mAvaliacaoDao.clearDatabase();
     }
 
     public void removeAvaliacao(Avaliacao avaliacao)
     {
-        this.mAvaliacaoDal.remove(avaliacao);
+        this.mAvaliacaoDao.remove(avaliacao);
     }
 
 }

@@ -1,4 +1,4 @@
-package checker.ifrs.edu.checker.model.dal;
+package checker.ifrs.edu.checker.model.dao;
 
 import checker.ifrs.edu.checker.vo.Questao;
 import io.realm.Realm;
@@ -6,7 +6,7 @@ import io.realm.RealmResults;
 
 import static checker.ifrs.edu.checker.utils.StringUtils.isNegativeOrZero;
 
-public class QuestaoDal
+public class QuestaoDao
 {
     private Realm mRealm;
 
@@ -14,7 +14,7 @@ public class QuestaoDal
      * Metodo construtor
      *
      */
-    public QuestaoDal()
+    public QuestaoDao ()
     {
         this.mRealm = Realm.getDefaultInstance();
     }

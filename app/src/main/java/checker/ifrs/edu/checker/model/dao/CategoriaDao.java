@@ -1,4 +1,4 @@
-package checker.ifrs.edu.checker.model.dal;
+package checker.ifrs.edu.checker.model.dao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ import io.realm.exceptions.RealmPrimaryKeyConstraintException;
 import static checker.ifrs.edu.checker.utils.StringUtils.isNegativeOrZero;
 import static checker.ifrs.edu.checker.utils.StringUtils.isNullOrEmpty;
 
-public class CategoriaDal
+public class CategoriaDao
 {
 
     private Realm mRealm;
@@ -24,7 +24,7 @@ public class CategoriaDal
      * Metodo construtor
      *
      */
-    public CategoriaDal()
+    public CategoriaDao ()
     {
         this.mRealm = Realm.getDefaultInstance();
     }
