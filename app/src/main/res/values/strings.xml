@@ -4,8 +4,8 @@
     <string name="app_name">Checker</string>
     <string name="developer1">Fernando Soares</string>
     <string name="developer2">Lael Nervis</string>
-    <string name="version">v2.0</string>
-    <string name="year">2016</string>
+    <string name="version">v1.2</string>
+    <string name="year">2017</string>
     <string name="location">CTA - IFRS</string>
 
 
@@ -87,7 +87,7 @@
     <string name="relatorio_toolbar_title">Relatório</string>
 
     <!-- Itens footer -->
-    <string name="footer_text_1">Checker &#8211; v1.0 Beta &#8211; 2017</string>
+    <string name="footer_text_1">Checker &#8211; v1.2 Beta &#8211; 2017</string>
     <string name="footer_text_2">IFRS | Fernando Sebenello Soares</string>
     <string name="footer_description_image">Logo do app</string>
     <string name="title_activity_relatorio">RelatorioActivity</string>
